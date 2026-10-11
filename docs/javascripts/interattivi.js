@@ -559,7 +559,7 @@
           anim.id = requestAnimationFrame(step);
           return;
         }
-        const v = lo + (hi - lo) * (0.5 - 0.5 * Math.cos((t - t0) / 3200));
+        const v = lo + (hi - lo) * (0.5 - 0.5 * Math.cos((t - t0) / 6000));
         inp.value = (lo + Math.round((v - lo) / ps) * ps).toFixed(6);
         aggiorna();
         if (anim) anim.id = requestAnimationFrame(step);

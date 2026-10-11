@@ -6,7 +6,7 @@ title: "Exercises · Pseudo-code"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 2** · each solution opens with a click · [:material-book-open-variant: Chapter 2](../foundations/02-pseudo-code.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-foundations.pdf)
+**Exercises · Chapter 2** · each solution opens with a click · [:material-book-open-variant: Chapter 2](../basic-algorithms/02-pseudo-code.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
 
 </div>
 

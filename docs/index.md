@@ -17,12 +17,13 @@ follow later; the interactive lab is already open and will grow.
 Teaching material conceived and developed by **[Fabio Furini](https://fabiofurini.github.io/)**, associate
 professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
-**The course lecture notes, online**: representation of numbers, pseudo-code and C++, sorting,
-searching and numerical algorithms, analysis of running time and correctness, recursion,
-recurrence relations and the Master Theorem, with definitions, theorems with their proofs,
-pseudo-code, C++ code, examples executed step by step and exercises with solutions.
+**The course lecture notes, online**, in four parts: basic algorithms (representation of numbers,
+pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
+Java), asymptotic growth and notation, analysis and recursion (running time, correctness,
+recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
+pseudo-code, code, examples executed step by step and exercises with solutions.
 
-[Start with the foundations :material-arrow-right:](foundations/index.md){ .md-button .md-button--primary }
+[Start with the basic algorithms :material-arrow-right:](basic-algorithms/index.md){ .md-button .md-button--primary }
 [The exercises](exercises/index.md){ .md-button }
 [Try an interactive graph](lab/index.md){ .md-button }
 [:material-download: Download the lecture notes (PDF)](downloads.md){ .md-button }
@@ -51,8 +52,8 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 !!! algoritmo "Algorithm"
     The pseudo-code, with the lines numbered as in the lecture notes.
 
-!!! codice "C++ code"
-    The C++ implementations, with syntax highlighting.
+!!! codice "Code"
+    The programs in C++, Python and Java, with syntax highlighting.
 
 </div>
 
@@ -64,23 +65,43 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
 <div class="grid cards" markdown>
 
--   :material-code-braces: **1 · Foundations and basic algorithms**
+-   :material-code-braces: **1 · Basic algorithms**
 
     ---
 
-    The representation of numbers, pseudo-code and an introduction to C++; the first algorithms: sorting (insertion, exchange and selection sort), linear and binary search, numerical algorithms (change of base, primality test, sieve of Eratosthenes, greatest common divisor). Every algorithm with its pseudo-code, examples executed step by step and the C++ code.
+    The representation of numbers and pseudo-code, the language in which all the algorithms of the course are written; the first algorithms: sorting (insertion, exchange and selection sort), linear and binary search, numerical algorithms (change of base, primality test, sieve of Eratosthenes, greatest common divisor). Every algorithm with its pseudo-code and examples executed step by step.
 
-    1\. Representation of numbers · 2\. Pseudo-code · 3\. Introduction to C++ · 4\. Sorting algorithms · 5\. Linear and binary search · 6\. Numerical algorithms
+    1\. Representation of numbers · 2\. Pseudo-code · 3\. Sorting algorithms · 4\. Linear and binary search · 5\. Numerical algorithms
 
-    [:octicons-arrow-right-24: The chapters](foundations/index.md)
+    [:octicons-arrow-right-24: The chapters](basic-algorithms/index.md)
 
--   :material-file-tree: **2 · Analysis and recursion**
+-   :material-console: **2 · Programming languages**
 
     ---
 
-    The analysis of algorithms: input size, running time and asymptotic notation, correctness with loop invariants. Recursion: recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+    From pseudo-code to programs: three programming languages, C++ (compiled), Python (interpreted) and Java (compiled to bytecode and run by a virtual machine). For each: variables and data types, input and output, operators, conditional statements, loops, arrays and lists, functions, bitwise operators and a complete algorithm, with the comparison of the three languages.
 
-    7\. Input size · 8\. Running time · 9\. Correctness · 10\. Recursion · 11\. Recurrences · 12\. The Master Theorem · 13\. Recursive algorithms · 14\. Recursive versus iterative algorithms
+    6\. Introduction to C++ · 7\. Introduction to Python · 8\. Introduction to Java
+
+    [:octicons-arrow-right-24: The chapters](languages/index.md)
+
+-   :material-chart-line: **3 · Asymptotic growth and notation**
+
+    ---
+
+    How the functions of a natural variable that count the steps of an algorithm grow: the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth; the asymptotic notations Theta, big O, Omega, little o and omega, their properties and their use in the analysis of algorithms. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
+
+    9\. Asymptotic growth · 10\. Asymptotic notation
+
+    [:octicons-arrow-right-24: The chapters](asymptotics/index.md)
+
+-   :material-file-tree: **4 · Analysis and recursion**
+
+    ---
+
+    The analysis of algorithms: input size, running time, correctness with loop invariants. Recursion: recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+
+    11\. Input size · 12\. Running time · 13\. Correctness · 14\. Recursion · 15\. Recurrences · 16\. The Master Theorem · 17\. Recursive algorithms · 18\. Recursive versus iterative algorithms
 
     [:octicons-arrow-right-24: The chapters](analysis-recursion/index.md)
 
@@ -111,7 +132,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
     ---
 
-    Two volumes of lecture notes and two exercise books, with the same numbering as the website.
+    Four volumes of lecture notes and four exercise books, with the same numbering as the website.
 
     [:octicons-arrow-right-24: Downloads](downloads.md)
 

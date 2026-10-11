@@ -6,7 +6,7 @@ title: "Exercises · Representation of numbers"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 1** · each solution opens with a click · [:material-book-open-variant: Chapter 1](../foundations/01-number-representation.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-foundations.pdf)
+**Exercises · Chapter 1** · each solution opens with a click · [:material-book-open-variant: Chapter 1](../basic-algorithms/01-number-representation.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
 
 </div>
 

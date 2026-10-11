@@ -123,46 +123,58 @@ extra_javascript:
   # grafici interattivi: JSXGraph, il motore, poi le ricette (gi-*.js, le aggiunge genera_sito.py)
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
   - javascripts/interattivi.js?v=6e596bae66
-  - javascripts/gi-cap1-6.js?v=1513f12a39
-  - javascripts/gi-cap10-14.js?v=217296d127
-  - javascripts/gi-cap7-9.js?v=fdde5b1a77
+  - javascripts/gi-cap1-5.js?v=f2d03ace72
+  - javascripts/gi-cap14-17.js?v=c75fa22fac
+  - javascripts/gi-cap9-13.js?v=ec8b167001
 
 nav:
   - Home: index.md
-  - Foundations:
-      - foundations/index.md
-      - "1. Representation of numbers": foundations/01-number-representation.md
-      - "2. Pseudo-code": foundations/02-pseudo-code.md
-      - "3. Introduction to C++": foundations/03-introduction-to-cpp.md
-      - "4. Sorting algorithms": foundations/04-sorting.md
-      - "5. Linear and binary search": foundations/05-search.md
-      - "6. Numerical algorithms": foundations/06-numerical-algorithms.md
+  - Basic algorithms:
+      - basic-algorithms/index.md
+      - "1. Representation of numbers": basic-algorithms/01-number-representation.md
+      - "2. Pseudo-code": basic-algorithms/02-pseudo-code.md
+      - "3. Sorting algorithms": basic-algorithms/03-sorting.md
+      - "4. Linear and binary search": basic-algorithms/04-search.md
+      - "5. Numerical algorithms": basic-algorithms/05-numerical-algorithms.md
+  - Languages:
+      - languages/index.md
+      - "6. Introduction to C++": languages/06-introduction-to-cpp.md
+      - "7. Introduction to Python": languages/07-introduction-to-python.md
+      - "8. Introduction to Java": languages/08-introduction-to-java.md
+  - Asymptotics:
+      - asymptotics/index.md
+      - "9. Asymptotic growth": asymptotics/09-asymptotic-growth.md
+      - "10. Asymptotic notation": asymptotics/10-asymptotic-notation.md
   - Analysis & recursion:
       - analysis-recursion/index.md
-      - "7. Input size": analysis-recursion/07-input-size.md
-      - "8. Running time": analysis-recursion/08-running-time.md
-      - "9. Correctness": analysis-recursion/09-correctness.md
-      - "10. Recursion": analysis-recursion/10-recursion.md
-      - "11. Recurrences": analysis-recursion/11-recurrences.md
-      - "12. The Master Theorem": analysis-recursion/12-master-theorem.md
-      - "13. Recursive algorithms": analysis-recursion/13-recursive-algorithms.md
-      - "14. Recursive versus iterative algorithms": analysis-recursion/14-recursive-vs-iterative.md
+      - "11. Input size": analysis-recursion/11-input-size.md
+      - "12. Running time": analysis-recursion/12-running-time.md
+      - "13. Correctness": analysis-recursion/13-correctness.md
+      - "14. Recursion": analysis-recursion/14-recursion.md
+      - "15. Recurrences": analysis-recursion/15-recurrences.md
+      - "16. The Master Theorem": analysis-recursion/16-master-theorem.md
+      - "17. Recursive algorithms": analysis-recursion/17-recursive-algorithms.md
+      - "18. Recursive versus iterative algorithms": analysis-recursion/18-recursive-vs-iterative.md
   - Exercises:
       - exercises/index.md
       - "1. Representation of numbers": exercises/ex-01-number-representation.md
       - "2. Pseudo-code": exercises/ex-02-pseudo-code.md
-      - "3. Introduction to C++": exercises/ex-03-introduction-to-cpp.md
-      - "4. Sorting algorithms": exercises/ex-04-sorting.md
-      - "5. Linear and binary search": exercises/ex-05-search.md
-      - "6. Numerical algorithms": exercises/ex-06-numerical-algorithms.md
-      - "7. Input size": exercises/ex-07-input-size.md
-      - "8. Running time": exercises/ex-08-running-time.md
-      - "9. Correctness": exercises/ex-09-correctness.md
-      - "10. Recursion": exercises/ex-10-recursion.md
-      - "11. Recurrences": exercises/ex-11-recurrences.md
-      - "12. The Master Theorem": exercises/ex-12-master-theorem.md
-      - "13. Recursive algorithms": exercises/ex-13-recursive-algorithms.md
-      - "14. Recursive versus iterative algorithms": exercises/ex-14-recursive-vs-iterative.md
+      - "3. Sorting algorithms": exercises/ex-03-sorting.md
+      - "4. Linear and binary search": exercises/ex-04-search.md
+      - "5. Numerical algorithms": exercises/ex-05-numerical-algorithms.md
+      - "6. Introduction to C++": exercises/ex-06-introduction-to-cpp.md
+      - "7. Introduction to Python": exercises/ex-07-introduction-to-python.md
+      - "8. Introduction to Java": exercises/ex-08-introduction-to-java.md
+      - "9. Asymptotic growth": exercises/ex-09-asymptotic-growth.md
+      - "10. Asymptotic notation": exercises/ex-10-asymptotic-notation.md
+      - "11. Input size": exercises/ex-11-input-size.md
+      - "12. Running time": exercises/ex-12-running-time.md
+      - "13. Correctness": exercises/ex-13-correctness.md
+      - "14. Recursion": exercises/ex-14-recursion.md
+      - "15. Recurrences": exercises/ex-15-recurrences.md
+      - "16. The Master Theorem": exercises/ex-16-master-theorem.md
+      - "17. Recursive algorithms": exercises/ex-17-recursive-algorithms.md
+      - "18. Recursive versus iterative algorithms": exercises/ex-18-recursive-vs-iterative.md
   - Lab:
       - lab/index.md
   - Downloads: downloads.md

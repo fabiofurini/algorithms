@@ -94,6 +94,8 @@ Finally (Section [15.5](#sez-sec-towardsMaster)) we draw the recursion tree of 
     <div class="pc-riga"><span class="pc-n">7</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch15_recurrences_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch15_recurrences_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch15_recurrences_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 <a id="box-3-exRecSumSteps"></a>
 
 !!! esempio "Example 15.2: The recurrence of <code>RecursiveSum</code>"
@@ -115,23 +117,6 @@ Finally (Section [15.5](#sez-sec-towardsMaster)) we draw the recursion tree of 
     $$
 
     For instance, $S(2)=2+3=5$, $S(3)=5+3=8$ and $S(4)=8+3=11$. In [Example 15.3](#box-6-exRecExpLinear) we show that $S(n)=3n-1=\Theta(n)$.
-
-- The same algorithm, written in C++, is the following function of the code of the course. In C++ the array is indexed from $0$, so its entries are <code>a[0]</code>, …, <code>a[n-1]</code>, and the last entry is <code>a[n-1]</code>.
-
-```cpp
-// sum of a[0..n-1] by decrease by one: depth of the recursion Theta(n)
-long long sumRecDecrease(int *a, int n)
-{
-	if (n == 0)
-	{
-		return 0;
-	}
-
-	return sumRecDecrease(a, n - 1) + a[n - 1];
-}
-```
-
-- The C++ function stops at the <strong>empty</strong> array ($n=0$, sum $0$) instead of at $n=1$: it also accepts $n=0$, and it executes one more call than the pseudo-code. The recurrence has the same form $S(n)=S(n-1)+\text{constant}$, and the order of growth does not change. On the array $3,1,4,1,5,9,2,6$ the function returns $31$.
 
 ### 15.1.2 Different forms of recurrences
 

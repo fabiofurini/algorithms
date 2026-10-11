@@ -130,6 +130,8 @@ The plan of the chapter is the following.
     <div class="pc-riga"><span class="pc-n">11</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 ### 12.2.1 Number of steps
 
 - Let $S(n)$ denote the number of steps executed by <code>FindMaximum</code> in the worst case, where $n$ is the size of the array.
@@ -362,6 +364,8 @@ that is, $S(n)=\Theta(|I|)$.
     <div class="pc-riga"><span class="pc-n">12</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>end</strong></span></span></div>
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
 ### 12.3.1 Number of steps
 
@@ -671,6 +675,8 @@ Thus, $S(n)=\Theta(|I|^2)$.
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 ### 12.4.1 Number of steps
 
 - Let $S(n)$ denote the number of steps executed by <code>ChangeToBase2</code>, where $n$ is the input value to be converted. There is only one input for each value of $n$, so there is no distinction between the worst case and the other cases.
@@ -931,6 +937,8 @@ Thus, $S(n)=\Theta(|I|^2)$.
     <div class="pc-riga" id="riga-12-running-time-pt-h"><span class="pc-n">12</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <code>true</code></span></span></div>
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch12_running_time_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
 ### 12.5.1 Number of steps
 

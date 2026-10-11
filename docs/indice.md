@@ -141,6 +141,5 @@
     - 18.3 Divide and conquer is what gives the gain, not recursion itself
     - 18.4 When subproblems overlap
     - 18.5 Space
-    - 18.6 <code>C++</code> implementation
     - 18.7 Experiment
     - 18.8 Guidelines

@@ -100,6 +100,8 @@ title: "Correctness"
     <div class="pc-riga"><span class="pc-n">11</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 - The <strong>loop invariant</strong> of the while loop of <code>FindMaximum</code> is:
 
 !!! chiave ""
@@ -247,7 +249,9 @@ title: "Correctness"
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
-- The condition at line [6](#riga-13-correctness-line-is-e) is evaluated from left to right, and the second part is evaluated only if the first one is true: when $j=0$ the condition is false and the non-existent element $a[0]$ is never accessed. The <code>C++</code> condition <code>i &gt; -1 and a[i] &gt; key</code> behaves in the same way.
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
+- The condition at line [6](#riga-13-correctness-line-is-e) is evaluated from left to right, and the second part is evaluated only if the first one is true: when $j=0$ the condition is false and the non-existent element $a[0]$ is never accessed.
 
 - The algorithm contains two nested loops. We first prove what a single execution of the <strong>inner</strong> while loop (lines [6](#riga-13-correctness-line-is-e)–[8](#riga-13-correctness-line-is-g)) does, and then we use this result to prove the correctness of the <strong>outer</strong> while loop (lines [3](#riga-13-correctness-line-is-b)–[11](#riga-13-correctness-line-is-i)).
 
@@ -501,6 +505,8 @@ title: "Correctness"
     <div class="pc-riga"><span class="pc-n">17</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 - The <strong>loop invariant</strong> of the while loop of <code>BinarySearch</code> is:
 
 !!! chiave ""
@@ -621,6 +627,8 @@ title: "Correctness"
     <div class="pc-riga" id="riga-13-correctness-line-eu-e"><span class="pc-n">7</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <span class="arithmatex">&#92;(n&#92;)</span></span><span class="pc-c">// <span class="arithmatex">&#92;(m = 0&#92;)</span>: <span class="arithmatex">&#92;(n&#92;)</span> is the GCD</span></span></div>
     <div class="pc-riga"><span class="pc-n">8</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch13_correctness_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
 - The proof is based on the following property of the greatest common divisor, proved in the chapter «Numerical algorithms»:
 

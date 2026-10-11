@@ -2,7 +2,7 @@
 # Do not edit mkdocs.yml by hand.
 site_name: Algorithms · Fabio Furini
 site_description: >-
-  Algorithms: the course lecture notes online, with pseudo-code and C++ code,
+  Algorithms: the course lecture notes online, with pseudo-code and Colab notebooks in Python, C++ and Java,
   definitions, theorems and proofs, worked examples and exercises with solutions.
 site_author: Fabio Furini
 site_url: https://fabiofurini.github.io/algorithms/
@@ -90,7 +90,7 @@ extra:
       lang: en
 
 extra_css:
-  - stylesheets/extra.css?v=68f743ff1a
+  - stylesheets/extra.css?v=305fcc0694
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
   - stylesheets/interattivi.css?v=750e9c2259
 
@@ -181,5 +181,6 @@ nav:
       - "18. Recursive versus iterative algorithms": exercises/ex-18-recursive-vs-iterative.md
   - Lab:
       - lab/index.md
+  - Notebooks: notebooks.md
   - Downloads: downloads.md
   - Index: indice.md

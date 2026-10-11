@@ -103,6 +103,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">16</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 - The stack $P$ plays exactly the role of the call stack: it contains the sub-arrays still to be summed. Its maximum size is of the same order as the depth of the recursion, i.e., $\Theta(\log_2 n)$.
 
 <a id="box-2-exRviExplicitStack"></a>
@@ -344,6 +346,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 <a id="box-4-exRviBottomUp"></a>
 
 !!! esempio "Example 18.3: bottom-up Merge Sort"
@@ -414,6 +418,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 - At the beginning of each iteration we have $p\cdot y^{k}=x^n$ (it holds at the start with $p=1$, $y=x$, $k=n$, and it is preserved by every iteration); when $k=0$ we get $p=x^n$.
 
 <a id="box-6-exRviPowerIt"></a>
@@ -468,6 +474,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">11</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 - The loop is executed $n-1$ times with a constant number of steps: $S(n)=\Theta(n)$, with $\Theta(1)$ extra memory.
 
 - Divide and conquer is a powerful <strong>design technique</strong>, but it is not always the best one: a gain with respect to brute force does not mean that the recursive algorithm is optimal.
@@ -508,6 +516,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">5</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <span class="arithmatex">&#92;(&#92;texttt{FibRec}(n-1) + &#92;texttt{FibRec}(n-2)&#92;)</span></span></span></div>
     <div class="pc-riga"><span class="pc-n">6</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
 <a id="box-8-exRviFibTree"></a>
 
@@ -585,6 +595,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">9</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
 <a id="box-11-obsRviFibMemo"></a>
 
 !!! teorema "Observation 18.6: number of calls of FibMemo"
@@ -622,6 +634,8 @@ The chapter first explains the costs that every recursive call carries, then com
     <div class="pc-riga"><span class="pc-n">14</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <span class="arithmatex">&#92;(curr&#92;)</span></span></span></div>
     <div class="pc-riga"><span class="pc-n">15</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+<div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
 - The loop is executed $n-1$ times: $S(n)=\Theta(n)$, with $\Theta(1)$ extra memory.
 
@@ -762,6 +776,8 @@ The previous sections compared numbers of steps. We now turn to the second resou
     <div class="pc-riga"><span class="pc-n">6</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+    <div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
     </div>
 
     <div class="minipage" style="width:47%" markdown>
@@ -776,6 +792,8 @@ The previous sections compared numbers of steps. We now turn to the second resou
     <div class="pc-riga"><span class="pc-n">7</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <span class="arithmatex">&#92;(a&#92;)</span></span></span></div>
     <div class="pc-riga"><span class="pc-n">8</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+    <div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
     </div>
 
@@ -808,6 +826,8 @@ The previous sections compared numbers of steps. We now turn to the second resou
     <div class="pc-riga"><span class="pc-n">14</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
 
+    <div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
+
     </div>
 
     <div class="minipage" style="width:47%" markdown>
@@ -828,6 +848,8 @@ The previous sections compared numbers of steps. We now turn to the second resou
     <div class="pc-riga"><span class="pc-n">13</span><span class="pc-corpo"><span class="pc-l"></span><span class="pc-t"><strong>return</strong> <span class="arithmatex">&#92;(-1&#92;)</span></span></span></div>
     <div class="pc-riga"><span class="pc-n">14</span><span class="pc-corpo"><span class="pc-t"><strong>end</strong></span></span></div>
     </div>
+
+    <div class="colab-pulsanti" markdown="0"><span class="colab-etichetta">Run in Colab:</span><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_python.ipynb" target="_blank" rel="noopener" title="Open the Python notebook of the chapter in Google Colab">Python</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_cpp.ipynb" target="_blank" rel="noopener" title="Open the C++ notebook of the chapter in Google Colab">C++</a><a class="colab-pulsante" href="https://colab.research.google.com/github/fabiofurini/algorithms/blob/main/notebooks/ch18_recursive_vs_iterative_java.ipynb" target="_blank" rel="noopener" title="Open the Java notebook of the chapter in Google Colab">Java</a></div>
 
     </div>
 
@@ -856,147 +878,6 @@ The previous sections compared numbers of steps. We now turn to the second resou
 !!! chiave ""
 
     <strong>Key points on space.</strong> The call stack uses memory proportional to the depth of the recursion, not to the number of calls. A logarithmic depth is harmless; a linear depth (decrease by one) risks a stack overflow. Tail recursion can be removed mechanically, obtaining a loop with $\Theta(1)$ extra memory.
-
-## 18.6 <code>C++</code> implementation { #sez-sec-cpp }
-
-- All the algorithms of this chapter are implemented in the course code, in the file <code>Recursion.cpp</code> (with <code>Recursion.h</code>); the experiments of the next section are in the file <code>Experiments.cpp</code>, and the sorting algorithms <code>insertionSort</code> and <code>mergeSort</code> are in the file <code>Sortings.cpp</code>. Arrays are indexed from $0$.
-
-- These are the three implementations of the array sum:
-
-```cpp
-long long sumIt(int *a, int n)
-{
-    long long s = 0;
-    for (int i = 0; i < n; i++)
-    {
-        s = s + a[i];
-    }
-    return s;
-}
-
-// sum of a[l..r] by halving: depth Theta(log n)
-long long sumRecHalving(int *a, int l, int r)
-{
-    if (l == r)
-    {
-        return a[l];
-    }
-    int mid = l + (r - l) / 2;
-    return sumRecHalving(a, l, mid) + sumRecHalving(a, mid + 1, r);
-}
-
-// sum of a[0..n-1] by decrease by one: depth Theta(n)
-long long sumRecDecrease(int *a, int n)
-{
-    if (n == 0)
-    {
-        return 0;
-    }
-    return sumRecDecrease(a, n - 1) + a[n - 1];
-}
-```
-
-<a id="box-17-exRviCallStack"></a>
-
-!!! esempio "Example 18.8: the call stack of sumRecDecrease"
-
-    This is the step-by-step execution of <code>sumRecDecrease(a, 3)</code> on the array $a=[4,7,1]$, showing the content of the call stack (the top of the stack is on the right; <code>s</code> stands for <code>sumRecDecrease</code> with the array <code>a</code> omitted).
-
-    $$
-    \begin{array}{c|c|c|c|}
-    {a[j]} & {j=0} & {j=1} & {j=2} \\
-    & 4 & 7 & 1
-    \end{array}
-    $$
-
-    <div class="tabella" markdown="0"><table>
-    <tr>
-    <th>step</th>
-    <th>call stack (active calls)</th>
-    <th>action</th>
-    </tr>
-    <tr>
-    <td>1</td>
-    <td><code>s(3)</code></td>
-    <td><span class="arithmatex">&#92;(n=3&#92;neq 0&#92;)</span>: call <code>s(2)</code>, then add <span class="arithmatex">&#92;(a&#91;2&#93;&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td><code>s(3)</code> <code>s(2)</code></td>
-    <td><span class="arithmatex">&#92;(n=2&#92;neq 0&#92;)</span>: call <code>s(1)</code>, then add <span class="arithmatex">&#92;(a&#91;1&#93;&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td><code>s(3)</code> <code>s(2)</code> <code>s(1)</code></td>
-    <td><span class="arithmatex">&#92;(n=1&#92;neq 0&#92;)</span>: call <code>s(0)</code>, then add <span class="arithmatex">&#92;(a&#91;0&#93;&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td><code>s(3)</code> <code>s(2)</code> <code>s(1)</code> <code>s(0)</code></td>
-    <td><span class="arithmatex">&#92;(n=0&#92;)</span>: return <span class="arithmatex">&#92;(0&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td><code>s(3)</code> <code>s(2)</code> <code>s(1)</code></td>
-    <td>return <span class="arithmatex">&#92;(0+a&#91;0&#93;=4&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>6</td>
-    <td><code>s(3)</code> <code>s(2)</code></td>
-    <td>return <span class="arithmatex">&#92;(4+a&#91;1&#93;=11&#92;)</span></td>
-    </tr>
-    <tr>
-    <td>7</td>
-    <td><code>s(3)</code></td>
-    <td>return <span class="arithmatex">&#92;(11+a&#91;2&#93;=12&#92;)</span></td>
-    </tr>
-    </table></div>
-
-    At step 4 there are $4=n+1$ active calls: the depth of the recursion is $n+1$. The additions are executed only <strong>after</strong> the base case is reached, while the stack is emptied. For comparison, <code>sumIt(a, 3)</code> uses the two variables <code>s</code> and <code>i</code> only: $s=0\to 4\to 11\to 12$.
-
-- These are the three implementations of the Fibonacci numbers:
-
-```cpp
-long long fibonacciRec(int n)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    return fibonacciRec(n - 1) + fibonacciRec(n - 2);
-}
-
-// memo must have n+1 entries, all initialised to -1
-long long fibonacciMemo(int n, long long *memo)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    if (memo[n] == -1)
-    {
-        memo[n] = fibonacciMemo(n - 1, memo) + fibonacciMemo(n - 2, memo);
-    }
-    return memo[n];
-}
-
-long long fibonacciIt(int n)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    long long prev = 0;  // F(i-2)
-    long long curr = 1;  // F(i-1)
-    for (int i = 2; i <= n; i++)
-    {
-        long long next = prev + curr;
-        prev = curr;
-        curr = next;
-    }
-    return curr;
-}
-```
 
 ## 18.7 Experiment { #sez-sec-experiment }
 

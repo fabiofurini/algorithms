@@ -237,3 +237,48 @@
 .md-typeset .pseudocodice .pc-solo-commento .pc-c { margin-left: 0; }
 .md-typeset .pseudocodice .pc-riga:target { background: color-mix(in srgb, var(--c-algoritmo) 14%, transparent); }
 @media (max-width: 600px) { .md-typeset .pseudocodice .pc-c { white-space: normal; } }
+
+/* ---------- pulsanti «Esegui in Colab: Python · C++ · Java» dopo lo pseudocodice ----------
+   (capitoli.pulsanti_colab; su telefono vanno a capo) */
+.md-typeset .colab-pulsanti {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35em .45em;
+  margin: -.4em 0 1.2em;
+  font-size: .72rem;
+}
+.md-typeset .colab-pulsanti .colab-etichetta {
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+  margin-right: .15em;
+}
+.md-typeset .colab-pulsanti .colab-pulsante {
+  display: inline-flex;
+  align-items: center;
+  gap: .3em;
+  padding: .12em .7em;
+  border: 1px solid var(--c-algoritmo);
+  border-radius: 999px;
+  color: var(--c-algoritmo);
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .15s, color .15s;
+}
+.md-typeset .colab-pulsanti .colab-pulsante::before {
+  content: "";
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: .3em 0 .3em .5em;
+  border-color: transparent transparent transparent currentColor;
+}
+.md-typeset .colab-pulsanti .colab-pulsante:hover,
+.md-typeset .colab-pulsanti .colab-pulsante:focus {
+  background-color: var(--c-algoritmo);
+  color: var(--md-default-bg-color);
+}
+/* pagina Notebook: badge e link nella tabella */
+.md-typeset .tabella-notebook td { vertical-align: middle; }
+.md-typeset .tabella-notebook img { display: inline-block; margin: 0; vertical-align: middle; }

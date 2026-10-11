@@ -21,7 +21,8 @@ professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
 Java), asymptotic notation and growth, analysis and recursion (running time, correctness,
 recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
-pseudo-code, code, examples executed step by step and exercises with solutions.
+pseudo-code, examples executed step by step, Colab notebooks in Python, C++ and Java and
+exercises with solutions.
 
 [Start with the basic algorithms :material-arrow-right:](basic-algorithms/index.md){ .md-button .md-button--primary }
 [The exercises](exercises/index.md){ .md-button }
@@ -53,7 +54,8 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     The pseudo-code, with the lines numbered as in the lecture notes.
 
 !!! codice "Code"
-    The programs in C++, Python and Java, with syntax highlighting.
+    The programs in C++, Python and Java in the chapters on the languages; the algorithms run
+    in the Colab notebooks, with the buttons below the pseudo-code.
 
 </div>
 
@@ -127,6 +129,14 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     the bits of numbers, growth of functions, recursion trees and the Master Theorem.
 
     [:octicons-arrow-right-24: The graphs](lab/index.md)
+
+-   :simple-googlecolab: **Notebooks in Python, C++ and Java**
+
+    ---
+
+    The algorithms of every chapter, to run in Google Colab in the language you prefer.
+
+    [:octicons-arrow-right-24: The notebooks](notebooks.md)
 
 -   :material-download: **Lecture notes and exercise books in PDF**
 

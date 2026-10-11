@@ -6,7 +6,7 @@ title: "Correctness"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis and recursion · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-13-correctness.md)
+**Part 4 · Analysis of algorithms · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises](../exercises/ex-13-correctness.md)
 
 </div>
 

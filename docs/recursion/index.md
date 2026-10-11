@@ -1,34 +1,10 @@
-# Analysis and recursion
+# Recursion
 
-*Part 4 of the course, volume 4 of the lecture notes.* The analysis of algorithms: input size, running time, correctness with loop invariants. Recursion: recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+*Part 5 of the course, volume 5 of the lecture notes.* Recursion: classical recursive algorithms, recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
 
-[:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis-recursion.pdf){ .md-button }
+[:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf){ .md-button }
 
 <div class="grid cards" markdown>
-
--   **11. Input size**
-
-    ---
-
-    Input size · Asymptotic notation: a recall · Input instance consisting of one natural number · Input instance consisting of two natural numbers · …
-
-    [:octicons-arrow-right-24: Read the chapter](11-input-size.md) · [Exercises](../exercises/ex-11-input-size.md)
-
--   **12. Running time**
-
-    ---
-
-    Running time of an algorithm · Find maximum · Insertion sort · Change of base · …
-
-    [:octicons-arrow-right-24: Read the chapter](12-running-time.md) · [Exercises](../exercises/ex-12-running-time.md)
-
--   **13. Correctness**
-
-    ---
-
-    Correctness of an algorithm · Correctness of Find Maximum · Correctness of Insertion Sort · Correctness of Binary Search · …
-
-    [:octicons-arrow-right-24: Read the chapter](13-correctness.md) · [Exercises](../exercises/ex-13-correctness.md)
 
 -   **14. Recursion**
 

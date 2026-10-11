@@ -5,7 +5,7 @@ hide:
 title: "Recursion trees"
 ---
 
-[← Lab](index.md) · Chapter 14: [Recursion](../analysis-recursion/14-recursion.md)
+[← Lab](index.md) · Chapter 14: [Recursion](../recursion/14-recursion.md)
 
 # Recursion trees
 

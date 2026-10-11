@@ -5,7 +5,7 @@ hide:
 title: "The Master Theorem"
 ---
 
-[← Lab](index.md) · Chapter 16: [The Master Theorem](../analysis-recursion/16-master-theorem.md)
+[← Lab](index.md) · Chapter 16: [The Master Theorem](../recursion/16-master-theorem.md)
 
 # The Master Theorem
 

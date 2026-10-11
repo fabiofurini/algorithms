@@ -5,7 +5,7 @@ hide:
 title: "Merge sort"
 ---
 
-[← Lab](index.md) · Chapter 17: [Recursive algorithms](../analysis-recursion/17-recursive-algorithms.md)
+[← Lab](index.md) · Chapter 17: [Recursive algorithms](../recursion/17-recursive-algorithms.md)
 
 # Merge sort
 

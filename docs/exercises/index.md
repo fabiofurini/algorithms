@@ -29,13 +29,18 @@ Exercises with **worked solutions**, chapter by chapter, as in the PDF exercise 
     - [9. Asymptotic notation](ex-09-asymptotic-notation.md) · 16 exercises
     - [10. Asymptotic growth](ex-10-asymptotic-growth.md) · 4 exercises
 
--   **Analysis and recursion**
+-   **Analysis of algorithms**
 
     ---
 
     - [11. Input size](ex-11-input-size.md) · 4 exercises
     - [12. Running time](ex-12-running-time.md) · 11 exercises
     - [13. Correctness](ex-13-correctness.md) · 5 exercises
+
+-   **Recursion**
+
+    ---
+
     - [14. Recursion](ex-14-recursion.md) · 6 exercises
     - [15. Recurrences](ex-15-recurrences.md) · 6 exercises
     - [16. The Master Theorem](ex-16-master-theorem.md) · 6 exercises

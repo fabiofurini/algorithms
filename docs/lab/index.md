@@ -61,7 +61,7 @@ of the lecture notes: arrays \(a[1..n]\) indexed from 1, the same names of algor
 
 </div>
 
-## Analysis and recursion
+## Analysis of algorithms
 
 <div class="grid cards" markdown>
 
@@ -72,6 +72,12 @@ of the lecture notes: arrays \(a[1..n]\) indexed from 1, the same names of algor
     FindMaximum iteration by iteration: check that the invariant holds at the start, at every step and at the end.
 
     [Open the app →](invariant.md)
+
+</div>
+
+## Recursion
+
+<div class="grid cards" markdown>
 
 -   :material-file-tree: **Recursion trees**
 

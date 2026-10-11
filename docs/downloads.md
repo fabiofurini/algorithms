@@ -34,13 +34,21 @@ The lecture notes and the exercise books in PDF, updated at every publication of
 
     [:octicons-download-24: lecture-notes-3-asymptotic-notation.pdf](pdf/lecture-notes-3-asymptotic-notation.pdf)
 
--   :material-book-open-variant: **Lecture notes, volume 4 · Analysis and recursion**
+-   :material-book-open-variant: **Lecture notes, volume 4 · Analysis of algorithms**
 
     ---
 
-    The analysis of algorithms: input size, running time, correctness with loop invariants. Recursion: recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+    The analysis of algorithms: the input size, the running time in the best, worst and average case, and correctness proved with loop invariants.
 
-    [:octicons-download-24: lecture-notes-4-analysis-recursion.pdf](pdf/lecture-notes-4-analysis-recursion.pdf)
+    [:octicons-download-24: lecture-notes-4-analysis.pdf](pdf/lecture-notes-4-analysis.pdf)
+
+-   :material-book-open-variant: **Lecture notes, volume 5 · Recursion**
+
+    ---
+
+    Recursion: classical recursive algorithms, recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+
+    [:octicons-download-24: lecture-notes-5-recursion.pdf](pdf/lecture-notes-5-recursion.pdf)
 
 </div>
 
@@ -72,12 +80,20 @@ The lecture notes and the exercise books in PDF, updated at every publication of
 
     [:octicons-download-24: exercises-3-asymptotic-notation.pdf](pdf/exercises-3-asymptotic-notation.pdf)
 
--   :material-pencil-box-multiple: **Exercises, volume 4 · Analysis and recursion**
+-   :material-pencil-box-multiple: **Exercises, volume 4 · Analysis of algorithms**
 
     ---
 
-    Worked exercises on chapters 11--18: input size, running time, correctness, recursion, recurrence relations, the Master Theorem, recursive algorithms. Every exercise has a complete solution.
+    Worked exercises on chapters 11--13: input size, running time, correctness. Every exercise has a complete solution.
 
-    [:octicons-download-24: exercises-4-analysis-recursion.pdf](pdf/exercises-4-analysis-recursion.pdf)
+    [:octicons-download-24: exercises-4-analysis.pdf](pdf/exercises-4-analysis.pdf)
+
+-   :material-pencil-box-multiple: **Exercises, volume 5 · Recursion**
+
+    ---
+
+    Worked exercises on chapters 14--18: recursion, recurrence relations, the Master Theorem, recursive algorithms, recursive versus iterative. Every exercise has a complete solution.
+
+    [:octicons-download-24: exercises-5-recursion.pdf](pdf/exercises-5-recursion.pdf)
 
 </div>

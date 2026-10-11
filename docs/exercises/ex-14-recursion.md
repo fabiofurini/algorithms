@@ -6,7 +6,7 @@ title: "Exercises · Recursion"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 14** · each solution opens with a click · [:material-book-open-variant: Chapter 14](../analysis-recursion/14-recursion.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis-recursion.pdf)
+**Exercises · Chapter 14** · each solution opens with a click · [:material-book-open-variant: Chapter 14](../recursion/14-recursion.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
 
 </div>
 

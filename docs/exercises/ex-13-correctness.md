@@ -6,7 +6,7 @@ title: "Exercises · Correctness"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 13** · each solution opens with a click · [:material-book-open-variant: Chapter 13](../analysis-recursion/13-correctness.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis-recursion.pdf)
+**Exercises · Chapter 13** · each solution opens with a click · [:material-book-open-variant: Chapter 13](../analysis/13-correctness.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis.pdf)
 
 </div>
 

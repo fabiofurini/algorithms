@@ -82,30 +82,33 @@
     - 10.2 The hierarchy of infinities
     - 10.3 Comparison of orders of growth
 
-## [Analysis and recursion](analysis-recursion/index.md)
+## [Analysis of algorithms](analysis/index.md)
 
-11. [Input size](analysis-recursion/11-input-size.md)
+11. [Input size](analysis/11-input-size.md)
     - 11.1 Input size
     - 11.2 Asymptotic notation: a recall
     - 11.3 Input instance consisting of one natural number
     - 11.4 Input instance consisting of two natural numbers
     - 11.5 Input instance consisting of an array of natural numbers
     - 11.6 Input size and number of steps
-12. [Running time](analysis-recursion/12-running-time.md)
+12. [Running time](analysis/12-running-time.md)
     - 12.1 Running time of an algorithm
     - 12.2 Find maximum
     - 12.3 Insertion sort
     - 12.4 Change of base
     - 12.5 Primality test
     - 12.6 Summary
-13. [Correctness](analysis-recursion/13-correctness.md)
+13. [Correctness](analysis/13-correctness.md)
     - 13.1 Correctness of an algorithm
     - 13.2 Correctness of Find Maximum
     - 13.3 Correctness of Insertion Sort
     - 13.4 Correctness of Binary Search
     - 13.5 Correctness of the Euclidean algorithm
     - 13.6 Correctness of recursive algorithms
-14. [Recursion](analysis-recursion/14-recursion.md)
+
+## [Recursion](recursion/index.md)
+
+14. [Recursion](recursion/14-recursion.md)
     - 14.1 Recursive algorithms
     - 14.2 Tree of recursive calls and call stack
     - 14.3 Correctness of recursive algorithms
@@ -115,27 +118,27 @@
     - 14.7 Fast exponentiation
     - 14.8 Towers of Hanoi
     - 14.9 Summary
-15. [Recurrences](analysis-recursion/15-recurrences.md)
+15. [Recurrences](recursion/15-recurrences.md)
     - 15.1 Recurrences
     - 15.2 The expansion method
     - 15.3 The substitution method
     - 15.4 The recursion-tree method
     - 15.5 Towards the Master Theorem
     - 15.6 Summary: which method when
-16. [The Master Theorem](analysis-recursion/16-master-theorem.md)
+16. [The Master Theorem](recursion/16-master-theorem.md)
     - 16.1 Recurrences in standard form
     - 16.2 The Master Theorem
     - 16.3 Applying the Master Theorem
     - 16.4 When the Master Theorem does not apply
     - 16.5 Proof of the Master Theorem
     - 16.6 Summary
-17. [Recursive algorithms](analysis-recursion/17-recursive-algorithms.md)
+17. [Recursive algorithms](recursion/17-recursive-algorithms.md)
     - 17.1 The sum of the elements of an array
     - 17.2 Merge Sort
     - 17.3 Recursive Binary Search
     - 17.4 The maximum subarray problem
     - 17.5 Summary
-18. [Recursive versus iterative algorithms](analysis-recursion/18-recursive-vs-iterative.md)
+18. [Recursive versus iterative algorithms](recursion/18-recursive-vs-iterative.md)
     - 18.1 Recursion and iteration
     - 18.2 Comparison at a glance
     - 18.3 Divide and conquer is what gives the gain, not recursion itself

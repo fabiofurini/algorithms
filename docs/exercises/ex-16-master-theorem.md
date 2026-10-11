@@ -6,7 +6,7 @@ title: "Exercises · The Master Theorem"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 16** · each solution opens with a click · [:material-book-open-variant: Chapter 16](../analysis-recursion/16-master-theorem.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis-recursion.pdf)
+**Exercises · Chapter 16** · each solution opens with a click · [:material-book-open-variant: Chapter 16](../recursion/16-master-theorem.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
 
 </div>
 

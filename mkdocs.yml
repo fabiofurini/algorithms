@@ -149,16 +149,18 @@ nav:
       - asymptotics/index.md
       - "9. Asymptotic notation": asymptotics/09-asymptotic-notation.md
       - "10. Asymptotic growth": asymptotics/10-asymptotic-growth.md
-  - Analysis & recursion:
-      - analysis-recursion/index.md
-      - "11. Input size": analysis-recursion/11-input-size.md
-      - "12. Running time": analysis-recursion/12-running-time.md
-      - "13. Correctness": analysis-recursion/13-correctness.md
-      - "14. Recursion": analysis-recursion/14-recursion.md
-      - "15. Recurrences": analysis-recursion/15-recurrences.md
-      - "16. The Master Theorem": analysis-recursion/16-master-theorem.md
-      - "17. Recursive algorithms": analysis-recursion/17-recursive-algorithms.md
-      - "18. Recursive versus iterative algorithms": analysis-recursion/18-recursive-vs-iterative.md
+  - Analysis:
+      - analysis/index.md
+      - "11. Input size": analysis/11-input-size.md
+      - "12. Running time": analysis/12-running-time.md
+      - "13. Correctness": analysis/13-correctness.md
+  - Recursion:
+      - recursion/index.md
+      - "14. Recursion": recursion/14-recursion.md
+      - "15. Recurrences": recursion/15-recurrences.md
+      - "16. The Master Theorem": recursion/16-master-theorem.md
+      - "17. Recursive algorithms": recursion/17-recursive-algorithms.md
+      - "18. Recursive versus iterative algorithms": recursion/18-recursive-vs-iterative.md
   - Exercises:
       - exercises/index.md
       - "1. Representation of numbers": exercises/ex-01-number-representation.md

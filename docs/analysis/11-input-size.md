@@ -6,7 +6,7 @@ title: "Input size"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis and recursion · Chapter 11** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-11-input-size.md)
+**Part 4 · Analysis of algorithms · Chapter 11** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises](../exercises/ex-11-input-size.md)
 
 </div>
 

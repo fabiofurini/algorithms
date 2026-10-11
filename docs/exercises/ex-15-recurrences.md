@@ -6,7 +6,7 @@ title: "Exercises · Recurrences"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 15** · each solution opens with a click · [:material-book-open-variant: Chapter 15](../analysis-recursion/15-recurrences.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis-recursion.pdf)
+**Exercises · Chapter 15** · each solution opens with a click · [:material-book-open-variant: Chapter 15](../recursion/15-recurrences.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
 
 </div>
 

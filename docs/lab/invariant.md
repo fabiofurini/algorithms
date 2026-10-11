@@ -5,7 +5,7 @@ hide:
 title: "The loop invariant"
 ---
 
-[← Lab](index.md) · Chapter 13: [Correctness](../analysis-recursion/13-correctness.md)
+[← Lab](index.md) · Chapter 13: [Correctness](../analysis/13-correctness.md)
 
 # The loop invariant
 

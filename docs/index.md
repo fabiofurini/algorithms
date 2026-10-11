@@ -97,15 +97,25 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
     [:octicons-arrow-right-24: The chapters](asymptotics/index.md)
 
--   :material-file-tree: **4 · Analysis and recursion**
+-   :material-timer-sand: **4 · Analysis of algorithms**
 
     ---
 
-    The analysis of algorithms: input size, running time, correctness with loop invariants. Recursion: recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+    The analysis of algorithms: the input size, the running time in the best, worst and average case, and correctness proved with loop invariants.
 
-    11\. Input size · 12\. Running time · 13\. Correctness · 14\. Recursion · 15\. Recurrences · 16\. The Master Theorem · 17\. Recursive algorithms · 18\. Recursive versus iterative algorithms
+    11\. Input size · 12\. Running time · 13\. Correctness
 
-    [:octicons-arrow-right-24: The chapters](analysis-recursion/index.md)
+    [:octicons-arrow-right-24: The chapters](analysis/index.md)
+
+-   :material-file-tree: **5 · Recursion**
+
+    ---
+
+    Recursion: classical recursive algorithms, recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
+
+    14\. Recursion · 15\. Recurrences · 16\. The Master Theorem · 17\. Recursive algorithms · 18\. Recursive versus iterative algorithms
+
+    [:octicons-arrow-right-24: The chapters](recursion/index.md)
 
 </div>
 
@@ -142,7 +152,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
     ---
 
-    Four volumes of lecture notes and four exercise books, with the same numbering as the website.
+    Five volumes of lecture notes and five exercise books, with the same numbering as the website.
 
     [:octicons-arrow-right-24: Downloads](downloads.md)
 

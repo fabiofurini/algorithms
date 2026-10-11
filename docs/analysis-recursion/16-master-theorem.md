@@ -139,7 +139,7 @@ The <strong>Master Theorem</strong> turns these three behaviours into a ready-to
 
 - This is the classical statement of the theorem (as in the textbook of Cormen, Leiserson, Rivest and Stein, <em>Introduction to Algorithms</em>), with the <strong>extended case 2</strong>: for $k=0$ we obtain the basic statement “if $f(n)=\Theta(n^{\log_b a})$ then $T(n)=\Theta(n^{\log_b a}\log n)$”.
 
-- The notations $O$, $\Omega$ and $\Theta$ in the statement are those defined in chapter 10 «Asymptotic notation».
+- The notations $O$, $\Omega$ and $\Theta$ in the statement are those defined in chapter 9 «Asymptotic notation».
 
 - The proof is given in Section [16.5](#sez-sec-proof).
 
@@ -1203,6 +1203,6 @@ We start with three recurrences, one for each case, and then solve the recurrenc
 ## Interactive lab { #interactive-lab }
 
 The algorithm of the chapter, one step at a time: move the sliders and press ▶.
-All the graphs of the course are in the [interactive lab](../lab/index.md#cap-16).
+The same graph full page, with the other ones of the course, is in the [interactive lab](../lab/master-theorem.md).
 
 <div class="gi" data-grafico="master"></div>

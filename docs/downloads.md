@@ -26,11 +26,11 @@ The lecture notes and the exercise books in PDF, updated at every publication of
 
     [:octicons-download-24: lecture-notes-2-programming-languages.pdf](pdf/lecture-notes-2-programming-languages.pdf)
 
--   :material-book-open-variant: **Lecture notes, volume 3 · Asymptotic growth and notation**
+-   :material-book-open-variant: **Lecture notes, volume 3 · Asymptotic notation and growth**
 
     ---
 
-    How the functions of a natural variable that count the steps of an algorithm grow: the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth; the asymptotic notations Theta, big O, Omega, little o and omega, their properties and their use in the analysis of algorithms. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
+    How the functions of a natural variable that count the steps of an algorithm are compared: the asymptotic notations Theta, big O, Omega, little o and omega, their properties and the limit criterion; then the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth written with the symbols. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
 
     [:octicons-download-24: lecture-notes-3-asymptotic-notation.pdf](pdf/lecture-notes-3-asymptotic-notation.pdf)
 
@@ -64,11 +64,11 @@ The lecture notes and the exercise books in PDF, updated at every publication of
 
     [:octicons-download-24: exercises-2-programming-languages.pdf](pdf/exercises-2-programming-languages.pdf)
 
--   :material-pencil-box-multiple: **Exercises, volume 3 · Asymptotic growth and notation**
+-   :material-pencil-box-multiple: **Exercises, volume 3 · Asymptotic notation and growth**
 
     ---
 
-    Worked exercises on chapters 9--10: comparison of orders of growth and the asymptotic notations Theta, big O, Omega, little o and omega. Every exercise has a complete solution.
+    Worked exercises on chapters 9--10: the asymptotic notations Theta, big O, Omega, little o and omega, and the comparison of orders of growth. Every exercise has a complete solution.
 
     [:octicons-download-24: exercises-3-asymptotic-notation.pdf](pdf/exercises-3-asymptotic-notation.pdf)
 

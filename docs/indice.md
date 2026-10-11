@@ -69,19 +69,18 @@
     - 8.10 Bitwise operators
     - 8.11 <code>Java</code>, <code>C++</code> and <code>Python</code> side by side
 
-## [Asymptotic growth and notation](asymptotics/index.md)
+## [Asymptotic notation and growth](asymptotics/index.md)
 
-9. [Asymptotic growth](asymptotics/09-asymptotic-growth.md)
-    - 9.1 Families of increasing functions of a natural variable
-    - 9.2 The hierarchy of infinities
-    - 9.3 Comparison of orders of growth
-10. [Asymptotic notation](asymptotics/10-asymptotic-notation.md)
-    - 10.1 $\Theta$, $\bigO$ and $\Omega$ notations
-    - 10.2 $o$ and $\omega$ notations
-    - 10.3 Limits and asymptotic notations
-    - 10.4 Relational properties of asymptotic notations
-    - 10.5 Asymptotic notation and orders of growth
-    - 10.6 Asymptotic notation in the analysis of algorithms
+9. [Asymptotic notation](asymptotics/09-asymptotic-notation.md)
+    - 9.1 $\Theta$, $\bigO$ and $\Omega$ notations
+    - 9.2 $o$ and $\omega$ notations
+    - 9.3 Limits and asymptotic notations
+    - 9.4 Relational properties of asymptotic notations
+    - 9.5 Asymptotic notation in the analysis of algorithms
+10. [Asymptotic growth](asymptotics/10-asymptotic-growth.md)
+    - 10.1 Families of increasing functions of a natural variable
+    - 10.2 The hierarchy of infinities
+    - 10.3 Comparison of orders of growth
 
 ## [Analysis and recursion](analysis-recursion/index.md)
 

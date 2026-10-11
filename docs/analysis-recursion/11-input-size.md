@@ -16,7 +16,7 @@ To compare two algorithms that solve the same problem we count how many operatio
 
 In this chapter we fix this measure: the <strong>input size</strong> is the number of bits needed to write the input in binary, as in the chapter «Representation of numbers». We proceed as follows:
 
-- we define the input size and we recall the asymptotic notation used to describe its order of growth (chapter 10 «Asymptotic notation»);
+- we define the input size and we recall the asymptotic notation used to describe its order of growth (chapter 9 «Asymptotic notation»);
 
 - we compute the input size, and its order of growth, when the input is one natural number, two natural numbers, or an array of natural numbers;
 
@@ -66,7 +66,7 @@ The exact input size depends on the specific values of the instance. In the anal
 
 ## 11.2 Asymptotic notation: a recall
 
-The asymptotic notation is defined and studied in chapter 10 «Asymptotic notation». Here we only recall the definitions and the two facts that are used in this chapter. As there, $f$ and $g$ are functions defined on the natural numbers $n \ge 1$ and with non-negative real values, and the notation compares their orders of growth for all sufficiently large $n$.
+The asymptotic notation is defined and studied in chapter 9 «Asymptotic notation». Here we only recall the definitions and the two facts that are used in this chapter. As there, $f$ and $g$ are functions defined on the natural numbers $n \ge 1$ and with non-negative real values, and the notation compares their orders of growth for all sufficiently large $n$.
 
 !!! chiave ""
 
@@ -92,7 +92,7 @@ The asymptotic notation is defined and studied in chapter 10 «Asymptotic notati
 
 - For functions of two parameters, such as $f(n,m)$, the definitions are the same, with the inequalities required for every $n \ge n_1$ and every $m \ge m_1$.
 
-- The following two facts are proved in chapter 10 «Asymptotic notation».
+- The following two facts are proved in chapter 9 «Asymptotic notation».
 
 <a id="box-3-obsThetaOOmega"></a>
 

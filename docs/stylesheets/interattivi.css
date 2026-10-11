@@ -96,3 +96,32 @@
 .gi-formula { flex-wrap: wrap; column-gap: .25em; row-gap: .1em; text-align: center; }
 /* tabelle larghe nelle letture (passi di Euclide, crivello): scorrono dentro il riquadro */
 .gi-letture { overflow-x: auto; }
+
+/* ---------------------------------------------------------------- app a tutta pagina
+   (pagine docs/laboratorio/<app>.md e docs/lab/<app>.md: <div class="gi gi-app-intera">).
+   La pagina esce dalla larghezza massima del tema; il riquadro del grafico prende quasi
+   tutta l'altezza dello schermo (la board JSXGraph si adatta al contenitore e si ridisegna
+   al resize); i controlli stanno a destra, sotto su schermi stretti. */
+body:has(.gi-app-intera) .md-grid { max-width: none; }
+.gi-app-intera { margin: .8em 0 1.2em; }
+.gi-app-intera .gi-corpo { grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr); align-items: start; }
+.gi-app-intera .gi-board {
+  aspect-ratio: auto !important;
+  height: max(480px, calc(100vh - 230px));
+}
+@media (max-width: 960px) {
+  .gi-app-intera .gi-corpo { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .gi-app-intera .gi-corpo { padding: .6em; }
+  .gi-app-intera .gi-board { height: 70vh; min-height: 320px; }
+}
+
+/* schede dell'indice del laboratorio: il link «Apri l'app →» in evidenza */
+.md-typeset .grid.cards > ul > li > p:last-child a { font-weight: 700; }
+/* nella pagina dell'app il titolo c'è già (H1): la testata del riquadro resta solo se ha le schede Esplora/Sfida */
+.gi-app-intera .gi-testa:not(:has(.gi-tab)) { display: none; }
+.md-typeset:has(.gi-app-intera) h1 { margin: .2em 0 .3em; }
+.md-typeset:has(.gi-app-intera) > p { margin: .4em 0; }
+
+.gi-app-intera .gi-corpo > div { min-width: 0; }

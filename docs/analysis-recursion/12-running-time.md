@@ -28,7 +28,7 @@ The plan of the chapter is the following.
 
     The <strong>running time</strong> of an algorithm is an estimate of the time needed to execute it, as a function of the <strong>input size</strong> $|I|$.
 
-- We are not interested in the exact time in seconds, which depends on the computer, on the compiler and on many other details, but in the <strong>order of growth</strong> of the running time, expressed with the asymptotic notation $O$, $\Omega$ and $\Theta$ (chapter 10 «Asymptotic notation», recalled in the chapter «Input size»).
+- We are not interested in the exact time in seconds, which depends on the computer, on the compiler and on many other details, but in the <strong>order of growth</strong> of the running time, expressed with the asymptotic notation $O$, $\Omega$ and $\Theta$ (chapter 9 «Asymptotic notation», recalled in the chapter «Input size»).
 
 - The running time of an algorithm depends on the number of <strong>primitive operations</strong> executed by the algorithm on an input of a given size.
 

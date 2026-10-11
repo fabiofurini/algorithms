@@ -2375,6 +2375,6 @@ int EuclideanAlgorithm(int n, int m)
 ## Interactive lab { #interactive-lab }
 
 The algorithm of the chapter, one step at a time: move the sliders and press ▶.
-All the graphs of the course are in the [interactive lab](../lab/index.md#cap-5).
+The same graph full page, with the other ones of the course, is in the [interactive lab](../lab/euclid-sieve.md).
 
 <div class="gi" data-grafico="euclide-crivello"></div>

@@ -6,11 +6,11 @@ title: "Exercises · Asymptotic notation"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 10** · each solution opens with a click · [:material-book-open-variant: Chapter 10](../asymptotics/10-asymptotic-notation.md) · [:material-file-pdf-box: Exercises, volume 3 (PDF)](../pdf/exercises-3-asymptotic-notation.pdf)
+**Exercises · Chapter 9** · each solution opens with a click · [:material-book-open-variant: Chapter 9](../asymptotics/09-asymptotic-notation.md) · [:material-file-pdf-box: Exercises, volume 3 (PDF)](../pdf/exercises-3-asymptotic-notation.pdf)
 
 </div>
 
-In the exercises of this chapter the asymptotic notations are used with the definitions and the limit criteria of the chapter «Asymptotic notation», summarized below. The limits are computed with the rules of Mathematical Analysis 1.
+In the exercises of this chapter the asymptotic notations are used with the definitions and the limit criteria of the chapter «Asymptotic notation», summarized below. The limits of functions of a natural variable (sequences) are computed with the results of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/)).
 
 !!! nota ""
 
@@ -48,21 +48,21 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
 !!! nota ""
 
-    Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
+    Limit criterion: given two asymptotically positive functions $f$ and $g$ of a natural variable such that the limit of $\frac{f(n)}{g(n)}$ exists, we have
 
     \begin{align*}
     &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} =0^+ ~~\Longleftrightarrow~~ f(n)= o\big(g(n)\big),\\
-    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} \text{ or } 0^+ ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big),\\
-    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} ~~\Longrightarrow~~ f(n)= \Theta\big(g(n)\big),\\
-    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} \text{ or } +\infty ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big),\\
+    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} \text{ or } 0^+ ~~\Longleftrightarrow~~ f(n)= \bigO\big(g(n)\big),\\
+    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} ~~\Longleftrightarrow~~ f(n)= \Theta\big(g(n)\big),\\
+    &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} \text{ or } +\infty ~~\Longleftrightarrow~~ f(n)= \Omega\big(g(n)\big),\\
     &\lim_{n \rr +\infty} \frac{f(n)}{g(n)} =+\infty ~~\Longleftrightarrow~~ f(n)= \omega\big(g(n)\big).
     \end{align*}
 
     When the ratio $\frac{f(n)}{g(n)}$ has no limit (for example when it contains $\sin n$ or $\cos n$), these criteria cannot be applied and we use the definitions.
 
-<a id="esercizio-10-1"></a>
+<a id="esercizio-9-1"></a>
 
-!!! esercizio "Exercise 10.1: Asymptotic notation (E1)"
+!!! esercizio "Exercise 9.1: Asymptotic notation (E1)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -214,9 +214,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Alternatively, the limit computed in part (b) is equal to $0^+$, so that $f(n) = o(n^6)$ by the limit criterion. Then, with the constant $c = c_1$ in the definition of $o$, we would have $f(n) < c_1\,n^6$ for all sufficiently large $n$, against the lower bound $c_1\,n^6 \le f(n)$.
 
-<a id="esercizio-10-2"></a>
+<a id="esercizio-9-2"></a>
 
-!!! esercizio "Exercise 10.2: Asymptotic notation (E2)"
+!!! esercizio "Exercise 9.2: Asymptotic notation (E2)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -312,9 +312,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Equivalently, the ratio is bounded from above by $6$ and cannot diverge to $+\infty$.
 
-<a id="esercizio-10-3"></a>
+<a id="esercizio-9-3"></a>
 
-!!! esercizio "Exercise 10.3: Asymptotic notation (E3)"
+!!! esercizio "Exercise 9.3: Asymptotic notation (E3)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -466,9 +466,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Alternatively, the limit computed in part (b) is equal to $0^+$, so that $f(n) = o(n^5)$ by the limit criterion. Then, with the constant $c = c_1$ in the definition of $o$, we would have $f(n) < c_1\,n^5$ for all sufficiently large $n$, against the lower bound $c_1\,n^5 \le f(n)$.
 
-<a id="esercizio-10-4"></a>
+<a id="esercizio-9-4"></a>
 
-!!! esercizio "Exercise 10.4: Asymptotic notation (E4)"
+!!! esercizio "Exercise 9.4: Asymptotic notation (E4)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -564,9 +564,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Equivalently, the ratio is bounded from above by $4$ and cannot diverge to $+\infty$.
 
-<a id="esercizio-10-5"></a>
+<a id="esercizio-9-5"></a>
 
-!!! esercizio "Exercise 10.5: Asymptotic notation (E5)"
+!!! esercizio "Exercise 9.5: Asymptotic notation (E5)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -688,9 +688,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             so that $f(n) = \omega(n^3)$ by the limit criterion. Then, with the constant $c = c_2$ in the definition of $\omega$, we would have $f(n) > c_2\,n^3$ for all sufficiently large $n$, against the upper bound $f(n) \le c_2\,n^3$. Hence $f(n) \neq \Theta(n^3)$.
 
-<a id="esercizio-10-6"></a>
+<a id="esercizio-9-6"></a>
 
-!!! esercizio "Exercise 10.6: Asymptotic notation (E6)"
+!!! esercizio "Exercise 9.6: Asymptotic notation (E6)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -786,9 +786,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Equivalently, the ratio is bounded from above by $10$ and cannot diverge to $+\infty$.
 
-<a id="esercizio-10-7"></a>
+<a id="esercizio-9-7"></a>
 
-!!! esercizio "Exercise 10.7: Asymptotic notation (E7)"
+!!! esercizio "Exercise 9.7: Asymptotic notation (E7)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -910,9 +910,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             so that $f(n) = \omega(n^2)$ by the limit criterion. Then, with the constant $c = c_2$ in the definition of $\omega$, we would have $f(n) > c_2\,n^2$ for all sufficiently large $n$, against the upper bound $f(n) \le c_2\,n^2$. Hence $f(n) \neq \Theta(n^2)$.
 
-<a id="esercizio-10-8"></a>
+<a id="esercizio-9-8"></a>
 
-!!! esercizio "Exercise 10.8: Asymptotic notation (E8)"
+!!! esercizio "Exercise 9.8: Asymptotic notation (E8)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -1008,9 +1008,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Equivalently, the ratio is bounded from above by $2$ and cannot diverge to $+\infty$.
 
-<a id="esercizio-10-9"></a>
+<a id="esercizio-9-9"></a>
 
-!!! esercizio "Exercise 10.9: Asymptotic notation (E9)"
+!!! esercizio "Exercise 9.9: Asymptotic notation (E9)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -1162,9 +1162,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Alternatively, the limit computed in part (b) is equal to $0^+$, so that $f(n) = o(n^4)$ by the limit criterion. Then, with the constant $c = c_1$ in the definition of $o$, we would have $f(n) < c_1\,n^4$ for all sufficiently large $n$, against the lower bound $c_1\,n^4 \le f(n)$.
 
-<a id="esercizio-10-10"></a>
+<a id="esercizio-9-10"></a>
 
-!!! esercizio "Exercise 10.10: Asymptotic notation (E10)"
+!!! esercizio "Exercise 9.10: Asymptotic notation (E10)"
 
     Consider the following asymptotically non-negative function of a natural variable:
 
@@ -1260,9 +1260,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Equivalently, the ratio is bounded from above by $3$ and cannot diverge to $+\infty$.
 
-<a id="esercizio-10-11"></a>
+<a id="esercizio-9-11"></a>
 
-!!! esercizio "Exercise 10.11: Asymptotic notation (E11)"
+!!! esercizio "Exercise 9.11: Asymptotic notation (E11)"
 
     Given $a \in \R_{>0}$ and $b \in \R$, consider the following asymptotically non-negative function of a natural variable:
 
@@ -1376,9 +1376,9 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Passing to the limit as $n \to +\infty$, we obtain $0 < c_1 \le 0$, which is impossible: the inequality cannot hold for arbitrarily large $n$, since $c_1$ is a positive constant.
 
-<a id="esercizio-10-12"></a>
+<a id="esercizio-9-12"></a>
 
-!!! esercizio "Exercise 10.12: Asymptotic notation (E12)"
+!!! esercizio "Exercise 9.12: Asymptotic notation (E12)"
 
     Given $a \in \R_{>0}$, $b \in \R$ and $c \in \R$, consider the following asymptotically non-negative function of a natural variable:
 
@@ -1452,20 +1452,20 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
             Passing to the limit as $n \to +\infty$, we obtain $0 < c_1 \le 0$, which is impossible: the inequality cannot hold for arbitrarily large $n$, since $c_1$ is a positive constant.
 
-<a id="esercizio-10-13"></a>
+<a id="esercizio-9-13"></a>
 
-!!! esercizio "Exercise 10.13: Asymptotic notation (E13)"
+!!! esercizio "Exercise 9.13: Asymptotic notation (E13)"
 
     Consider four asymptotically positive functions $f$, $g$, $p$ and $q$ of a natural variable and the following implications:
 
     \begin{equation*}
     \label{eq:n13-prod}
-    f(n)=\Theta\big(p(n)\big) \ \text{ and } \ g(n)=\Theta\big(q(n)\big) ~~\Longrightarrow~~ f(n) \cdot g(n) = \Theta\big( p(n) \cdot q(n) \big), \tag{10.1}
+    f(n)=\Theta\big(p(n)\big) \ \text{ and } \ g(n)=\Theta\big(q(n)\big) ~~\Longrightarrow~~ f(n) \cdot g(n) = \Theta\big( p(n) \cdot q(n) \big), \tag{9.1}
     \end{equation*}
 
     \begin{equation*}
     \label{eq:n13-sum}
-    f(n)=\Theta\big(p(n)\big) \ \text{ and } \ g(n)=\Theta\big(q(n)\big) ~~\Longrightarrow~~ f(n) + g(n) = \Theta\big( p(n) + q(n) \big). \tag{10.2}
+    f(n)=\Theta\big(p(n)\big) \ \text{ and } \ g(n)=\Theta\big(q(n)\big) ~~\Longrightarrow~~ f(n) + g(n) = \Theta\big( p(n) + q(n) \big). \tag{9.2}
     \end{equation*}
 
     **Questions**
@@ -1584,21 +1584,21 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
         so that $7\;n = o(n^2)$ and therefore $7\;n \neq \Theta(n^2)$.
 
-<a id="esercizio-10-14"></a>
+<a id="esercizio-9-14"></a>
 
-!!! esercizio "Exercise 10.14: Asymptotic notation (E14)"
+!!! esercizio "Exercise 9.14: Asymptotic notation (E14)"
 
     Consider two asymptotically non-negative functions $f$ and $g$ of a natural variable and the following equivalences:
 
     \begin{align*}
     \label{eq:n14-a}
-    &f(n)= \Theta\big(g(n)\big) ~~\Longleftrightarrow~~ f(n)= \bigO\big(g(n)\big) \ \text{ and } \ f(n)= \Omega\big(g(n)\big), \tag{10.3}\\[1ex]
+    &f(n)= \Theta\big(g(n)\big) ~~\Longleftrightarrow~~ f(n)= \bigO\big(g(n)\big) \ \text{ and } \ f(n)= \Omega\big(g(n)\big), \tag{9.3}\\[1ex]
     \label{eq:n14-b}
-    &f(n)= \bigO\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \Omega\big(f(n)\big), \tag{10.4}\\[1ex]
+    &f(n)= \bigO\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \Omega\big(f(n)\big), \tag{9.4}\\[1ex]
     \label{eq:n14-c}
-    &f(n)= o\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \omega\big(f(n)\big), \tag{10.5}\\[1ex]
+    &f(n)= o\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \omega\big(f(n)\big), \tag{9.5}\\[1ex]
     \label{eq:n14-d}
-    &f(n)= \Theta\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \Theta\big(f(n)\big). \tag{10.6}
+    &f(n)= \Theta\big(g(n)\big) ~~\Longleftrightarrow~~ g(n)= \Theta\big(f(n)\big). \tag{9.6}
     \end{align*}
 
     **Questions**
@@ -1689,23 +1689,23 @@ In the exercises of this chapter the asymptotic notations are used with the defi
 
         It follows that “$f(n)= \Theta\big(g(n)\big)$” is a necessary and sufficient condition for “$g(n)= \Theta\big(f(n)\big)$”.
 
-<a id="esercizio-10-15"></a>
+<a id="esercizio-9-15"></a>
 
-!!! esercizio "Exercise 10.15: Asymptotic notation (E15)"
+!!! esercizio "Exercise 9.15: Asymptotic notation (E15)"
 
     Consider three asymptotically non-negative functions $f$, $g$ and $h$ of a natural variable and the following implications (<strong>transitivity</strong>):
 
     \begin{align*}
     \label{eq:n15-1}
-    &f(n)= \Theta\big(g(n)\big) \ \text{ and } \ g(n) = \Theta\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \Theta\big(h(n)\big), \tag{10.7}\\[1ex]
+    &f(n)= \Theta\big(g(n)\big) \ \text{ and } \ g(n) = \Theta\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \Theta\big(h(n)\big), \tag{9.7}\\[1ex]
     \label{eq:n15-2}
-    &f(n)= \bigO\big(g(n)\big) \ \text{ and } \ g(n) = \bigO\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(h(n)\big), \tag{10.8}\\[1ex]
+    &f(n)= \bigO\big(g(n)\big) \ \text{ and } \ g(n) = \bigO\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(h(n)\big), \tag{9.8}\\[1ex]
     \label{eq:n15-3}
-    &f(n)= \Omega\big(g(n)\big) \ \text{ and } \ g(n) = \Omega\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(h(n)\big), \tag{10.9}\\[1ex]
+    &f(n)= \Omega\big(g(n)\big) \ \text{ and } \ g(n) = \Omega\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(h(n)\big), \tag{9.9}\\[1ex]
     \label{eq:n15-4}
-    &f(n)= o\big(g(n)\big) \ \text{ and } \ g(n) = o\big(h(n)\big) ~~\Longrightarrow~~ f(n)= o\big(h(n)\big), \tag{10.10}\\[1ex]
+    &f(n)= o\big(g(n)\big) \ \text{ and } \ g(n) = o\big(h(n)\big) ~~\Longrightarrow~~ f(n)= o\big(h(n)\big), \tag{9.10}\\[1ex]
     \label{eq:n15-5}
-    &f(n)= \omega\big(g(n)\big) \ \text{ and } \ g(n) = \omega\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \omega\big(h(n)\big). \tag{10.11}
+    &f(n)= \omega\big(g(n)\big) \ \text{ and } \ g(n) = \omega\big(h(n)\big) ~~\Longrightarrow~~ f(n)= \omega\big(h(n)\big). \tag{9.11}
     \end{align*}
 
     **Questions**
@@ -1830,19 +1830,19 @@ In the exercises of this chapter the asymptotic notations are used with the defi
         f(n) \neq \omega\big(h(n)\big) ~~\Longrightarrow~~ f(n)\neq\omega\big(g(n)\big) \ \text{ or } \ g(n)\neq\omega\big(h(n)\big).
         $$
 
-<a id="esercizio-10-16"></a>
+<a id="esercizio-9-16"></a>
 
-!!! esercizio "Exercise 10.16: Asymptotic notation (E16)"
+!!! esercizio "Exercise 9.16: Asymptotic notation (E16)"
 
     Consider an asymptotically non-negative function $f$ of a natural variable and the following <strong>reflexivity</strong> properties:
 
     \begin{align*}
     \label{eq:n16-1}
-    &f(n)= \Theta\big(f(n)\big), \tag{10.12}\\[1ex]
+    &f(n)= \Theta\big(f(n)\big), \tag{9.12}\\[1ex]
     \label{eq:n16-2}
-    &f(n)= \bigO\big(f(n)\big), \tag{10.13}\\[1ex]
+    &f(n)= \bigO\big(f(n)\big), \tag{9.13}\\[1ex]
     \label{eq:n16-3}
-    &f(n)= \Omega\big(f(n)\big). \tag{10.14}
+    &f(n)= \Omega\big(f(n)\big). \tag{9.14}
     \end{align*}
 
     **Questions**

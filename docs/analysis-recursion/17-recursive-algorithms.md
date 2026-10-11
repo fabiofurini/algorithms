@@ -3389,6 +3389,6 @@ The four problems of the chapter cover the three typical shapes of a recursive a
 ## Interactive lab { #interactive-lab }
 
 The algorithm of the chapter, one step at a time: move the sliders and press ▶.
-All the graphs of the course are in the [interactive lab](../lab/index.md#cap-17).
+The same graph full page, with the other ones of the course, is in the [interactive lab](../lab/merge-sort.md).
 
 <div class="gi" data-grafico="merge-sort"></div>

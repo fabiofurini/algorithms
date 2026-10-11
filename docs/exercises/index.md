@@ -22,12 +22,12 @@ Exercises with **worked solutions**, chapter by chapter, as in the PDF exercise 
     - [7. Introduction to Python](ex-07-introduction-to-python.md) · 5 exercises
     - [8. Introduction to Java](ex-08-introduction-to-java.md) · 5 exercises
 
--   **Asymptotic growth and notation**
+-   **Asymptotic notation and growth**
 
     ---
 
-    - [9. Asymptotic growth](ex-09-asymptotic-growth.md) · 4 exercises
-    - [10. Asymptotic notation](ex-10-asymptotic-notation.md) · 16 exercises
+    - [9. Asymptotic notation](ex-09-asymptotic-notation.md) · 16 exercises
+    - [10. Asymptotic growth](ex-10-asymptotic-growth.md) · 4 exercises
 
 -   **Analysis and recursion**
 

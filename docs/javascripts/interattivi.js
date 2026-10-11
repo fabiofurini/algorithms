@@ -47,6 +47,7 @@
  *   rapporto      CSS aspect-ratio del riquadro, es. "1 / 1" (default "4 / 3")
  *   assi          false: niente assi (default true)
  *   griglia       true: griglia di sfondo
+ *   (la classe gi-app-intera sul div .gi dimensiona la board al contenitore: pagine delle app del laboratorio)
  *   opzioniBoard  oggetto unito alle opzioni di JXG.JSXGraph.initBoard
  *   g(x, p, f, chiave, st)  funzione di una variabile disegnata in automatico
  *                   (colore b; f = st.fn().f se la voce di funzioni ha un campo f);
@@ -389,6 +390,23 @@
     };
     const vista = () => (typeof R.vista === "function" ? R.vista(chiave, st) : R.vista) || [-5, 5, 5, -5];
 
+    // App a tutta pagina (classe gi-app-intera): la board segue le dimensioni del contenitore .gi-board
+    // (fissate dal CSS) e si ridisegna al resize della finestra; negli altri usi resta com'è.
+    let osservaBoard = null;
+    function adattaAlContenitore() {
+      if (osservaBoard) osservaBoard.disconnect();
+      const adatta = () => {
+        const w = boardEl.clientWidth, hh = boardEl.clientHeight;
+        if (board && w > 0 && hh > 0 && (board.canvasWidth !== w || board.canvasHeight !== hh)) {
+          board.resizeContainer(w, hh, true);
+          board.fullUpdate();
+        }
+      };
+      adatta();
+      if (window.ResizeObserver) { osservaBoard = new ResizeObserver(adatta); osservaBoard.observe(boardEl); }
+      else window.addEventListener("resize", adatta);
+    }
+
     function creaBoard() {
       if (board) JXG.JSXGraph.freeBoard(board);
       const muted = css(el, "--gi-muted"), line = css(el, "--gi-line");
@@ -400,6 +418,7 @@
         defaultAxes: { x: assi, y: assi },
       }, R.opzioniBoard || {}));
       st.board = board;
+      if (el.classList.contains("gi-app-intera")) adattaAlContenitore();
       if (R.originale) board.create("functiongraph", [(x) => voce().f(x)], R.fPieno
         ? { strokeColor: colore("b"), strokeWidth: 3, highlight: false }
         : { strokeColor: colore("orig"), strokeWidth: 2.2, dash: 2, highlight: false });

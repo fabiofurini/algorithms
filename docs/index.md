@@ -19,7 +19,7 @@ professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
 **The course lecture notes, online**, in four parts: basic algorithms (representation of numbers,
 pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
-Java), asymptotic growth and notation, analysis and recursion (running time, correctness,
+Java), asymptotic notation and growth, analysis and recursion (running time, correctness,
 recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
 pseudo-code, code, examples executed step by step and exercises with solutions.
 
@@ -85,13 +85,13 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
     [:octicons-arrow-right-24: The chapters](languages/index.md)
 
--   :material-chart-line: **3 · Asymptotic growth and notation**
+-   :material-chart-line: **3 · Asymptotic notation and growth**
 
     ---
 
-    How the functions of a natural variable that count the steps of an algorithm grow: the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth; the asymptotic notations Theta, big O, Omega, little o and omega, their properties and their use in the analysis of algorithms. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
+    How the functions of a natural variable that count the steps of an algorithm are compared: the asymptotic notations Theta, big O, Omega, little o and omega, their properties and the limit criterion; then the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth written with the symbols. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
 
-    9\. Asymptotic growth · 10\. Asymptotic notation
+    9\. Asymptotic notation · 10\. Asymptotic growth
 
     [:octicons-arrow-right-24: The chapters](asymptotics/index.md)
 

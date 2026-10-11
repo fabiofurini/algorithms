@@ -6,27 +6,29 @@ title: "Asymptotic notation"
 
 <div class="info-capitolo" markdown>
 
-**Part 3 · Asymptotic growth and notation · Chapter 10** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises](../exercises/ex-10-asymptotic-notation.md)
+**Part 3 · Asymptotic notation and growth · Chapter 9** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises](../exercises/ex-09-asymptotic-notation.md)
 
 </div>
 
 ## Introduction
 
-In the chapter «Asymptotic growth» we met the main families of increasing functions of a natural variable (logarithmic, power, exponential and factorial functions) and we compared how fast they grow by means of limits. In this chapter we give the precise language used to express these comparisons: the <strong>asymptotic notations</strong> $\Theta$, $\bigO$, $\Omega$, $o$ and $\omega$.
+The number of steps executed by an algorithm is a function of a natural number: the size of its input. Two algorithms that solve the same problem are compared by looking at how fast these functions grow when the input grows, neglecting constant factors and the values on a few small inputs. In this chapter we give the precise language used to express these comparisons: the <strong>asymptotic notations</strong> $\Theta$, $\bigO$, $\Omega$, $o$ and $\omega$.
 
-The functions of a natural variable (sequences) and their limits are studied in the course of Mathematical Analysis 1, and we do not repeat them here: we only use the definition of limit and the elementary rules to compute limits.
+!!! chiave ""
+
+    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use the definition of limit and the rules to compute limits of the part <em>Limits of sequences</em> of that course.
 
 The plan of the chapter is the following.
 
-- In Section [10.1](#sez-sec-an-theta) we define the notations $\Theta$, $\bigO$ and $\Omega$, we interpret them graphically and we prove that $\Theta$ is the same as $\bigO$ and $\Omega$ together. We also study the sum and the maximum of two functions.
+- In Section [9.1](#sez-sec-an-theta) we define the notations $\Theta$, $\bigO$ and $\Omega$, we interpret them graphically and we prove that $\Theta$ is the same as $\bigO$ and $\Omega$ together. We also study the sum and the maximum of two functions.
 
-- In Section [10.2](#sez-sec-an-small) we define the notations $o$ and $\omega$, which express bounds that are <strong>not</strong> asymptotically tight.
+- In Section [9.2](#sez-sec-an-small) we define the notations $o$ and $\omega$, which express bounds that are <strong>not</strong> asymptotically tight.
 
-- In Section [10.3](#sez-sec-an-limits) we link the five notations to the limit of the ratio $\frac{f(n)}{g(n)}$. This gives a fast way to compare two functions, but it does not always work, since the limit may not exist.
+- In Section [9.3](#sez-sec-an-limits) we link the five notations to the limit of the ratio $\frac{f(n)}{g(n)}$. When the limit exists, its value decides which of the five notations hold ([Proposition 9.18](#box-33-propLimitCriterion), the <strong>limit criterion</strong>); when it does not exist, we use the definitions.
 
-- In Section [10.4](#sez-sec-an-relational) we prove the relational properties of the notations (transitivity, reflexivity, symmetry and transpose symmetry), which make the asymptotic comparison of two functions similar to the comparison of two real numbers, with one important difference.
+- In Section [9.4](#sez-sec-an-relational) we prove the relational properties of the notations (transitivity, reflexivity, symmetry and transpose symmetry), which make the asymptotic comparison of two functions similar to the comparison of two real numbers, with one important difference.
 
-- In Sections [10.5](#sez-sec-an-growth) and [10.6](#sez-sec-an-algorithms) we connect the notation with the orders of growth of the chapter «Asymptotic growth» and with the analysis of algorithms of the chapters «Input size» and «Running time».
+- In Section [9.5](#sez-sec-an-algorithms) we see how the notation is used in the analysis of algorithms of the chapters «Input size» and «Running time».
 
 Every constant ($c$, $c_1$, $c_2$, $n_1$) used in the examples of the chapter has been checked numerically with a script, for all the values of $n$ from the threshold $n_1$ up to at least $2 \cdot 10^5$.
 
@@ -34,23 +36,23 @@ Throughout the chapter we use the following terminology.
 
 <a id="box-1-defAsymNonNeg"></a>
 
-!!! definizione "Definition 10.1: asymptotically non-negative and asymptotically positive functions"
+!!! definizione "Definition 9.1: asymptotically non-negative and asymptotically positive functions"
 
     A function $f$ of a natural variable is <strong>asymptotically non-negative</strong> if there exists $\tilde n \in \N$ such that $f(n) \ge 0$ for all $n \ge \tilde n$. It is <strong>asymptotically positive</strong> if there exists $\tilde n \in \N$ such that $f(n) > 0$ for all $n \ge \tilde n$.
 
-## 10.1 $\Theta$, $\bigO$ and $\Omega$ notations { #sez-sec-an-theta }
+## 9.1 $\Theta$, $\bigO$ and $\Omega$ notations { #sez-sec-an-theta }
 
-### 10.1.1 Definitions
+### 9.1.1 Definitions
 
 <a id="box-2-defTheta"></a>
 
-!!! definizione "Definition 10.2: $\Theta$-notation"
+!!! definizione "Definition 9.2: $\Theta$-notation"
 
     Given two functions $f$ and $g$ of a natural variable, we write $f(n)=\Theta\big(g(n)\big)$ if there exist $c_1,c_2 \in \R_{>0}$ and $n_1 \in \N$ such that
 
     \begin{equation*}
     \label{eq:an-theta}
-    0 \le c_1 \: g(n) \le f(n) \le c_2 \: g(n),\qquad \forall n \ge n_1. \tag{10.1}
+    0 \le c_1 \: g(n) \le f(n) \le c_2 \: g(n),\qquad \forall n \ge n_1. \tag{9.1}
     \end{equation*}
 
 - If $f(n)= \Theta\big(g(n)\big)$, then, for sufficiently large values of $n$, the function $f$ is bounded from above and from below by the function $g$ scaled by two positive constants.
@@ -61,13 +63,13 @@ Throughout the chapter we use the following terminology.
 
 <a id="box-3-defBigO"></a>
 
-!!! definizione "Definition 10.3: $\bigO$-notation"
+!!! definizione "Definition 9.3: $\bigO$-notation"
 
     Given two functions $f$ and $g$ of a natural variable, we write $f(n)=\bigO\big(g(n)\big)$ if there exist $c \in \R_{>0}$ and $n_1 \in \N$ such that
 
     \begin{equation*}
     \label{eq:an-bigo}
-    0 \le f(n) \le c \: g(n),\qquad \forall n \ge n_1. \tag{10.2}
+    0 \le f(n) \le c \: g(n),\qquad \forall n \ge n_1. \tag{9.2}
     \end{equation*}
 
 - If $f(n)= \bigO\big(g(n)\big)$, then, for sufficiently large values of $n$, the function $f$ is bounded from above by the function $g$ scaled by a positive constant.
@@ -76,13 +78,13 @@ Throughout the chapter we use the following terminology.
 
 <a id="box-4-defOmega"></a>
 
-!!! definizione "Definition 10.4: $\Omega$-notation"
+!!! definizione "Definition 9.4: $\Omega$-notation"
 
     Given two functions $f$ and $g$ of a natural variable, we write $f(n)=\Omega\big(g(n)\big)$ if there exist $c \in \R_{>0}$ and $n_1 \in \N$ such that
 
     \begin{equation*}
     \label{eq:an-omega}
-    0 \le c \: g(n) \le f(n),\qquad \forall n \ge n_1. \tag{10.3}
+    0 \le c \: g(n) \le f(n),\qquad \forall n \ge n_1. \tag{9.3}
     \end{equation*}
 
 - If $f(n)= \Omega\big(g(n)\big)$, then, for sufficiently large values of $n$, the function $f$ is bounded from below by the function $g$ scaled by a positive constant.
@@ -97,11 +99,11 @@ Throughout the chapter we use the following terminology.
 
 - To prove that a statement is false, we proceed by contradiction: we suppose that the constants exist and we derive an inequality that cannot hold for arbitrarily large $n$.
 
-### 10.1.2 Examples of asymptotic tight bounds
+### 9.1.2 Examples of asymptotic tight bounds
 
 <a id="box-5-ex-an-tight1"></a>
 
-!!! esempio "Example 10.1: asymptotic tight bound"
+!!! esempio "Example 9.1: asymptotic tight bound"
 
     - To prove that
 
@@ -129,7 +131,7 @@ Throughout the chapter we use the following terminology.
 
         For $n = 6$ the lower bound fails, since $-18 + 18 = 0 < \frac{36}{14}$.
 
-        ![Figure 1](../img/10-asymptotic-notation/fig01.svg){ .fig .ovale loading=lazy style="width:75%" }
+        ![Figure 1](../img/09-asymptotic-notation/fig01.svg){ .fig .ovale loading=lazy style="width:75%" }
 
     - The previous proof also proves that
 
@@ -139,7 +141,7 @@ Throughout the chapter we use the following terminology.
 
 <a id="box-6-ex-an-tight2"></a>
 
-!!! esempio "Example 10.2: asymptotic tight bound"
+!!! esempio "Example 9.2: asymptotic tight bound"
 
     - To prove that
 
@@ -165,7 +167,7 @@ Throughout the chapter we use the following terminology.
         0 \le \frac{1}{2}\;n^2 \le n^2\; (2 - \sin n) \le \frac{7}{2}\;n^2,\qquad \forall n \ge 1.
         $$
 
-        ![Figure 2](../img/10-asymptotic-notation/fig02.svg){ .fig .ovale loading=lazy style="width:75%" }
+        ![Figure 2](../img/09-asymptotic-notation/fig02.svg){ .fig .ovale loading=lazy style="width:75%" }
 
     - The previous proof also proves that
 
@@ -173,27 +175,27 @@ Throughout the chapter we use the following terminology.
         n^2\; (2 - \sin n) = \bigO(n^2) \qquad\text{and}\qquad n^2\; (2 - \sin n) = \Omega(n^2).
         $$
 
-### 10.1.3 Graphical interpretation
+### 9.1.3 Graphical interpretation
 
 The next figure gives a graphical interpretation of the three notations.
 
-![Figure 3](../img/10-asymptotic-notation/fig03.svg){ .fig .ovale loading=lazy style="width:95%" }
+![Figure 3](../img/09-asymptotic-notation/fig03.svg){ .fig .ovale loading=lazy style="width:95%" }
 
 - In (a), from $n_1$ on, the values of $f$ lie between $c_1\,g(n)$ and $c_2\,g(n)$; in (b) they lie below $c\,g(n)$; in (c) they lie above $c\,g(n)$. Before $n_1$ nothing is required.
 
 - In the figure, $n_1$ is the smallest possible threshold, but any larger value would also work. The figure also illustrates one possible choice of the constants $c_1, c_2$ and $c$, but other valid choices exist.
 
-### 10.1.4 $\Theta$ versus $\bigO$ and $\Omega$
+### 9.1.4 $\Theta$ versus $\bigO$ and $\Omega$
 
 <a id="box-7-obsThetaOOmega"></a>
 
-!!! teorema "Observation 10.5: $\Theta$ is the same as $\bigO$ and $\Omega$"
+!!! teorema "Observation 9.5: $\Theta$ is the same as $\bigO$ and $\Omega$"
 
     Given two functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-theta-iff}
-    f(n)= \Theta\big(g(n)\big) \quad\Longleftrightarrow\quad f(n)= \bigO\big(g(n)\big) \ \text{ and } \ f(n)= \Omega\big(g(n)\big). \tag{10.4}
+    f(n)= \Theta\big(g(n)\big) \quad\Longleftrightarrow\quad f(n)= \bigO\big(g(n)\big) \ \text{ and } \ f(n)= \Omega\big(g(n)\big). \tag{9.4}
     \end{equation*}
 
     In particular,
@@ -202,7 +204,7 @@ The next figure gives a graphical interpretation of the three notations.
     \label{eq:an-theta-o}
     f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big)
     \qquad\text{and}\qquad
-    f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{10.5}
+    f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{9.5}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -243,7 +245,7 @@ The next figure gives a graphical interpretation of the three notations.
 
 <a id="box-8-ex-an-upper1"></a>
 
-!!! esempio "Example 10.3: asymptotic upper bound that is not tight"
+!!! esempio "Example 9.3: asymptotic upper bound that is not tight"
 
     - To prove that
 
@@ -271,7 +273,7 @@ The next figure gives a graphical interpretation of the three notations.
 
         (For $n=1$ the inequality fails, since $3 > \frac{3}{2}$.)
 
-        ![Figure 4](../img/10-asymptotic-notation/fig04.svg){ .fig .ovale loading=lazy style="width:65%" }
+        ![Figure 4](../img/09-asymptotic-notation/fig04.svg){ .fig .ovale loading=lazy style="width:65%" }
 
     - To prove that
 
@@ -295,7 +297,7 @@ The next figure gives a graphical interpretation of the three notations.
 
 <a id="box-9-ex-an-upper2"></a>
 
-!!! esempio "Example 10.4: asymptotic upper bound that is not tight"
+!!! esempio "Example 9.4: asymptotic upper bound that is not tight"
 
     - To prove that
 
@@ -321,7 +323,7 @@ The next figure gives a graphical interpretation of the three notations.
         0 \le n^2\;\sin^2 n\le \frac{3}{2} \;n^2,\qquad \forall n \ge 1.
         $$
 
-        ![Figure 5](../img/10-asymptotic-notation/fig05.svg){ .fig .ovale loading=lazy style="width:65%" }
+        ![Figure 5](../img/09-asymptotic-notation/fig05.svg){ .fig .ovale loading=lazy style="width:65%" }
 
     - To prove that
 
@@ -345,7 +347,7 @@ The next figure gives a graphical interpretation of the three notations.
 
 <a id="box-10-ex-an-lower1"></a>
 
-!!! esempio "Example 10.5: asymptotic lower bound that is not tight"
+!!! esempio "Example 9.5: asymptotic lower bound that is not tight"
 
     - To prove that
 
@@ -371,7 +373,7 @@ The next figure gives a graphical interpretation of the three notations.
         0 \le \frac{3}{2}\;n^2 \le 2\;n^3,\qquad \forall n \ge 1.
         $$
 
-        ![Figure 6](../img/10-asymptotic-notation/fig06.svg){ .fig .ovale loading=lazy style="width:65%" }
+        ![Figure 6](../img/09-asymptotic-notation/fig06.svg){ .fig .ovale loading=lazy style="width:65%" }
 
     - To prove that
 
@@ -393,17 +395,17 @@ The next figure gives a graphical interpretation of the three notations.
 
         which cannot hold for arbitrarily large $n$, since $c_2$ is a constant (it fails for every $n > \frac{c_2}{2}$).
 
-### 10.1.5 Sum and maximum of two functions
+### 9.1.5 Sum and maximum of two functions
 
 <a id="box-11-obsAddBound"></a>
 
-!!! teorema "Observation 10.6: adding the bound to the function"
+!!! teorema "Observation 9.6: adding the bound to the function"
 
     Given two functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-addbound}
-    f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n) + g(n) = \Theta\big(g(n)\big). \tag{10.6}
+    f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n) + g(n) = \Theta\big(g(n)\big). \tag{9.6}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -424,9 +426,9 @@ The next figure gives a graphical interpretation of the three notations.
 
 <a id="box-12-ex-an-addbound"></a>
 
-!!! esempio "Example 10.6: asymptotic tight bound of a sum"
+!!! esempio "Example 9.6: asymptotic tight bound of a sum"
 
-    - In [Example 10.1](#box-5-ex-an-tight1) we proved that
+    - In [Example 9.1](#box-5-ex-an-tight1) we proved that
 
         $$
         - 3\: n + \frac{1}{2} \: n^2 = \Theta(n^2)
@@ -440,7 +442,7 @@ The next figure gives a graphical interpretation of the three notations.
 
         with the constants $c_1+1=\frac{15}{14}$, $c_2+1=\frac{3}{2}$ and $n_1=7$.
 
-    - In [Example 10.2](#box-6-ex-an-tight2) we proved that
+    - In [Example 9.2](#box-6-ex-an-tight2) we proved that
 
         $$
         n^2\; (2 - \sin n) = \Theta(n^2)
@@ -468,7 +470,7 @@ The next figure gives a graphical interpretation of the three notations.
 
 <a id="box-13-ex-an-addbound-counter"></a>
 
-!!! esempio "Example 10.7: the converse of [Observation 10.6](#box-11-obsAddBound) is false"
+!!! esempio "Example 9.7: the converse of [Observation 9.6](#box-11-obsAddBound) is false"
 
     Let $f(n) = 10\:n$ and $g(n) = \frac{1}{10}\:n^2$.
 
@@ -496,7 +498,7 @@ The next figure gives a graphical interpretation of the three notations.
         0 \le \frac{1}{10} \: n^2 \le 10 \: n + \frac{1}{10}\: n^2 \le \frac{21}{10} \: n^2,\qquad \forall n \ge 5.
         $$
 
-        ![Figure 7](../img/10-asymptotic-notation/fig07.svg){ .fig .ovale loading=lazy style="width:65%" }
+        ![Figure 7](../img/09-asymptotic-notation/fig07.svg){ .fig .ovale loading=lazy style="width:65%" }
 
     - To prove that
 
@@ -522,7 +524,7 @@ When we add two functions, the asymptotic behaviour of the sum is determined by 
 
 <a id="box-14-obsSumMax1"></a>
 
-!!! teorema "Observation 10.7: sum and maximum (1)"
+!!! teorema "Observation 9.7: sum and maximum (1)"
 
     Given two asymptotically non-negative functions $f$ and $g$ of a natural variable, we have
 
@@ -548,7 +550,7 @@ When we add two functions, the asymptotic behaviour of the sum is determined by 
 
 <a id="box-15-obsSumMax2"></a>
 
-!!! teorema "Observation 10.8: sum and maximum (2)"
+!!! teorema "Observation 9.8: sum and maximum (2)"
 
     Given two asymptotically non-negative functions $f$ and $g$ of a natural variable, we have
 
@@ -574,9 +576,9 @@ When we add two functions, the asymptotic behaviour of the sum is determined by 
 
 <a id="box-16-ex-an-summax"></a>
 
-!!! esempio "Example 10.8: sum and maximum"
+!!! esempio "Example 9.8: sum and maximum"
 
-    By Observations [10.7](#box-14-obsSumMax1) and [Observation 10.8](#box-15-obsSumMax2) we have
+    By Observations [9.7](#box-14-obsSumMax1) and [Observation 9.8](#box-15-obsSumMax2) we have
 
     $$
     \frac{1}{2} \: n^2 + 2^n = \Theta \left( \max \left\{ \frac{1}{2} \: n^2 , 2^n \right\} \right)
@@ -586,13 +588,13 @@ When we add two functions, the asymptotic behaviour of the sum is determined by 
 
     In this case $\max\left\{ \frac{1}{2} \: n^2 , 2^n \right\} = 2^n$ for every $n \in \N$, so that $\frac{1}{2} \: n^2 + 2^n = \Theta(2^n)$, with $c_1=1$, $c_2=2$ and $n_1=0$.
 
-## 10.2 $o$ and $\omega$ notations { #sez-sec-an-small }
+## 9.2 $o$ and $\omega$ notations { #sez-sec-an-small }
 
 The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or may not be asymptotically tight. We use the $o$-notation to denote an asymptotic upper bound that is <strong>not asymptotically tight</strong>, and the $\omega$-notation to denote an asymptotic lower bound that is <strong>not asymptotically tight</strong>.
 
 <a id="box-17-ex-an-tightnontight"></a>
 
-!!! esempio "Example 10.9: asymptotically tight and non-tight upper bounds"
+!!! esempio "Example 9.9: asymptotically tight and non-tight upper bounds"
 
     - We have $3n^3 = \bigO(n^3)$ and $3n^3 = \Theta(n^3)$: $n^3$ is an asymptotic upper bound for $3n^3$, and it is also an asymptotically tight bound.
 
@@ -600,13 +602,13 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
 <a id="box-18-defSmallO"></a>
 
-!!! definizione "Definition 10.9: $o$-notation"
+!!! definizione "Definition 9.9: $o$-notation"
 
     Given two functions $f$ and $g$ of a natural variable, we write $f(n)=o\big(g(n)\big)$ if for all $c \in \R_{>0}$ there exists $n_1 \in \N$ such that
 
     \begin{equation*}
     \label{eq:an-smallo}
-    0 \le f(n) < c \: g(n),\qquad \forall n \ge n_1. \tag{10.7}
+    0 \le f(n) < c \: g(n),\qquad \forall n \ge n_1. \tag{9.7}
     \end{equation*}
 
 - If $f(n)= o\big(g(n)\big)$, then, for sufficiently large values of $n$, the function $f$ is bounded from above by the function $g$ scaled by <strong>any</strong> positive constant, that is, the function $f$ becomes insignificant relative to the function $g$.
@@ -617,13 +619,13 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
 <a id="box-19-defSmallOmega"></a>
 
-!!! definizione "Definition 10.10: $\omega$-notation"
+!!! definizione "Definition 9.10: $\omega$-notation"
 
     Given two functions $f$ and $g$ of a natural variable, we write $f(n)=\omega\big(g(n)\big)$ if for all $c \in \R_{>0}$ there exists $n_1 \in \N$ such that
 
     \begin{equation*}
     \label{eq:an-smallomega}
-    0 \le c \: g(n) < f(n),\qquad \forall n \ge n_1. \tag{10.8}
+    0 \le c \: g(n) < f(n),\qquad \forall n \ge n_1. \tag{9.8}
     \end{equation*}
 
 - If $f(n)= \omega\big(g(n)\big)$, then, for sufficiently large values of $n$, the function $f$ is bounded from below by the function $g$ scaled by <strong>any</strong> positive constant, that is, the function $f$ becomes arbitrarily large relative to the function $g$.
@@ -636,7 +638,7 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
 <a id="box-20-ex-an-smallo"></a>
 
-!!! esempio "Example 10.10: asymptotic upper bound that is not tight"
+!!! esempio "Example 9.10: asymptotic upper bound that is not tight"
 
     - To prove that
 
@@ -658,7 +660,7 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
         This holds whenever $n > \frac{3}{c}$, so we can choose any $n_1 > \frac{3}{c}$, for example $n_1 = \big\lfloor \frac{3}{c} \big\rfloor + 1$. For instance, $c = 1$ gives $n_1 = 4$, $c = \frac{1}{2}$ gives $n_1 = 7$, and $c = \frac{1}{10}$ gives $n_1 = 31$.
 
-        ![Figure 8](../img/10-asymptotic-notation/fig08.svg){ .fig .ovale loading=lazy style="width:65%" }
+        ![Figure 8](../img/09-asymptotic-notation/fig08.svg){ .fig .ovale loading=lazy style="width:65%" }
 
     - The previous proof also proves that
 
@@ -690,7 +692,7 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
 <a id="box-21-ex-an-smallomega"></a>
 
-!!! esempio "Example 10.11: asymptotic lower bound that is not tight"
+!!! esempio "Example 9.11: asymptotic lower bound that is not tight"
 
     - To prove that
 
@@ -712,7 +714,7 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
         This holds whenever $n > 5c$, so we can choose any $n_1 > 5c$, for example $n_1 = \lfloor 5c \rfloor + 1$. For instance, $c = 1$ gives $n_1 = 6$ and $c = 10$ gives $n_1 = 51$.
 
-        ![Figure 9](../img/10-asymptotic-notation/fig09.svg){ .fig .ovale loading=lazy style="width:60%" }
+        ![Figure 9](../img/09-asymptotic-notation/fig09.svg){ .fig .ovale loading=lazy style="width:60%" }
 
     - The previous proof also proves that
 
@@ -740,21 +742,21 @@ The asymptotic bounds expressed by the $\bigO$- and $\Omega$-notations may or ma
 
         which cannot hold for arbitrarily large $n$, since $c_2$ is a constant.
 
-## 10.3 Limits and asymptotic notations { #sez-sec-an-limits }
+## 9.3 Limits and asymptotic notations { #sez-sec-an-limits }
 
 When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately which notations hold. In this section the functions $f$ and $g$ are <strong>asymptotically positive</strong>, so that the ratio is defined for all sufficiently large $n$. The limits are computed with the rules of Mathematical Analysis 1.
 
-### 10.3.1 Limits and the notations $o$ and $\omega$
+### 9.3.1 Limits and the notations $o$ and $\omega$
 
 <a id="box-22-obsLimZero"></a>
 
-!!! teorema "Observation 10.11: limit equal to zero"
+!!! teorema "Observation 9.11: limit equal to zero"
 
     Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-limzero}
-    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} =0^+ ~~\Longleftrightarrow~~ f(n)= o\big(g(n)\big). \tag{10.9}
+    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} =0^+ ~~\Longleftrightarrow~~ f(n)= o\big(g(n)\big). \tag{9.9}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -783,13 +785,13 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-23-obsSmallOBigO"></a>
 
-!!! teorema "Observation 10.12: $o$ implies $\bigO$"
+!!! teorema "Observation 9.12: $o$ implies $\bigO$"
 
     Given two functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-smallo-bigo}
-    f(n)= o\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big). \tag{10.10}
+    f(n)= o\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big). \tag{9.10}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -810,7 +812,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-24-ex-an-bigo-not-smallo"></a>
 
-!!! esempio "Example 10.12: an upper bound that is not an $o$"
+!!! esempio "Example 9.12: an upper bound that is not an $o$"
 
     - To prove that
 
@@ -852,13 +854,13 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-25-obsLimInf"></a>
 
-!!! teorema "Observation 10.13: limit equal to $+\infty$"
+!!! teorema "Observation 9.13: limit equal to $+\infty$"
 
     Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-liminf}
-    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} =+\infty ~~\Longleftrightarrow~~ f(n)= \omega\big(g(n)\big). \tag{10.11}
+    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} =+\infty ~~\Longleftrightarrow~~ f(n)= \omega\big(g(n)\big). \tag{9.11}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -887,13 +889,13 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-26-obsSmallOmegaOmega"></a>
 
-!!! teorema "Observation 10.14: $\omega$ implies $\Omega$"
+!!! teorema "Observation 9.14: $\omega$ implies $\Omega$"
 
     Given two functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-smallomega-omega}
-    f(n)= \omega\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{10.12}
+    f(n)= \omega\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{9.12}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -914,7 +916,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-27-ex-an-omega-not-smallomega"></a>
 
-!!! esempio "Example 10.13: a lower bound that is not an $\omega$"
+!!! esempio "Example 9.13: a lower bound that is not an $\omega$"
 
     - To prove that
 
@@ -954,17 +956,17 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
         and we apply $\eqref{eq:an-liminf}$.
 
-### 10.3.2 Limits and the notations $\Theta$, $\bigO$ and $\Omega$
+### 9.3.2 Limits and the notations $\Theta$, $\bigO$ and $\Omega$
 
 <a id="box-28-obsLimFinite"></a>
 
-!!! teorema "Observation 10.15: finite positive limit"
+!!! teorema "Observation 9.15: finite positive limit"
 
     Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-limfinite}
-    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} ~~\Longrightarrow~~ f(n)= \Theta\big(g(n)\big). \tag{10.13}
+    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} ~~\Longrightarrow~~ f(n)= \Theta\big(g(n)\big). \tag{9.13}
     \end{equation*}
 
 ??? dimostrazione "Proof"
@@ -989,7 +991,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
     f(n) \neq \Theta\big(g(n)\big) ~~\Longrightarrow~~ \text{the limit of } \frac{f(n)}{g(n)} \text{ is not a number } \ell \in \R_{> 0}.
     $$
 
-    The implication does not work in the other direction. A counterexample is given by [Example 10.2](#box-6-ex-an-tight2):
+    The implication does not work in the other direction. A counterexample is given by [Example 9.2](#box-6-ex-an-tight2):
 
     $$
     n^2\; (2 - \sin n) = \Theta(n^2), \qquad\text{but}\qquad \lim_{n \to +\infty} \frac{n^2\; (2 - \sin n)}{n^2} = \lim_{n \to +\infty} (2 - \sin n) \text{ does not exist}.
@@ -1007,7 +1009,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-29-ex-an-alternating"></a>
 
-!!! esempio "Example 10.14: asymptotic tight bound without a limit"
+!!! esempio "Example 9.14: asymptotic tight bound without a limit"
 
     To prove that
 
@@ -1043,7 +1045,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
     0 \le\frac{1}{2} \;n^2 \le (2 + (-1)^n) \: n^2 \le \frac{7}{2} \: n^2,\qquad \forall n \ge 1.
     $$
 
-    ![Figure 10](../img/10-asymptotic-notation/fig10.svg){ .fig .ovale loading=lazy style="width:70%" }
+    ![Figure 10](../img/09-asymptotic-notation/fig10.svg){ .fig .ovale loading=lazy style="width:70%" }
 
     On the other hand,
 
@@ -1055,18 +1057,18 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-30-obsLimBigO"></a>
 
-!!! teorema "Observation 10.16: limit criterion for $\bigO$"
+!!! teorema "Observation 9.16: limit criterion for $\bigO$"
 
     Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-limbigo}
-    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} \ \text{ or } \ 0^+ ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big). \tag{10.14}
+    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{> 0} \ \text{ or } \ 0^+ ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big). \tag{9.14}
     \end{equation*}
 
 ??? dimostrazione "Proof"
 
-    By Observations [10.15](#box-28-obsLimFinite), [Observation 10.5](#box-7-obsThetaOOmega), [Observation 10.11](#box-22-obsLimZero) and [Observation 10.12](#box-23-obsSmallOBigO), we have
+    By Observations [9.15](#box-28-obsLimFinite), [Observation 9.5](#box-7-obsThetaOOmega), [Observation 9.11](#box-22-obsLimZero) and [Observation 9.12](#box-23-obsSmallOBigO), we have
 
     $$
     \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} ~~\Longrightarrow~~ f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \bigO\big(g(n)\big),
@@ -1084,7 +1086,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
     f(n) \neq \bigO\big(g(n)\big) ~~\Longrightarrow~~ \text{the limit of } \frac{f(n)}{g(n)} \text{ is neither a number } \ell \in \R_{>0} \text{ nor } 0^+.
     $$
 
-    The implication does not work in the other direction. A counterexample is given by [Example 10.4](#box-9-ex-an-upper2):
+    The implication does not work in the other direction. A counterexample is given by [Example 9.4](#box-9-ex-an-upper2):
 
     $$
     n^2\;\sin^2 n = \bigO(n^2), \qquad\text{but}\qquad \lim_{n \to +\infty} \frac{n^2\;\sin^2 n}{n^2} = \lim_{n \to +\infty} \sin^2 n \text{ does not exist}.
@@ -1102,18 +1104,18 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-31-obsLimOmega"></a>
 
-!!! teorema "Observation 10.17: limit criterion for $\Omega$"
+!!! teorema "Observation 9.17: limit criterion for $\Omega$"
 
     Given two asymptotically positive functions $f$ and $g$ of a natural variable, we have
 
     \begin{equation*}
     \label{eq:an-limomega}
-    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} \ \text{ or } \ +\infty ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{10.15}
+    \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} \ \text{ or } \ +\infty ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big). \tag{9.15}
     \end{equation*}
 
 ??? dimostrazione "Proof"
 
-    By Observations [10.15](#box-28-obsLimFinite), [Observation 10.5](#box-7-obsThetaOOmega), [Observation 10.13](#box-25-obsLimInf) and [Observation 10.14](#box-26-obsSmallOmegaOmega), we have
+    By Observations [9.15](#box-28-obsLimFinite), [Observation 9.5](#box-7-obsThetaOOmega), [Observation 9.13](#box-25-obsLimInf) and [Observation 9.14](#box-26-obsSmallOmegaOmega), we have
 
     $$
     \lim_{n \rr +\infty} \frac{f(n)}{g(n)} = \ell \in \R_{>0} ~~\Longrightarrow~~ f(n)= \Theta\big(g(n)\big) ~~\Longrightarrow~~ f(n)= \Omega\big(g(n)\big),
@@ -1131,7 +1133,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
     f(n) \neq \Omega\big(g(n)\big) ~~\Longrightarrow~~ \text{the limit of } \frac{f(n)}{g(n)} \text{ is neither a number } \ell \in \R_{>0} \text{ nor } +\infty.
     $$
 
-    The implication does not work in the other direction. A counterexample is given by [Example 10.14](#box-29-ex-an-alternating): since $(2 + (-1)^n) \: n^2 = \Theta(n^2)$, by [Observation 10.5](#box-7-obsThetaOOmega) we have
+    The implication does not work in the other direction. A counterexample is given by [Example 9.14](#box-29-ex-an-alternating): since $(2 + (-1)^n) \: n^2 = \Theta(n^2)$, by [Observation 9.5](#box-7-obsThetaOOmega) we have
 
     $$
     (2 + (-1)^n) \: n^2 = \Omega(n^2), \qquad\text{but}\qquad \lim_{n \to +\infty} \frac{(2 + (-1)^n) \: n^2}{n^2} = \lim_{n \to +\infty} (2 + (-1)^n) \text{ does not exist}.
@@ -1149,7 +1151,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 <a id="box-32-ex-an-limits"></a>
 
-!!! esempio "Example 10.15: asymptotic bounds from limits"
+!!! esempio "Example 9.15: asymptotic bounds from limits"
 
     - We have
 
@@ -1175,11 +1177,84 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
         Then, according to $\eqref{eq:an-liminf}$, we have $n+3\;n^4=\omega(n^3)$. Moreover, according to $\eqref{eq:an-smallomega-omega}$ or to $\eqref{eq:an-limomega}$, we have $n+3\;n^4=\Omega(n^3)$.
 
-## 10.4 Relational properties of asymptotic notations { #sez-sec-an-relational }
+### 9.3.3 The limit criterion
 
-<a id="box-33-propRelational"></a>
+When the limit of the ratio exists, the previous observations can be reversed: the value of the limit tells us exactly which of the five notations hold and which ones do not.
 
-!!! teorema "Proposition 10.18: relational properties"
+<a id="box-33-propLimitCriterion"></a>
+
+!!! teorema "Proposition 9.18: limit criterion"
+
+    Let $f$ and $g$ be two asymptotically positive functions of a natural variable such that the limit
+
+    $$
+    L = \lim_{n \rr +\infty} \frac{f(n)}{g(n)}
+    $$
+
+    exists (equal to $0^+$, to a number $\ell \in \R_{>0}$, or to $+\infty$). Then:
+
+    \begin{align*}
+    \label{eq:an-crit-smallo}
+    f(n)= o\big(g(n)\big) &~~\Longleftrightarrow~~ L = 0^+, \tag{9.16}\\
+    \label{eq:an-crit-bigo}
+    f(n)= \bigO\big(g(n)\big) &~~\Longleftrightarrow~~ L = 0^+ \ \text{ or } \ L \in \R_{>0}, \tag{9.17}\\
+    \label{eq:an-crit-theta}
+    f(n)= \Theta\big(g(n)\big) &~~\Longleftrightarrow~~ L \in \R_{>0}, \tag{9.18}\\
+    \label{eq:an-crit-omega}
+    f(n)= \Omega\big(g(n)\big) &~~\Longleftrightarrow~~ L \in \R_{>0} \ \text{ or } \ L = +\infty, \tag{9.19}\\
+    \label{eq:an-crit-smallomega}
+    f(n)= \omega\big(g(n)\big) &~~\Longleftrightarrow~~ L = +\infty. \tag{9.20}
+    \end{align*}
+
+??? dimostrazione "Proof"
+
+    The implications from right to left are $\eqref{eq:an-limzero}$, $\eqref{eq:an-limbigo}$, $\eqref{eq:an-limfinite}$, $\eqref{eq:an-limomega}$ and $\eqref{eq:an-liminf}$, and $\eqref{eq:an-crit-smallo}$ and $\eqref{eq:an-crit-smallomega}$ are $\eqref{eq:an-limzero}$ and $\eqref{eq:an-liminf}$. For the other implications we first observe that $f(n)= \bigO\big(g(n)\big)$ and $f(n)= \omega\big(g(n)\big)$ cannot hold together. Indeed, if $0 \le f(n) \le c\, g(n)$ for all $n \ge n_1'$, the definition $\eqref{eq:an-smallomega}$ with the same constant $c$ gives $n_1''$ such that $c\, g(n) < f(n)$ for all $n \ge n_1''$, and for $n \ge \max\{n_1', n_1''\}$ we would have $c\, g(n) < f(n) \le c\, g(n)$, which is impossible. In the same way, $f(n)= \Omega\big(g(n)\big)$ and $f(n)= o\big(g(n)\big)$ cannot hold together, since they would give $c\, g(n) \le f(n) < c\, g(n)$. Since the limit exists, exactly one of the three cases $L = 0^+$, $L \in \R_{>0}$ and $L = +\infty$ holds.
+
+    - If $f(n)= \bigO\big(g(n)\big)$, then $L \neq +\infty$, since otherwise $f(n)= \omega\big(g(n)\big)$ by $\eqref{eq:an-liminf}$. Hence $L = 0^+$ or $L \in \R_{>0}$.
+
+    - If $f(n)= \Omega\big(g(n)\big)$, then $L \neq 0^+$, since otherwise $f(n)= o\big(g(n)\big)$ by $\eqref{eq:an-limzero}$. Hence $L \in \R_{>0}$ or $L = +\infty$.
+
+    - If $f(n)= \Theta\big(g(n)\big)$, then $f(n)= \bigO\big(g(n)\big)$ and $f(n)= \Omega\big(g(n)\big)$ by [Observation 9.5](#box-7-obsThetaOOmega), and by the two previous points $L \in \R_{>0}$.
+
+    <p class="qed-riga"><span class="qed">□</span></p>
+
+!!! chiave ""
+
+    For two asymptotically positive functions $f$ and $g$ whose ratio has a limit $L$, the limit criterion reads:
+
+    - if $L = 0^+$, then $f(n) = o\big(g(n)\big)$ and $f(n) = \bigO\big(g(n)\big)$, and the other three notations do not hold;
+
+    - if $L \in \R_{>0}$, then $f(n) = \Theta\big(g(n)\big)$, $f(n) = \bigO\big(g(n)\big)$ and $f(n) = \Omega\big(g(n)\big)$, while $f(n) \neq o\big(g(n)\big)$ and $f(n) \neq \omega\big(g(n)\big)$;
+
+    - if $L = +\infty$, then $f(n) = \omega\big(g(n)\big)$ and $f(n) = \Omega\big(g(n)\big)$, and the other three notations do not hold.
+
+    If the ratio has no limit, the criterion cannot be applied, and we use the definitions (Examples [9.2](#box-6-ex-an-tight2) and [Example 9.14](#box-29-ex-an-alternating)).
+
+<a id="box-34-ex-an-criterion"></a>
+
+!!! esempio "Example 9.16: the limit criterion"
+
+    - In the course <em>Mathematical Analysis 1</em> (chapter <em>Hierarchies of infinities and the ratio test</em>) it is proved that
+
+        $$
+        \lim_{n \rr +\infty} \frac{\ln n}{n} = 0^+.
+        $$
+
+        By [Proposition 9.18](#box-33-propLimitCriterion), we have $\ln n = o(n)$ and $\ln n = \bigO(n)$, while $\ln n \neq \Theta(n)$, $\ln n \neq \Omega(n)$ and $\ln n \neq \omega(n)$.
+
+    - In the same chapter of that course it is proved that $\lim_{n \rr +\infty} \frac{n^2}{2^n} = 0^+$, hence
+
+        $$
+        \lim_{n \rr +\infty} \frac{2^n + n^2}{2^n} = \lim_{n \rr +\infty} \Big( 1 + \underbrace{\frac{n^2}{2^n}}_{\rr\, 0^+} \Big) = 1 \in \R_{>0}.
+        $$
+
+        By [Proposition 9.18](#box-33-propLimitCriterion), we have $2^n + n^2 = \Theta(2^n)$, $2^n + n^2 = \bigO(2^n)$ and $2^n + n^2 = \Omega(2^n)$, while $2^n + n^2 \neq o(2^n)$ and $2^n + n^2 \neq \omega(2^n)$.
+
+## 9.4 Relational properties of asymptotic notations { #sez-sec-an-relational }
+
+<a id="box-35-propRelational"></a>
+
+!!! teorema "Proposition 9.19: relational properties"
 
     Given three functions $f$, $g$ and $h$ of a natural variable, the following properties hold.
 
@@ -1254,9 +1329,9 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
 - The analogous property <strong>does not hold</strong> for the asymptotic comparison of two functions: there exist two functions $f$ and $g$ such that none of the five notations holds, as the next example shows.
 
-<a id="box-34-ex-an-trichotomy"></a>
+<a id="box-36-ex-an-trichotomy"></a>
 
-!!! esempio "Example 10.16: two functions that cannot be compared"
+!!! esempio "Example 9.17: two functions that cannot be compared"
 
     We consider the asymptotically positive function
 
@@ -1292,7 +1367,7 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
         we proceed by contradiction and we suppose that there exist $c \in \R_{>0}$ and $n_1 \in \N$ such that $0 \le c\,n \le n^{1+\sin n}$, that is, $c \le n^{\sin n}$, for all $n \ge n_1$. This is false for the arbitrarily large integers $m$ with $\sin m < -\frac12$ and $\frac{1}{\sqrt m} < c$.
 
-    - By [Observation 10.5](#box-7-obsThetaOOmega), it follows that
+    - By [Observation 9.5](#box-7-obsThetaOOmega), it follows that
 
         $$
         n^{1 + \sin n} \neq \Theta(n).
@@ -1314,9 +1389,9 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
     Therefore none of the five notations holds between $n^{1+\sin n}$ and $n$. Note that this is a stronger failure than the failure of trichotomy: not even the analogues of $a \le b$ or $a \ge b$ hold.
 
-<a id="box-35-ex-an-trichotomy-graph"></a>
+<a id="box-37-ex-an-trichotomy-graph"></a>
 
-!!! esempio "Example 10.17: the graph of $n^{1+\sin n}$"
+!!! esempio "Example 9.18: the graph of $n^{1+\sin n}$"
 
     This is the graph of the function
 
@@ -1326,58 +1401,19 @@ When the ratio $\frac{f(n)}{g(n)}$ has a limit, its value tells us immediately w
 
     together with the graph of the function $g: \R_{\ge 0} \rr \R$, $g: x \mapsto x$. The values $f(n)$ are alternately above and below the line $g$, farther and farther from it.
 
-    ![Figure 11](../img/10-asymptotic-notation/fig11.svg){ .fig .ovale loading=lazy style="width:80%" }
+    ![Figure 11](../img/09-asymptotic-notation/fig11.svg){ .fig .ovale loading=lazy style="width:80%" }
 
-## 10.5 Asymptotic notation and orders of growth { #sez-sec-an-growth }
-
-In the chapter «Asymptotic growth» the orders of growth of the families of increasing functions of a natural variable were compared by computing limits of ratios. With [Observation 10.11](#box-22-obsLimZero), every limit equal to $0^+$ becomes a relation $o$.
-
-<a id="box-36-ex-an-hierarchy"></a>
-
-!!! esempio "Example 10.18: the hierarchy of the orders of growth"
-
-    For every $\alpha, \beta \in \R_{>0}$ and $a, b \in \R_{>1}$, the limits
-
-    $$
-    \lim_{n \rr +\infty} \frac{\log_a^{\beta} n}{n^{\alpha}} = 0^+, \qquad
-    \lim_{n \rr +\infty} \frac{n^{\alpha}}{b^{n}} = 0^+, \qquad
-    \lim_{n \rr +\infty} \frac{b^{n}}{n!} = 0^+, \qquad
-    \lim_{n \rr +\infty} \frac{n!}{n^{n}} = 0^+
-    $$
-
-    of the chapter «Asymptotic growth» give, by $\eqref{eq:an-limzero}$,
-
-    $$
-    \log_a^{\beta} n = o(n^{\alpha}), \qquad n^{\alpha} = o(b^{n}), \qquad b^{n} = o(n!), \qquad n! = o(n^{n}).
-    $$
-
-    By the transitivity of $o$ ([Proposition 10.18](#box-33-propRelational)), each function of the chain is $o$ of all the functions that follow it, for example $\log_a^{\beta} n = o(n!)$.
-
-!!! chiave ""
-
-    Given two asymptotically increasing functions $f$ and $g$ of a natural variable:
-
-    - if $f(n) = o\big(g(n)\big)$, $f$ has a strictly smaller order of growth than $g$ ($f$ grows slower than $g$);
-
-    - if $f(n) = \bigO\big(g(n)\big)$, $f$ has a smaller or equal order of growth ($f$ grows at most as fast as $g$);
-
-    - if $f(n) = \Theta\big(g(n)\big)$, $f$ has the same order of growth as $g$ ($f$ grows as fast as $g$);
-
-    - if $f(n) = \Omega\big(g(n)\big)$, $f$ has a greater or equal order of growth ($f$ grows at least as fast as $g$);
-
-    - if $f(n) = \omega\big(g(n)\big)$, $f$ has a strictly greater order of growth than $g$ ($f$ grows faster than $g$).
-
-## 10.6 Asymptotic notation in the analysis of algorithms { #sez-sec-an-algorithms }
+## 9.5 Asymptotic notation in the analysis of algorithms { #sez-sec-an-algorithms }
 
 In the chapters «Input size» and «Running time» we measure the size $|I|$ of the input of an algorithm and we count the number of steps $S(n)$ that the algorithm executes in the worst case, as a function of a natural parameter $n$. The exact expression of $S(n)$ depends on the conventions used to count the steps, and the time of one step depends on the computer. The asymptotic notation keeps only what does not depend on these details: the <strong>order of growth</strong>.
 
 - <strong>Constant factors do not matter.</strong> If $f(n) = \Theta\big(g(n)\big)$ and $\lambda \in \R_{>0}$, then $\lambda\, f(n) = \Theta\big(g(n)\big)$, with the constants $\lambda c_1$ and $\lambda c_2$ and the same threshold. For example, an algorithm executing $4n$ steps and an algorithm executing $n$ steps both have a number of steps $\Theta(n)$.
 
-- <strong>Lower-order terms do not matter.</strong> This is made precise by the next observation, which follows from [Observation 10.7](#box-14-obsSumMax1).
+- <strong>Lower-order terms do not matter.</strong> This is made precise by the next observation, which follows from [Observation 9.7](#box-14-obsSumMax1).
 
-<a id="box-37-obsDropLower"></a>
+<a id="box-38-obsDropLower"></a>
 
-!!! teorema "Observation 10.19: dropping the lower-order terms"
+!!! teorema "Observation 9.20: dropping the lower-order terms"
 
     Given two asymptotically non-negative functions $f$ and $g$ of a natural variable, we have
 
@@ -1395,9 +1431,9 @@ In the chapters «Input size» and «Running time» we measure the size $|I|$ of
 
     that is, $f(n) + g(n) = \Theta\big(f(n)\big)$ with the constants $c_1 = 1$ and $c_2 = 1 + c$. <span class="qed">□</span>
 
-<a id="box-38-ex-an-algorithms"></a>
+<a id="box-39-ex-an-algorithms"></a>
 
-!!! esempio "Example 10.19: the number of steps of two algorithms"
+!!! esempio "Example 9.19: the number of steps of two algorithms"
 
     In the chapter «Running time» we count the steps of two algorithms on an array of $n$ entries.
 
@@ -1423,7 +1459,7 @@ In the chapters «Input size» and «Running time» we measure the size $|I|$ of
 
         The same result follows from the limit $\lim_{n \rr +\infty} \frac{3n^2+9n-8}{2n^2} = \frac{3}{2} \in \R_{>0}$ and $\eqref{eq:an-limfinite}$. The number of steps is <strong>quadratic</strong> in $n$.
 
-    - Since $n = o(n^2)$, for large arrays <code>InsertionSort</code> executes, in the worst case, many more steps than <code>FindMaximum</code>: by [Observation 10.11](#box-22-obsLimZero), the ratio $\frac{4n}{(3n^2+9n-8)/2}$ tends to $0^+$.
+    - Since $n = o(n^2)$, for large arrays <code>InsertionSort</code> executes, in the worst case, many more steps than <code>FindMaximum</code>: by [Observation 9.11](#box-22-obsLimZero), the ratio $\frac{4n}{(3n^2+9n-8)/2}$ tends to $0^+$.
 
 - The three notations $\bigO$, $\Omega$ and $\Theta$ say different things about the number of steps $S(n)$ in the worst case. If $S(n) = \bigO\big(g(n)\big)$, then, for all $n \ge n_1$, the algorithm executes at most $c\, g(n)$ steps on <strong>every</strong> input with parameter $n$. If $S(n) = \Omega\big(g(n)\big)$, then, for all $n \ge n_1$, there is <strong>at least one</strong> input with parameter $n$ on which the algorithm executes at least $c\, g(n)$ steps. The statement $S(n) = \Theta\big(g(n)\big)$ gives both, and it is the most informative one.
 
@@ -1439,7 +1475,7 @@ In the chapters «Input size» and «Running time» we measure the size $|I|$ of
 
     - $\Theta$ is the same as $\bigO$ and $\Omega$ together; $o$ implies $\bigO$ and $\omega$ implies $\Omega$. None of these implications can be reversed.
 
-    - For asymptotically positive functions, the limit of $\frac{f(n)}{g(n)}$ decides: $0^+$ gives $o$ (and $\bigO$), a number $\ell > 0$ gives $\Theta$ (and $\bigO$, $\Omega$), $+\infty$ gives $\omega$ (and $\Omega$). When the limit does not exist, as for $2 - \sin n$ or $2 + (-1)^n$, we use the definitions.
+    - Limit criterion: for asymptotically positive functions whose ratio $\frac{f(n)}{g(n)}$ has a limit, the limit decides: $0^+$ gives $o$ and $\bigO$, a number $\ell > 0$ gives $\Theta$, $\bigO$ and $\Omega$, $+\infty$ gives $\omega$ and $\Omega$, and in each case the other notations do not hold. When the limit does not exist, as for $2 - \sin n$ or $2 + (-1)^n$, we use the definitions.
 
     - The notations are transitive; $\Theta$, $\bigO$, $\Omega$ are reflexive; $\Theta$ is symmetric; $\bigO$ and $\Omega$, and $o$ and $\omega$, are transpose symmetric. Unlike real numbers, two functions may not be comparable at all, as $n^{1+\sin n}$ and $n$.
 

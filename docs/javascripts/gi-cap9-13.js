@@ -5,7 +5,7 @@
  *   crescita     ordini di crescita: log2 n, n, n log2 n, n^2, n^3, 2^n
  *                (pulsanti per accenderle), cursore n, scala lineare o
  *                logaritmica, valori e tempo stimato a 10^9 operazioni al
- *                secondo (cap. 9, «Asymptotic growth»)
+ *                secondo (cap. 10, «Asymptotic growth»)
  *   invariante   FindMaximum passo per passo: a ogni valutazione della
  *                condizione del ciclo si verifica l'invariante
  *                max = max{a[1], …, a[i-1]}; inizializzazione, mantenimento,
@@ -55,7 +55,7 @@
   };
 
   // ================================================================
-  // 1. Ordini di crescita (cap. 9)
+  // 1. Ordini di crescita (cap. 10)
   // ================================================================
   const FUNZ = [
     { k: "log", tex: "\\log_2 n", f: (n) => Math.log2(n), col: "c", da: 1 },

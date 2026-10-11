@@ -92,7 +92,7 @@ extra:
 extra_css:
   - stylesheets/extra.css?v=68f743ff1a
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
-  - stylesheets/interattivi.css?v=c4336c2fb4
+  - stylesheets/interattivi.css?v=512c099b79
 
 markdown_extensions:
   - admonition
@@ -122,10 +122,14 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   # grafici interattivi: JSXGraph, il motore, poi le ricette (gi-*.js, le aggiunge genera_sito.py)
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
-  - javascripts/interattivi.js?v=6e596bae66
+  - javascripts/interattivi.js?v=6c89a94c9c
   - javascripts/gi-cap1-5.js?v=f2d03ace72
   - javascripts/gi-cap14-17.js?v=c75fa22fac
-  - javascripts/gi-cap9-13.js?v=ec8b167001
+  - javascripts/gi-cap9-13.js?v=0517f03b6f
+
+# le pagine delle singole app del laboratorio non stanno nel menu (solo l'indice)
+not_in_nav: |
+  /lab/*.md
 
 nav:
   - Home: index.md
@@ -143,8 +147,8 @@ nav:
       - "8. Introduction to Java": languages/08-introduction-to-java.md
   - Asymptotics:
       - asymptotics/index.md
-      - "9. Asymptotic growth": asymptotics/09-asymptotic-growth.md
-      - "10. Asymptotic notation": asymptotics/10-asymptotic-notation.md
+      - "9. Asymptotic notation": asymptotics/09-asymptotic-notation.md
+      - "10. Asymptotic growth": asymptotics/10-asymptotic-growth.md
   - Analysis & recursion:
       - analysis-recursion/index.md
       - "11. Input size": analysis-recursion/11-input-size.md
@@ -165,8 +169,8 @@ nav:
       - "6. Introduction to C++": exercises/ex-06-introduction-to-cpp.md
       - "7. Introduction to Python": exercises/ex-07-introduction-to-python.md
       - "8. Introduction to Java": exercises/ex-08-introduction-to-java.md
-      - "9. Asymptotic growth": exercises/ex-09-asymptotic-growth.md
-      - "10. Asymptotic notation": exercises/ex-10-asymptotic-notation.md
+      - "9. Asymptotic notation": exercises/ex-09-asymptotic-notation.md
+      - "10. Asymptotic growth": exercises/ex-10-asymptotic-growth.md
       - "11. Input size": exercises/ex-11-input-size.md
       - "12. Running time": exercises/ex-12-running-time.md
       - "13. Correctness": exercises/ex-13-correctness.md

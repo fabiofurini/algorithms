@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+title: "Algorithms: online lecture notes with worked exercises"
+abstract: >-
+  The lecture notes of the Algorithms course — representation of numbers,
+  pseudo-code, introduction to C++, sorting, searching and numerical
+  algorithms, input size, running time, correctness, recursion, recurrence
+  relations, the Master Theorem, recursive algorithms — with definitions,
+  theorems and proofs, pseudo-code, C++ code, worked examples and exercises
+  with solutions.
+authors:
+  - family-names: Furini
+    given-names: Fabio
+    email: fabio.furini@uniroma1.it
+    affiliation: "DIAG, Sapienza University of Rome"
+url: "https://fabiofurini.github.io/algorithms/"
+repository-code: "https://github.com/fabiofurini/algorithms"
+license:
+  - CC-BY-4.0
+  - MIT
+date-released: 2026-10-11
+keywords:
+  - algorithms
+  - pseudo-code
+  - C++
+  - sorting
+  - running time
+  - correctness
+  - recursion
+  - Master Theorem
+  - teaching material

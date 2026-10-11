@@ -1,0 +1,28 @@
+# Only what students need goes to GitHub (REGOLE_MODULI_TEMATICI §0.5):
+# docs/, mkdocs.yml, README.md, LICENSE, LICENSE-CODE, CITATION.cff, .github/.
+
+# private folders (REGOLE_MODULI_TEMATICI §1): revised notes (local git repository),
+# generated volumes (LaTeX and PDF; online only the PDFs in docs/pdf/), slides, generators
+note/
+volumes/
+slides/
+python/
+materiale_sorgente/
+# LaTeX sources never go online
+*.tex
+# intermediate products and built site
+build/
+site/
+# Python and LaTeX
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# misc
+.DS_Store
+*conflicted copy*

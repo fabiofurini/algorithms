@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Interactive lab
 
 Here you can watch the algorithms at work. Pick an app: it opens full page, with **sliders** and buttons.

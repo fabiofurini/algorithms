@@ -122,8 +122,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   # grafici interattivi: JSXGraph, il motore, poi le ricette (gi-*.js, le aggiunge genera_sito.py)
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
-  - javascripts/interattivi.js?v=6c89a94c9c
-  - javascripts/gi-cap1-5.js?v=f2d03ace72
+  - javascripts/interattivi.js?v=b28de80f9b
+  - javascripts/gi-cap1-5.js?v=0c2149b07f
   - javascripts/gi-cap14-17.js?v=c75fa22fac
   - javascripts/gi-cap9-13.js?v=0517f03b6f
 

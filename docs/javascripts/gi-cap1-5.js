@@ -140,15 +140,25 @@
     };
     bt("◀", T("un passo indietro", "one step back"), () => { ferma(st); vai(-1); });
     bt("▶", T("un passo avanti", "one step forward"), () => { ferma(st); vai(1); });
+    // velocità di «Esegui»: lenta (predefinita, per seguire ogni passo), media, veloce
+    const VEL = [[T("lenta", "slow"), 2.6], [T("media", "medium"), 1.3], [T("veloce", "fast"), 0.5]];
+    const parti = () => {
+      st.dati.timer = setInterval(() => {
+        if (!document.body.contains(st.el) || !vai(1)) ferma(st);
+      }, (st.dati.ritmo || 450) * VEL[st.dati.vel || 0][1]);
+    };
     st.dati.play = bt(T("Esegui ⏵", "Run ⏵"), T("esegui l'algoritmo fino alla fine", "run the algorithm to the end"), () => {
       if (st.dati.timer) { ferma(st); return; }
       const i = inputDi(st, "k");
       if (i && +i.value >= +i.max) st.imposta("k", 0);
       st.dati.play.textContent = T("Pausa ⏸", "Pause ⏸");
-      st.dati.timer = setInterval(() => {
-        if (!document.body.contains(st.el) || !vai(1)) ferma(st);
-      }, st.dati.ritmo || 450);
+      parti();
     }, true);
+    const sel = GI.h("select", { class: "gi-btn", title: T("velocità di «Esegui»", "speed of «Run»"), "aria-label": T("velocità", "speed"), style: "margin:0" },
+      VEL.map(([n], j) => `<option value="${j}">${T("Velocità: ", "Speed: ") + n}</option>`).join(""));
+    sel.value = st.dati.vel || 0;
+    sel.onchange = () => { st.dati.vel = +sel.value; if (st.dati.timer) { clearInterval(st.dati.timer); parti(); } };
+    box.append(sel);
     for (const [testo, titolo, fz] of altri) bt(testo, titolo, () => { ferma(st); fz(); });
     ultimo.after(box);
     st.dati.comandi = box;
@@ -777,7 +787,7 @@
     parametri: [
       { k: "n", min: 1, max: 150, step: 1, val: 48, colore: "a", cifre: 0, descr: DESCR_N.mcd },
       { k: "m", min: 1, max: 150, step: 1, val: 18, colore: "b", cifre: 0, descr: T("il secondo numero \\(m \\ge 1\\)", "the second number \\(m \\ge 1\\)") },
-      { k: "k", min: 0, max: 10, step: 1, val: 0, colore: "c", cifre: 0, descr: T("passo dell'esecuzione", "execution step") },
+      { k: "k", min: 0, max: 10, step: 1, val: 1, colore: "c", cifre: 0, descr: T("passo dell'esecuzione", "execution step") },
     ],
     vista: [-2, 52, 52, -2],
     stessaScala: true,
@@ -807,7 +817,7 @@
         const in_ = inputDi(st, "n"), im = inputDi(st, "m"), ik = inputDi(st, "k");
         if (in_) { in_.min = ch === "mcd" ? 1 : 2; in_.value = ch === "mcd" ? 48 : 50; }
         if (im) im.value = 18;
-        if (ik) ik.value = 0;
+        if (ik) ik.value = ch === "mcd" ? 1 : 0;
         const cm = ctrlDi(st, "m");
         if (cm) cm.hidden = ch !== "mcd";
         const cn = ctrlDi(st, "n"), sm = cn && cn.querySelector("small");
@@ -871,8 +881,8 @@
 
   function disegnaEuclide(crea, board, S, C) {
     const { n, m, k, K } = S, { Q, g } = S.T;
-    const L = Math.max(n, m), pad = 0.04 * L;
-    adatta(board, -pad, m + pad, n + pad, -pad);
+    const L = Math.max(n, m), pad = 0.06 * L;
+    adatta(board, -2.2 * pad, m + pad, n + pad, -1.6 * pad);
     const tinte = [C.a, C.b, C.c, C.d, C.e];
     // reticolo di lato MCD alla fine (se non è troppo fitto)
     if (k === K && n / g <= 40 && m / g <= 40 && g > 0) {
@@ -894,6 +904,14 @@
       rett(crea, x, y, n, m, { strokeColor: C.grigio, strokeWidth: 2, dash: 2 });
     }
     rett(crea, 0, 0, n, m, { strokeColor: C.muted, strokeWidth: 1.6 });
+    // misure: i lati del rettangolo e il lato dei quadrati del passo corrente
+    const fs = Math.max(11, Math.min(18, board.unitX * 1.2));
+    scritta(crea, n / 2, -pad * 0.55, `n = ${n}`, { fontSize: fs, strokeColor: C.a, anchorX: "middle", anchorY: "top" });
+    scritta(crea, -pad * 0.35, m / 2, `m = ${m}`, { fontSize: fs, strokeColor: C.b, anchorX: "right", anchorY: "middle" });
+    for (const q of Q) {
+      if (q.passo !== k || q.l * board.unitX < 34) continue;
+      scritta(crea, q.x0 + q.l / 2, q.y0 + q.l / 2, String(q.l), { fontSize: Math.min(28, q.l * board.unitX * 0.3), strokeColor: C.testo, anchorX: "middle", anchorY: "middle", cssStyle: "font-weight:600" });
+    }
   }
 
   function disegnaCrivello(crea, board, S, C) {

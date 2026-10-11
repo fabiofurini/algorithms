@@ -534,7 +534,7 @@
       btn.classList.add("on"); btn.textContent = "⏸";
       const step = (t) => {
         if (!document.body.contains(el)) return;
-        const v = lo + (hi - lo) * (0.5 - 0.5 * Math.cos((t - t0) / 1500));
+        const v = lo + (hi - lo) * (0.5 - 0.5 * Math.cos((t - t0) / 3200));
         inp.value = (lo + Math.round((v - lo) / ps) * ps).toFixed(6);
         aggiorna();
         if (anim) anim.id = requestAnimationFrame(step);

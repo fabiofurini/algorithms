@@ -341,20 +341,12 @@ int ChangeToBase(int n, int b, int *digits)
         <th>iteration</th>
         <th><code>q</code></th>
         <th><code>r</code></th>
-        <th colspan="4"><code>digits</code></th>
+        <th><code>digits[3]</code></th>
+        <th><code>digits[2]</code></th>
+        <th><code>digits[1]</code></th>
+        <th><code>digits[0]</code></th>
         <th><code>n</code></th>
         <th><code>nd</code></th>
-        </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><code>[3]</code></td>
-        <td><code>[2]</code></td>
-        <td><code>[1]</code></td>
-        <td><code>[0]</code></td>
-        <td></td>
-        <td></td>
         </tr>
         <tr>
         <td>start</td>
@@ -411,21 +403,13 @@ int ChangeToBase(int n, int b, int *digits)
         <th>iteration</th>
         <th><code>q</code></th>
         <th><code>r</code></th>
-        <th colspan="5"><code>digits</code></th>
+        <th><code>digits[4]</code></th>
+        <th><code>digits[3]</code></th>
+        <th><code>digits[2]</code></th>
+        <th><code>digits[1]</code></th>
+        <th><code>digits[0]</code></th>
         <th><code>n</code></th>
         <th><code>nd</code></th>
-        </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><code>[4]</code></td>
-        <td><code>[3]</code></td>
-        <td><code>[2]</code></td>
-        <td><code>[1]</code></td>
-        <td><code>[0]</code></td>
-        <td></td>
-        <td></td>
         </tr>
         <tr>
         <td>start</td>
@@ -498,20 +482,12 @@ int ChangeToBase(int n, int b, int *digits)
         <th>iteration</th>
         <th><code>q</code></th>
         <th><code>r</code></th>
-        <th colspan="4"><code>digits</code></th>
+        <th><code>digits[3]</code></th>
+        <th><code>digits[2]</code></th>
+        <th><code>digits[1]</code></th>
+        <th><code>digits[0]</code></th>
         <th><code>n</code></th>
         <th><code>nd</code></th>
-        </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><code>[3]</code></td>
-        <td><code>[2]</code></td>
-        <td><code>[1]</code></td>
-        <td><code>[0]</code></td>
-        <td></td>
-        <td></td>
         </tr>
         <tr>
         <td>start</td>
@@ -568,20 +544,12 @@ int ChangeToBase(int n, int b, int *digits)
         <th>iteration</th>
         <th><code>q</code></th>
         <th><code>r</code></th>
-        <th colspan="4"><code>digits</code></th>
+        <th><code>digits[3]</code></th>
+        <th><code>digits[2]</code></th>
+        <th><code>digits[1]</code></th>
+        <th><code>digits[0]</code></th>
         <th><code>n</code></th>
         <th><code>nd</code></th>
-        </tr>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><code>[3]</code></td>
-        <td><code>[2]</code></td>
-        <td><code>[1]</code></td>
-        <td><code>[0]</code></td>
-        <td></td>
-        <td></td>
         </tr>
         <tr>
         <td>start</td>

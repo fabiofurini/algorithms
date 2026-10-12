@@ -170,12 +170,14 @@ lecture notes: on the website and in the PDF you find everything in the same pla
 
 By the same author:
 
-- **[Linear Programming](https://fabiofurini.github.io/linear-programming/)** — polyhedra, the simplex algorithm, duality and modelling, with the interactive lab;
-- **[Operations Research Lab](https://fabiofurini.github.io/operations-research-lab/)** — the lab on modelling and solving optimization problems, with Python and solvers;
-- **[MIP Modelling](https://fabiofurini.github.io/mip-modelling/)** — the module on integer-variable models, with the same tools and the same style;
-- **[Mathematical Analysis 1](https://fabiofurini.github.io/mathematical-analysis-1/)** — the analysis lecture notes, with interactive graphs;
-- **[Linear Algebra](https://fabiofurini.github.io/linear-algebra/)** — the preparatory course, with the step-by-step computation lab;
-- **[Convex Optimization](https://fabiofurini.github.io/convex-optimization/)** — convex sets and functions, optimization problems, with interactive graphs.
+- **[Linear Programming](https://fabiofurini.github.io/linear-programming/)** — polyhedra, the simplex algorithm, duality and the dual simplex, with the interactive lab
+- **[Convex Optimization](https://fabiofurini.github.io/convex-optimization/)** — convex sets and functions, convex optimization problems, with interactive graphs
+- **[Integer Linear Programming](https://fabiofurini.github.io/integer-linear-programming/)** — LP relaxation, valid inequalities, cutting planes, branch-and-bound and branch-and-cut
+- **[Combinatorial Optimization](https://fabiofurini.github.io/combinatorial-optimization/)** — knapsack, bin packing, coloring, TSP, scheduling and lot sizing, solved in every way
+- **[MIP Modelling](https://fabiofurini.github.io/mip-modelling/)** — integer linear programming models, from the formulation to the solution with solvers
+- **[Operations Research Lab](https://fabiofurini.github.io/operations-research-lab/)** — modelling and solving optimization problems with Python and solvers
+- **[Mathematical Analysis 1](https://fabiofurini.github.io/mathematical-analysis-1/)** — real numbers, functions, limits, derivatives and series, with interactive graphs
+- **[Linear Algebra](https://fabiofurini.github.io/linear-algebra/)** — vectors, matrices, determinants, linear systems and eigenvalues, with the computation lab
 
 Teaching material by **[Fabio Furini](https://fabiofurini.github.io/)** —
 [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.

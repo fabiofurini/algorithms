@@ -174,6 +174,7 @@ By the same author:
 - **[Convex Optimization](https://fabiofurini.github.io/convex-optimization/)** — convex sets and functions, convex optimization problems, with interactive graphs;
 - **[Integer Linear Programming](https://fabiofurini.github.io/integer-linear-programming/)** — LP relaxation, valid inequalities, cutting planes, branch-and-bound and branch-and-cut;
 - **[Combinatorial Optimization](https://fabiofurini.github.io/combinatorial-optimization/)** — knapsack, bin packing, coloring, TSP, scheduling and lot sizing, solved in every way;
+- **[Network Optimization](https://fabiofurini.github.io/network-optimization/)** — graphs, spanning trees, shortest paths, network flows, the network simplex and project management;
 - **[MIP Modelling](https://fabiofurini.github.io/mip-modelling/)** — integer linear programming models, from the formulation to the solution with solvers;
 - **[Operations Research Lab](https://fabiofurini.github.io/operations-research-lab/)** — modelling and solving optimization problems with Python and solvers;
 - **[Mathematical Analysis 1](https://fabiofurini.github.io/mathematical-analysis-1/)** — real numbers, functions, limits, derivatives and series, with interactive graphs;

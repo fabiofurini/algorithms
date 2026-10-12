@@ -6,7 +6,7 @@ title: "Exercises · Recursive versus iterative algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 18** · each solution opens with a click · [:material-book-open-variant: Chapter 18](../recursion/18-recursive-vs-iterative.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
+**Exercises · Chapter 18** · each solution opens with a click · [:material-book-open-variant: Chapter 18: Recursive versus iterative algorithms](../recursion/18-recursive-vs-iterative.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
 
 </div>
 

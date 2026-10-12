@@ -6,7 +6,7 @@ title: "Recursive versus iterative algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 18** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-18-recursive-vs-iterative.md)
+**Part 5 · Recursion · Chapter 18** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursive versus iterative algorithms](../exercises/ex-18-recursive-vs-iterative.md)
 
 </div>
 
@@ -1087,3 +1087,7 @@ The asymptotic analysis predicts how the number of steps grows with $n$. We now 
     <strong>Always consider the space</strong>: the call stack uses memory proportional to the depth of the recursion. Tail recursion can be eliminated mechanically, obtaining a loop with $\Theta(1)$ extra memory.
 
     <strong>Always compare with the best iterative algorithm</strong>: a recursive algorithm can improve on brute force and still be beaten by a smarter loop (Kadane's algorithm for the maximum subarray).
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Recursive versus iterative algorithms](../exercises/ex-18-recursive-vs-iterative.md)

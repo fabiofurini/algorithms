@@ -6,7 +6,7 @@ title: "Asymptotic notation"
 
 <div class="info-capitolo" markdown>
 
-**Part 3 · Asymptotic notation and growth · Chapter 9** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises](../exercises/ex-09-asymptotic-notation.md)
+**Part 3 · Asymptotic notation and growth · Chapter 9** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises: Asymptotic notation](../exercises/ex-09-asymptotic-notation.md)
 
 </div>
 
@@ -1480,5 +1480,9 @@ In the chapters «Input size» and «Running time» we measure the size $|I|$ of
     - The notations are transitive; $\Theta$, $\bigO$, $\Omega$ are reflexive; $\Theta$ is symmetric; $\bigO$ and $\Omega$, and $o$ and $\omega$, are transpose symmetric. Unlike real numbers, two functions may not be comparable at all, as $n^{1+\sin n}$ and $n$.
 
     - In the analysis of algorithms, the notation drops constant factors and lower-order terms and keeps the order of growth of the number of steps.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Asymptotic notation](../exercises/ex-09-asymptotic-notation.md)
 
 [^1]: Since $\pi$ is irrational, the values $n \bmod \pi$, $n \in \N$, are dense in $[0,\pi]$. Therefore, for every $\varepsilon \in \R_{>0}$ there exist arbitrarily large integers $n$ such that $|\sin n|<\varepsilon$. By choosing $\varepsilon=\frac{\sqrt{c_1}}{2}$, we obtain $\sin^2 n < \frac{c_1}{4} < c_1$, which contradicts $c_1 \le \sin^2 n$ for all sufficiently large $n$.

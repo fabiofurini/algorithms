@@ -6,7 +6,7 @@ title: "Exercises · Asymptotic notation"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 9** · each solution opens with a click · [:material-book-open-variant: Chapter 9](../asymptotics/09-asymptotic-notation.md) · [:material-file-pdf-box: Exercises, volume 3 (PDF)](../pdf/exercises-3-asymptotic-notation.pdf)
+**Exercises · Chapter 9** · each solution opens with a click · [:material-book-open-variant: Chapter 9: Asymptotic notation](../asymptotics/09-asymptotic-notation.md) · [:material-file-pdf-box: Exercises, volume 3 (PDF)](../pdf/exercises-3-asymptotic-notation.pdf)
 
 </div>
 

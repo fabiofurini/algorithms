@@ -6,7 +6,7 @@ title: "The Master Theorem"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 16** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-16-master-theorem.md)
+**Part 5 · Recursion · Chapter 16** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: The Master Theorem](../exercises/ex-16-master-theorem.md) · [:material-gesture-tap: App: The Master Theorem](../lab/master-theorem.md)
 
 </div>
 
@@ -1185,6 +1185,10 @@ We start with three recurrences, one for each case, and then solve the recurrenc
     5. None of the above (a <strong>gap</strong>, e.g., $f(n)=n^{\log_b a}/\log n$) $\longrightarrow$ the theorem does not apply: use the recursion tree $T(n)=\Theta(n^{\log_b a})+\sum_{j=0}^{\log_b n-1}a^jf(n/b^j)$ ([Lemma 16.3](#box-21-lemMasterTree)).
 
     Base of the logarithms: irrelevant in $\log^k n$, essential in $n^{\log_b a}$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: The Master Theorem](../exercises/ex-16-master-theorem.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

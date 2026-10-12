@@ -6,7 +6,7 @@ title: "Exercises · Introduction to Python"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 7** · each solution opens with a click · [:material-book-open-variant: Chapter 7](../languages/07-introduction-to-python.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
+**Exercises · Chapter 7** · each solution opens with a click · [:material-book-open-variant: Chapter 7: Introduction to Python](../languages/07-introduction-to-python.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
 
 </div>
 

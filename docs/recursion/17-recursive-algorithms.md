@@ -6,7 +6,7 @@ title: "Recursive algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 17** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-17-recursive-algorithms.md)
+**Part 5 · Recursion · Chapter 17** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursive algorithms](../exercises/ex-17-recursive-algorithms.md) · [:material-gesture-tap: App: Merge sort](../lab/merge-sort.md)
 
 </div>
 
@@ -2963,6 +2963,10 @@ The four problems of the chapter cover the three typical shapes of a recursive a
     - Correctness: always by strong induction on the size of the sub-problem; the non-recursive parts (<code>Merge</code>, <code>FindMaxCrossingSubarray</code>, <code>Kadane</code>) by loop invariants.
 
     - Recursion gives an asymptotic gain only when the work of the combine step, summed over a level, is small compared with what an iterative algorithm does (Merge Sort against the $\Theta(n^2)$ sorting algorithms). For the sum and the search it gives no gain in time and costs memory; for the maximum subarray the best algorithm is iterative.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Recursive algorithms](../exercises/ex-17-recursive-algorithms.md)
 
 [^1]: The example is taken from the textbook of T. H. Cormen, C. E. Leiserson, R. L. Rivest and C. Stein, <em>Introduction to Algorithms</em>, Section 4.1.
 

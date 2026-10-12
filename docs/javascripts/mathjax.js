@@ -10,6 +10,7 @@ window.MathJax = {
     tags: "ams",
     packages: { "[+]": ["mathtools", "cancel", "color"] },
     macros: {
+      toprule: "\\hline", midrule: "\\hline", bottomrule: "\\hline",
       N: "\\mathbb{N}", Z: "\\mathbb{Z}", Q: "\\mathbb{Q}", R: "\\mathbb{R}",
       C: "\\mathbb{C}", F: "\\mathbb{F}",
       rr: "\\rightarrow", mt: "\\mapsto", ip: "+\\infty", im: "-\\infty",

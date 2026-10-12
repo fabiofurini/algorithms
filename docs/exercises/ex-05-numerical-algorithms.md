@@ -6,7 +6,7 @@ title: "Exercises · Numerical algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 5** · each solution opens with a click · [:material-book-open-variant: Chapter 5](../basic-algorithms/05-numerical-algorithms.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
+**Exercises · Chapter 5** · each solution opens with a click · [:material-book-open-variant: Chapter 5: Numerical algorithms](../basic-algorithms/05-numerical-algorithms.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
 
 </div>
 

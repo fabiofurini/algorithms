@@ -6,7 +6,7 @@ title: "Exercises · Running time"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 12** · each solution opens with a click · [:material-book-open-variant: Chapter 12](../analysis/12-running-time.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis.pdf)
+**Exercises · Chapter 12** · each solution opens with a click · [:material-book-open-variant: Chapter 12: Running time](../analysis/12-running-time.md) · [:material-file-pdf-box: Exercises, volume 4 (PDF)](../pdf/exercises-4-analysis.pdf)
 
 </div>
 

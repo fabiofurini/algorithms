@@ -6,7 +6,7 @@ title: "Exercises · Sorting algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 3** · each solution opens with a click · [:material-book-open-variant: Chapter 3](../basic-algorithms/03-sorting.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
+**Exercises · Chapter 3** · each solution opens with a click · [:material-book-open-variant: Chapter 3: Sorting algorithms](../basic-algorithms/03-sorting.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
 
 </div>
 

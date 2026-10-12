@@ -6,7 +6,7 @@ title: "Exercises · Introduction to C++"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 6** · each solution opens with a click · [:material-book-open-variant: Chapter 6](../languages/06-introduction-to-cpp.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
+**Exercises · Chapter 6** · each solution opens with a click · [:material-book-open-variant: Chapter 6: Introduction to C++](../languages/06-introduction-to-cpp.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
 
 </div>
 

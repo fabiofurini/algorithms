@@ -6,7 +6,7 @@ title: "Input size"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis of algorithms · Chapter 11** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises](../exercises/ex-11-input-size.md)
+**Part 4 · Analysis of algorithms · Chapter 11** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises: Input size](../exercises/ex-11-input-size.md)
 
 </div>
 
@@ -972,3 +972,7 @@ When a number of steps is bounded by exponentials with constant factors, the con
     - An array of $n$ natural numbers: $|I| = \Omega(n)$ and $|I| = O\big(n(1+\log_2 M)\big)$, with $M$ the maximum entry; the upper bound is not tight in general. If the entries have a constant number of bits, $|I| = \Theta(n)$.
 
     - The same number of steps $S(n)$ can be polynomial or exponential in $|I|$: the value of a number is exponential in its input size, while the number of entries of an array is at most its input size.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Input size](../exercises/ex-11-input-size.md)

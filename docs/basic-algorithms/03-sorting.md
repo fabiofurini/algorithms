@@ -6,7 +6,7 @@ title: "Sorting algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 3** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises](../exercises/ex-03-sorting.md)
+**Part 1 · Basic algorithms · Chapter 3** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Sorting algorithms](../exercises/ex-03-sorting.md) · [:material-gesture-tap: App: Sorting step by step](../lab/sorting.md)
 
 </div>
 
@@ -2011,6 +2011,10 @@ Before studying specific algorithms, we fix the operations that they may use and
     - Insertion Sort adapts to the input: on an array that is already sorted it performs only $n-1$ comparisons and no shift. It is the only stable algorithm of the three.
 
     - Exchange Sort and Selection Sort always perform $\frac{n(n-1)}{2}$ comparisons, but Selection Sort performs at most $n-1$ swaps, against the $\frac{n(n-1)}{2}$ swaps of Exchange Sort in the worst case.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Sorting algorithms](../exercises/ex-03-sorting.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

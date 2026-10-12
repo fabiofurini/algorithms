@@ -6,7 +6,7 @@ title: "Asymptotic growth"
 
 <div class="info-capitolo" markdown>
 
-**Part 3 · Asymptotic notation and growth · Chapter 10** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises](../exercises/ex-10-asymptotic-growth.md)
+**Part 3 · Asymptotic notation and growth · Chapter 10** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises: Asymptotic growth](../exercises/ex-10-asymptotic-growth.md) · [:material-gesture-tap: App: Orders of growth](../lab/growth.md)
 
 </div>
 
@@ -849,6 +849,10 @@ In the proofs of this subsection and of the following ones we compute the limit 
     - A constant factor in the exponent of an exponential, and a different base of an exponential, do change the order of growth: for example $2^{n/2} = o(2^n)$ and $3^n = \omega(2^n)$.
 
     - A function has a sub-linear, linear or super-linear order of growth if it is $o(n)$, $\Theta(n)$ or $\omega(n)$; for example $\sqrt n$, $5n+3$ and $n \ln n$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Asymptotic growth](../exercises/ex-10-asymptotic-growth.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

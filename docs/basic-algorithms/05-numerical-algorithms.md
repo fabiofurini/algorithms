@@ -6,7 +6,7 @@ title: "Numerical algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 5** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises](../exercises/ex-05-numerical-algorithms.md)
+**Part 1 · Basic algorithms · Chapter 5** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Numerical algorithms](../exercises/ex-05-numerical-algorithms.md) · [:material-gesture-tap: App: Euclid and the sieve of Eratosthenes](../lab/euclid-sieve.md)
 
 </div>
 
@@ -1625,6 +1625,10 @@ The following observation replaces the pair $(n, m)$ with a pair of smaller numb
     - The Euclidean algorithm repeats the replacement until the second number is $0$, and returns the first one, since $\gcd(n, 0) = n$.
 
     - Two numbers are coprime if and only if the Euclidean algorithm returns $1$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Numerical algorithms](../exercises/ex-05-numerical-algorithms.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

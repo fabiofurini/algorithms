@@ -6,7 +6,7 @@ title: "Introduction to Python"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 7** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises](../exercises/ex-07-introduction-to-python.md)
+**Part 2 · Programming languages · Chapter 7** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to Python](../exercises/ex-07-introduction-to-python.md)
 
 </div>
 
@@ -1402,3 +1402,7 @@ The following table summarizes the main differences between the two languages me
     - The lists of <code>Python</code> are indexed from $0$ to $n-1$, with $n$ = <code>len(a)</code>, while the arrays of the pseudo-code are indexed from $1$ to $n$; lists grow with <code>append</code> and need no memory management.
 
     - A function modifies the list of the caller when it changes its elements, but not a number it receives; several results are returned together as a tuple.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Introduction to Python](../exercises/ex-07-introduction-to-python.md)

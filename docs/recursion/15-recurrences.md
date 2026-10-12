@@ -6,7 +6,7 @@ title: "Recurrences"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 15** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-15-recurrences.md)
+**Part 5 · Recursion · Chapter 15** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recurrences](../exercises/ex-15-recurrences.md)
 
 </div>
 
@@ -1176,3 +1176,7 @@ with $a\ge 1$, $b>1$ constants and $n$ an exact power of $b$.
     - <strong>Recursion-tree method</strong>: to visualise the costs and to obtain a guess; ideal when the recursive terms have <em>different sizes</em> (unbalanced trees, as $T(n/3)+T(2n/3)+c\,n$). Compute the cost per level, the depth, the number of leaves, and sum using the geometric series.
 
     - <strong>Master Theorem</strong> (chapter <em>The Master Theorem</em>): recurrences in <em>standard form</em> $a\,T(n/b)+f(n)$; it gives the answer directly by comparing $f(n)$ with $n^{\log_b a}$. It does not apply to $T(n-1)+f(n)$ or to unbalanced splits.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Recurrences](../exercises/ex-15-recurrences.md)

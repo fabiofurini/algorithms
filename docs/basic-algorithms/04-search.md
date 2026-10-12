@@ -6,7 +6,7 @@ title: "Linear and binary search"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 4** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises](../exercises/ex-04-search.md)
+**Part 1 · Basic algorithms · Chapter 4** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Linear and binary search](../exercises/ex-04-search.md) · [:material-gesture-tap: App: Linear and binary search](../lab/search.md)
 
 </div>
 
@@ -535,6 +535,10 @@ title: "Linear and binary search"
     - Binary search works only on arrays sorted in non-decreasing order; it halves the search interval $a[left..right]$ at each iteration and executes at most $\lfloor \log_2 n \rfloor + 1$ iterations.
 
     - In the pseudo-code the indices go from $1$ to $n$, in the Colab notebooks (Python, <code>C++</code>, Java) from $0$ to $n-1$: the returned indices differ by $1$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Linear and binary search](../exercises/ex-04-search.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

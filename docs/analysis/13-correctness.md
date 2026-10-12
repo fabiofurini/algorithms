@@ -6,7 +6,7 @@ title: "Correctness"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis of algorithms · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises](../exercises/ex-13-correctness.md)
+**Part 4 · Analysis of algorithms · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises: Correctness](../exercises/ex-13-correctness.md) · [:material-gesture-tap: App: The loop invariant](../lab/invariant.md)
 
 </div>
 
@@ -747,6 +747,10 @@ title: "Correctness"
     - Nested loops need one invariant for each loop (Insertion Sort); a <strong>return</strong> inside the loop is a second exit that must be proved correct (Binary Search).
 
     - Recursive algorithms are proved correct by induction on the size of the input.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Correctness](../exercises/ex-13-correctness.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

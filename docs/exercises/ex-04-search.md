@@ -6,7 +6,7 @@ title: "Exercises · Linear and binary search"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 4** · each solution opens with a click · [:material-book-open-variant: Chapter 4](../basic-algorithms/04-search.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
+**Exercises · Chapter 4** · each solution opens with a click · [:material-book-open-variant: Chapter 4: Linear and binary search](../basic-algorithms/04-search.md) · [:material-file-pdf-box: Exercises, volume 1 (PDF)](../pdf/exercises-1-basic-algorithms.pdf)
 
 </div>
 

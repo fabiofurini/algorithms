@@ -6,7 +6,7 @@ title: "Exercises · Recursive algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 17** · each solution opens with a click · [:material-book-open-variant: Chapter 17](../recursion/17-recursive-algorithms.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
+**Exercises · Chapter 17** · each solution opens with a click · [:material-book-open-variant: Chapter 17: Recursive algorithms](../recursion/17-recursive-algorithms.md) · [:material-file-pdf-box: Exercises, volume 5 (PDF)](../pdf/exercises-5-recursion.pdf)
 
 </div>
 

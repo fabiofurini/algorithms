@@ -6,7 +6,7 @@ title: "Running time"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis of algorithms · Chapter 12** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises](../exercises/ex-12-running-time.md)
+**Part 4 · Analysis of algorithms · Chapter 12** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises: Running time](../exercises/ex-12-running-time.md)
 
 </div>
 
@@ -1225,3 +1225,7 @@ Thus, $S(n)=\Theta(|I|^2)$.
     - If $n$ is the number of entries of an array (with entries of fixed size), then $|I|=\Theta(n)$ and the order of growth does not change: $S(n)=\Theta(n^k)$ gives $T(|I|)=\Theta(|I|^k)$.
 
     - If $n$ is the <strong>value</strong> of the input number, then $|I|=\Theta(\log_2 n)$, i.e., $n=2^{\Theta(|I|)}$: a number of steps $\Theta(\log_2 n)$ is linear in $|I|$, while any number of steps $\Theta(\sqrt{n})$ or $\Theta(n)$ is <strong>exponential</strong> in $|I|$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Running time](../exercises/ex-12-running-time.md)

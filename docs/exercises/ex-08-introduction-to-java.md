@@ -6,7 +6,7 @@ title: "Exercises · Introduction to Java"
 
 <div class="info-capitolo" markdown>
 
-**Exercises · Chapter 8** · each solution opens with a click · [:material-book-open-variant: Chapter 8](../languages/08-introduction-to-java.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
+**Exercises · Chapter 8** · each solution opens with a click · [:material-book-open-variant: Chapter 8: Introduction to Java](../languages/08-introduction-to-java.md) · [:material-file-pdf-box: Exercises, volume 2 (PDF)](../pdf/exercises-2-programming-languages.pdf)
 
 </div>
 

@@ -6,7 +6,7 @@ title: "Introduction to Java"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 8** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises](../exercises/ex-08-introduction-to-java.md)
+**Part 2 · Programming languages · Chapter 8** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to Java](../exercises/ex-08-introduction-to-java.md)
 
 </div>
 
@@ -1363,3 +1363,7 @@ The following table summarizes the main differences among the three languages of
     - The arrays of <code>Java</code> are allocated with <code>new</code>, know their size <code>a.length</code>, are indexed from $0$ to $n-1$ and are freed automatically; the class <code>ArrayList</code> provides lists of variable size.
 
     - Parameters are passed by value; a method that receives an array can modify its elements, and several results are returned together in an array.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Introduction to Java](../exercises/ex-08-introduction-to-java.md)

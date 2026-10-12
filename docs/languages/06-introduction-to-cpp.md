@@ -6,7 +6,7 @@ title: "Introduction to C++"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 6** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises](../exercises/ex-06-introduction-to-cpp.md)
+**Part 2 · Programming languages · Chapter 6** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to C++](../exercises/ex-06-introduction-to-cpp.md)
 
 </div>
 
@@ -1759,3 +1759,7 @@ The bitwise operators give short and fast solutions to common tasks. In the foll
     - A function receives its parameters by value (a copy) or by reference (<code>&amp;</code>); an array is passed through the pointer to its first element, together with its size.
 
     - The bitwise operators act on the binary representation of the integer numbers: <code>x &lt; &lt; k</code> multiplies $x$ by $2^k$ and, for $x \ge 0$, <code>x &gt; &gt; k</code> computes $\lfloor x/2^k \rfloor$.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Introduction to C++](../exercises/ex-06-introduction-to-cpp.md)

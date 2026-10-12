@@ -6,7 +6,7 @@ title: "Pseudo-code"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 2** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises](../exercises/ex-02-pseudo-code.md)
+**Part 1 · Basic algorithms · Chapter 2** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Pseudo-code](../exercises/ex-02-pseudo-code.md)
 
 </div>
 
@@ -1904,3 +1904,7 @@ We conclude with a summary of the notation used in these notes, compared with ot
     - Arrays $a[1..n]$, $b[1..m][1..n]$, … are indexed from $1$ in pseudo-code; sets store distinct elements without positions.
 
     - An algorithm is written as a <strong>function</strong> with its input (including the preconditions), its output and a <strong>return</strong> statement.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Pseudo-code](../exercises/ex-02-pseudo-code.md)

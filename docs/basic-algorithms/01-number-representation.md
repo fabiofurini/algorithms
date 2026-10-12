@@ -6,7 +6,7 @@ title: "Representation of numbers"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 1** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises](../exercises/ex-01-number-representation.md)
+**Part 1 · Basic algorithms · Chapter 1** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Representation of numbers](../exercises/ex-01-number-representation.md) · [:material-gesture-tap: App: Number representation](../lab/number-representation.md)
 
 </div>
 
@@ -1480,6 +1480,10 @@ The machine epsilon measures the <strong>relative precision</strong> of the form
     - IEEE 754 single precision: $1 + 8 + 23$ bits, bias $127$; double precision: $1 + 11 + 52$ bits, bias $1023$.
 
     - The exponent bits determine the range, the fraction bits the precision; most real numbers (for instance $0.1$) are stored with a rounding error.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Representation of numbers](../exercises/ex-01-number-representation.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

@@ -6,7 +6,7 @@ title: "Recursion"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 14** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises](../exercises/ex-14-recursion.md)
+**Part 5 · Recursion · Chapter 14** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursion](../exercises/ex-14-recursion.md) · [:material-gesture-tap: App: Recursion trees](../lab/recursion-trees.md)
 
 </div>
 
@@ -1231,6 +1231,10 @@ The plan of the chapter is the following.
     - Recursion can be very inefficient when the <strong>same subproblems</strong> are solved many times (naive <code>Fib</code>): this motivates <strong>Dynamic Programming</strong>.
 
     - A <strong>tail-recursive</strong> algorithm (<code>RecursiveGCD</code>) can be directly rewritten as a loop.
+
+---
+
+**Exercises on this chapter:** [:material-pencil: Recursion](../exercises/ex-14-recursion.md)
 
 <!-- laboratorio-interattivo: sezione generata da interattivi.py -->
 

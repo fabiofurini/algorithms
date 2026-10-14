@@ -26,7 +26,7 @@ exercises with solutions.
 
 [Start with the basic algorithms :material-arrow-right:](basic-algorithms/index.md){ .md-button .md-button--primary }
 [The exercises](exercises/index.md){ .md-button }
-[Try an interactive graph](lab/index.md){ .md-button }
+[Explore the interactive lab](lab/index.md){ .md-button }
 [:material-download: Download the lecture notes (PDF)](downloads.md){ .md-button }
 
 </div>

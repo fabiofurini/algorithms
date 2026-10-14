@@ -7,20 +7,15 @@ hide:
 
 <div class="hero" markdown>
 
-![Under construction: the website and the course material are still being written](img/under-construction.svg){ width="560" }
-
-**Website under construction.** The material is still being written: the slides will
-follow later; the interactive lab is already open and will grow.
-
 # Algorithms
 
 Teaching material conceived and developed by **[Fabio Furini](https://fabiofurini.github.io/)**, associate
 professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
-**The course lecture notes, online**, in four parts: basic algorithms (representation of numbers,
+**The course lecture notes, online**, in five parts: basic algorithms (representation of numbers,
 pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
-Java), asymptotic notation and growth, analysis and recursion (running time, correctness,
-recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
+Java), asymptotic notation and growth, analysis of algorithms (running time and correctness),
+and recursion (recurrence relations, the Master Theorem and recursive algorithms), with definitions, theorems with their proofs,
 pseudo-code, examples executed step by step, Colab notebooks in Python, C++ and Java and
 exercises with solutions.
 
@@ -184,3 +179,5 @@ Teaching material by **[Fabio Furini](https://fabiofurini.github.io/)** —
 [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
 *Questo sito è disponibile anche in [italiano](https://fabiofurini.github.io/algoritmi/).*
+
+*Additional teaching materials, including lecture slides, will be added soon.*

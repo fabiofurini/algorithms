@@ -178,6 +178,6 @@ By the same author:
 Teaching material by **[Fabio Furini](https://fabiofurini.github.io/)** —
 [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
-*Questo sito è disponibile anche in [italiano](https://fabiofurini.github.io/algoritmi/).*
+*This website is also available in [Italian](https://fabiofurini.github.io/algoritmi/).*
 
 *Additional teaching materials, including lecture slides, will be added soon.*

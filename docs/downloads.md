@@ -4,7 +4,7 @@ title: Downloads
 
 # Downloads
 
-The lecture notes and the exercise books in PDF, updated at every publication of the site, with the same numbering of definitions, theorems, examples and exercises as the website. Text and figures are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en).
+The lecture notes, the exercise books and the slides in PDF, updated at every publication of the site, with the same numbering of definitions, theorems, examples and exercises as the website. Text and figures are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en).
 
 ## Lecture notes
 
@@ -97,3 +97,25 @@ The lecture notes and the exercise books in PDF, updated at every publication of
     [:octicons-download-24: exercises-5-recursion.pdf](pdf/exercises-5-recursion.pdf)
 
 </div>
+
+## Slides
+
+### Basic algorithms
+
+- :material-presentation: [Chapter 1 · Representation of numbers](pdf/slides-01-number-representation.pdf)
+- :material-presentation: [Chapter 2 · Pseudo-code](pdf/slides-02-pseudo-code.pdf)
+- :material-presentation: [Chapter 4 · Linear and binary search](pdf/slides-04-search.pdf)
+- :material-presentation: [Chapter 5 · Numerical algorithms](pdf/slides-05-numerical-algorithms.pdf)
+
+### Programming languages
+
+- :material-presentation: [Chapter 6 · Introduction to C++](pdf/slides-06-introduction-to-cpp.pdf)
+
+### Asymptotic notation and growth
+
+- :material-presentation: [Chapter 10 · Asymptotic growth](pdf/slides-10-asymptotic-growth.pdf)
+
+### Analysis of algorithms
+
+- :material-presentation: [Chapter 11 · Input size](pdf/slides-11-input-size.pdf)
+- :material-presentation: [Chapter 12 · Running time](pdf/slides-12-running-time.pdf)

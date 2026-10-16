@@ -6,7 +6,7 @@ title: "Pseudo-code"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 2** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Pseudo-code](../exercises/ex-02-pseudo-code.md)
+**Part 1 · Basic algorithms · Chapter 2** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-presentation: Slides](../pdf/slides-02-pseudo-code.pdf) · [:material-pencil: Exercises: Pseudo-code](../exercises/ex-02-pseudo-code.md)
 
 </div>
 

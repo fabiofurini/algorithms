@@ -6,7 +6,7 @@ title: "Representation of numbers"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 1** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Representation of numbers](../exercises/ex-01-number-representation.md) · [:material-gesture-tap: App: Number representation](../lab/number-representation.md)
+**Part 1 · Basic algorithms · Chapter 1** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-presentation: Slides](../pdf/slides-01-number-representation.pdf) · [:material-pencil: Exercises: Representation of numbers](../exercises/ex-01-number-representation.md) · [:material-gesture-tap: App: Number representation](../lab/number-representation.md)
 
 </div>
 
@@ -318,7 +318,7 @@ The table of [Example 1.2](#box-5-texexpbox2) stops at $15$: with four binary di
 
 !!! esempio "Example 1.3: representation intervals in binary"
 
-    For $b=2$ the representation interval with $k$ bits is $[0, 2^k-1]$. The last three rows correspond to $1$, $2$, $4$ and $8$ bytes.
+    For $b=2$ the representation interval with $k$ bits is $[0, 2^k-1]$. The last four rows correspond to $1$, $2$, $4$ and $8$ bytes.
 
     <div class="tabella" markdown="0"><table>
     <tr>

@@ -6,7 +6,7 @@ title: "Numerical algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 5** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Numerical algorithms](../exercises/ex-05-numerical-algorithms.md) · [:material-gesture-tap: App: Euclid and the sieve of Eratosthenes](../lab/euclid-sieve.md)
+**Part 1 · Basic algorithms · Chapter 5** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-presentation: Slides](../pdf/slides-05-numerical-algorithms.pdf) · [:material-pencil: Exercises: Numerical algorithms](../exercises/ex-05-numerical-algorithms.md) · [:material-gesture-tap: App: Euclid and the sieve of Eratosthenes](../lab/euclid-sieve.md)
 
 </div>
 

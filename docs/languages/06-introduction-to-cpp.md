@@ -6,7 +6,7 @@ title: "Introduction to C++"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 6** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to C++](../exercises/ex-06-introduction-to-cpp.md)
+**Part 2 · Programming languages · Chapter 6** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-presentation: Slides](../pdf/slides-06-introduction-to-cpp.pdf) · [:material-pencil: Exercises: Introduction to C++](../exercises/ex-06-introduction-to-cpp.md)
 
 </div>
 

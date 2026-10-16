@@ -6,7 +6,7 @@ title: "Linear and binary search"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 4** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Linear and binary search](../exercises/ex-04-search.md) · [:material-gesture-tap: App: Linear and binary search](../lab/search.md)
+**Part 1 · Basic algorithms · Chapter 4** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-presentation: Slides](../pdf/slides-04-search.pdf) · [:material-pencil: Exercises: Linear and binary search](../exercises/ex-04-search.md) · [:material-gesture-tap: App: Linear and binary search](../lab/search.md)
 
 </div>
 

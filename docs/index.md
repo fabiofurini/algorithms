@@ -180,4 +180,4 @@ Teaching material by **[Fabio Furini](https://fabiofurini.github.io/)** —
 
 *This website is also available in [Italian](https://fabiofurini.github.io/algoritmi/).*
 
-*Additional teaching materials, including lecture slides, will be added soon.*
+*The lecture slides, one PDF per chapter, are on the [Downloads](downloads.md) page.*

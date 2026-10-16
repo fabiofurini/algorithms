@@ -6,7 +6,7 @@ title: "Asymptotic growth"
 
 <div class="info-capitolo" markdown>
 
-**Part 3 · Asymptotic notation and growth · Chapter 10** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises: Asymptotic growth](../exercises/ex-10-asymptotic-growth.md) · [:material-gesture-tap: App: Orders of growth](../lab/growth.md)
+**Part 3 · Asymptotic notation and growth · Chapter 10** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-presentation: Slides](../pdf/slides-10-asymptotic-growth.pdf) · [:material-pencil: Exercises: Asymptotic growth](../exercises/ex-10-asymptotic-growth.md) · [:material-gesture-tap: App: Orders of growth](../lab/growth.md)
 
 </div>
 

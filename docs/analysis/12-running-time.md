@@ -6,7 +6,7 @@ title: "Running time"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis of algorithms · Chapter 12** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises: Running time](../exercises/ex-12-running-time.md)
+**Part 4 · Analysis of algorithms · Chapter 12** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-presentation: Slides](../pdf/slides-12-running-time.pdf) · [:material-pencil: Exercises: Running time](../exercises/ex-12-running-time.md)
 
 </div>
 

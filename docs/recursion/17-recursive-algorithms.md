@@ -6,7 +6,7 @@ title: "Recursive algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 17** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursive algorithms](../exercises/ex-17-recursive-algorithms.md) · [:material-gesture-tap: App: Merge sort](../lab/merge-sort.md)
+**Part 5 · Recursion · Chapter 17** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-presentation: Slides 1/2](../pdf/slides-17-recursive-algorithms-1.pdf) · [:material-presentation: Slides 2/2](../pdf/slides-17-recursive-algorithms-2.pdf) · [:material-pencil: Exercises: Recursive algorithms](../exercises/ex-17-recursive-algorithms.md) · [:material-gesture-tap: App: Merge sort](../lab/merge-sort.md)
 
 </div>
 

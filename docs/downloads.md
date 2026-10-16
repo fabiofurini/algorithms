@@ -130,4 +130,6 @@ The lecture notes, the exercise books and the slides in PDF, updated at every pu
 - :material-presentation: [Chapter 14 · Recursion](pdf/slides-14-recursion.pdf)
 - :material-presentation: [Chapter 15 · Recurrences](pdf/slides-15-recurrences.pdf)
 - :material-presentation: [Chapter 16 · The Master Theorem](pdf/slides-16-master-theorem.pdf)
+- :material-presentation: [Chapter 17 · Recursive algorithms (1/2)](pdf/slides-17-recursive-algorithms-1.pdf)
+- :material-presentation: [Chapter 17 · Recursive algorithms (2/2)](pdf/slides-17-recursive-algorithms-2.pdf)
 - :material-presentation: [Chapter 18 · Recursive versus iterative algorithms](pdf/slides-18-recursive-vs-iterative.pdf)

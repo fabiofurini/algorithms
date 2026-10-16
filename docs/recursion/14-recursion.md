@@ -6,7 +6,7 @@ title: "Recursion"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 14** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursion](../exercises/ex-14-recursion.md) · [:material-gesture-tap: App: Recursion trees](../lab/recursion-trees.md)
+**Part 5 · Recursion · Chapter 14** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-presentation: Slides](../pdf/slides-14-recursion.pdf) · [:material-pencil: Exercises: Recursion](../exercises/ex-14-recursion.md) · [:material-gesture-tap: App: Recursion trees](../lab/recursion-trees.md)
 
 </div>
 

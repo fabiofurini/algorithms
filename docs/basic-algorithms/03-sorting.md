@@ -6,7 +6,7 @@ title: "Sorting algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 1 · Basic algorithms · Chapter 3** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-pencil: Exercises: Sorting algorithms](../exercises/ex-03-sorting.md) · [:material-gesture-tap: App: Sorting step by step](../lab/sorting.md)
+**Part 1 · Basic algorithms · Chapter 3** · [:material-file-pdf-box: Lecture notes, volume 1 (PDF)](../pdf/lecture-notes-1-basic-algorithms.pdf) · [:material-presentation: Slides](../pdf/slides-03-sorting.pdf) · [:material-pencil: Exercises: Sorting algorithms](../exercises/ex-03-sorting.md) · [:material-gesture-tap: App: Sorting step by step](../lab/sorting.md)
 
 </div>
 

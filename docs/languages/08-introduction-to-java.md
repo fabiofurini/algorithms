@@ -6,7 +6,7 @@ title: "Introduction to Java"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 8** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to Java](../exercises/ex-08-introduction-to-java.md)
+**Part 2 · Programming languages · Chapter 8** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-presentation: Slides](../pdf/slides-08-introduction-to-java.pdf) · [:material-pencil: Exercises: Introduction to Java](../exercises/ex-08-introduction-to-java.md)
 
 </div>
 

@@ -6,7 +6,7 @@ title: "Asymptotic notation"
 
 <div class="info-capitolo" markdown>
 
-**Part 3 · Asymptotic notation and growth · Chapter 9** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-pencil: Exercises: Asymptotic notation](../exercises/ex-09-asymptotic-notation.md)
+**Part 3 · Asymptotic notation and growth · Chapter 9** · [:material-file-pdf-box: Lecture notes, volume 3 (PDF)](../pdf/lecture-notes-3-asymptotic-notation.pdf) · [:material-presentation: Slides](../pdf/slides-09-asymptotic-notation.pdf) · [:material-pencil: Exercises: Asymptotic notation](../exercises/ex-09-asymptotic-notation.md)
 
 </div>
 

@@ -6,7 +6,7 @@ title: "Correctness"
 
 <div class="info-capitolo" markdown>
 
-**Part 4 · Analysis of algorithms · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-pencil: Exercises: Correctness](../exercises/ex-13-correctness.md) · [:material-gesture-tap: App: The loop invariant](../lab/invariant.md)
+**Part 4 · Analysis of algorithms · Chapter 13** · [:material-file-pdf-box: Lecture notes, volume 4 (PDF)](../pdf/lecture-notes-4-analysis.pdf) · [:material-presentation: Slides](../pdf/slides-13-correctness.pdf) · [:material-pencil: Exercises: Correctness](../exercises/ex-13-correctness.md) · [:material-gesture-tap: App: The loop invariant](../lab/invariant.md)
 
 </div>
 

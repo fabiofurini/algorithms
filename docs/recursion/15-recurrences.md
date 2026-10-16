@@ -6,7 +6,7 @@ title: "Recurrences"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 15** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recurrences](../exercises/ex-15-recurrences.md)
+**Part 5 · Recursion · Chapter 15** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-presentation: Slides](../pdf/slides-15-recurrences.pdf) · [:material-pencil: Exercises: Recurrences](../exercises/ex-15-recurrences.md)
 
 </div>
 

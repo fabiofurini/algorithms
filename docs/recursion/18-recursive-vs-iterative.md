@@ -6,7 +6,7 @@ title: "Recursive versus iterative algorithms"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 18** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: Recursive versus iterative algorithms](../exercises/ex-18-recursive-vs-iterative.md)
+**Part 5 · Recursion · Chapter 18** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-presentation: Slides](../pdf/slides-18-recursive-vs-iterative.pdf) · [:material-pencil: Exercises: Recursive versus iterative algorithms](../exercises/ex-18-recursive-vs-iterative.md)
 
 </div>
 

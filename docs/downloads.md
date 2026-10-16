@@ -104,18 +104,30 @@ The lecture notes, the exercise books and the slides in PDF, updated at every pu
 
 - :material-presentation: [Chapter 1 · Representation of numbers](pdf/slides-01-number-representation.pdf)
 - :material-presentation: [Chapter 2 · Pseudo-code](pdf/slides-02-pseudo-code.pdf)
+- :material-presentation: [Chapter 3 · Sorting algorithms](pdf/slides-03-sorting.pdf)
 - :material-presentation: [Chapter 4 · Linear and binary search](pdf/slides-04-search.pdf)
 - :material-presentation: [Chapter 5 · Numerical algorithms](pdf/slides-05-numerical-algorithms.pdf)
 
 ### Programming languages
 
 - :material-presentation: [Chapter 6 · Introduction to C++](pdf/slides-06-introduction-to-cpp.pdf)
+- :material-presentation: [Chapter 7 · Introduction to Python](pdf/slides-07-introduction-to-python.pdf)
+- :material-presentation: [Chapter 8 · Introduction to Java](pdf/slides-08-introduction-to-java.pdf)
 
 ### Asymptotic notation and growth
 
+- :material-presentation: [Chapter 9 · Asymptotic notation](pdf/slides-09-asymptotic-notation.pdf)
 - :material-presentation: [Chapter 10 · Asymptotic growth](pdf/slides-10-asymptotic-growth.pdf)
 
 ### Analysis of algorithms
 
 - :material-presentation: [Chapter 11 · Input size](pdf/slides-11-input-size.pdf)
 - :material-presentation: [Chapter 12 · Running time](pdf/slides-12-running-time.pdf)
+- :material-presentation: [Chapter 13 · Correctness](pdf/slides-13-correctness.pdf)
+
+### Recursion
+
+- :material-presentation: [Chapter 14 · Recursion](pdf/slides-14-recursion.pdf)
+- :material-presentation: [Chapter 15 · Recurrences](pdf/slides-15-recurrences.pdf)
+- :material-presentation: [Chapter 16 · The Master Theorem](pdf/slides-16-master-theorem.pdf)
+- :material-presentation: [Chapter 18 · Recursive versus iterative algorithms](pdf/slides-18-recursive-vs-iterative.pdf)

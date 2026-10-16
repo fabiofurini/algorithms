@@ -6,7 +6,7 @@ title: "Introduction to Python"
 
 <div class="info-capitolo" markdown>
 
-**Part 2 · Programming languages · Chapter 7** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-pencil: Exercises: Introduction to Python](../exercises/ex-07-introduction-to-python.md)
+**Part 2 · Programming languages · Chapter 7** · [:material-file-pdf-box: Lecture notes, volume 2 (PDF)](../pdf/lecture-notes-2-programming-languages.pdf) · [:material-presentation: Slides](../pdf/slides-07-introduction-to-python.pdf) · [:material-pencil: Exercises: Introduction to Python](../exercises/ex-07-introduction-to-python.md)
 
 </div>
 

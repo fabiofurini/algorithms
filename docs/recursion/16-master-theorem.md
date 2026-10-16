@@ -6,7 +6,7 @@ title: "The Master Theorem"
 
 <div class="info-capitolo" markdown>
 
-**Part 5 · Recursion · Chapter 16** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-pencil: Exercises: The Master Theorem](../exercises/ex-16-master-theorem.md) · [:material-gesture-tap: App: The Master Theorem](../lab/master-theorem.md)
+**Part 5 · Recursion · Chapter 16** · [:material-file-pdf-box: Lecture notes, volume 5 (PDF)](../pdf/lecture-notes-5-recursion.pdf) · [:material-presentation: Slides](../pdf/slides-16-master-theorem.pdf) · [:material-pencil: Exercises: The Master Theorem](../exercises/ex-16-master-theorem.md) · [:material-gesture-tap: App: The Master Theorem](../lab/master-theorem.md)
 
 </div>
 

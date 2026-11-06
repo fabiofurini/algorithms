@@ -93,6 +93,7 @@ extra_css:
   - stylesheets/extra.css?v=305fcc0694
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
   - stylesheets/interattivi.css?v=750e9c2259
+  - stylesheets/quiz.css?v=9e3792b41c
 
 markdown_extensions:
   - admonition
@@ -126,6 +127,7 @@ extra_javascript:
   - javascripts/gi-cap1-5.js?v=0c2149b07f
   - javascripts/gi-cap14-17.js?v=c75fa22fac
   - javascripts/gi-cap9-13.js?v=0517f03b6f
+  - javascripts/quiz.js?v=3990768383
 
 # le pagine delle singole app del laboratorio non stanno nel menu (solo l'indice)
 not_in_nav: |
@@ -181,6 +183,7 @@ nav:
       - "16. The Master Theorem": exercises/ex-16-master-theorem.md
       - "17. Recursive algorithms": exercises/ex-17-recursive-algorithms.md
       - "18. Recursive versus iterative algorithms": exercises/ex-18-recursive-vs-iterative.md
+  - Quiz: self-assessment.md
   - Lab:
       - lab/index.md
   - Notebooks: notebooks.md

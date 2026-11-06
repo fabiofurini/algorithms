@@ -815,8 +815,8 @@ window.QUIZ_GEN = window.QUIZ_GEN || {};
       var o = build(rng, op(bl + 1, br + 1, best), [op(fp + 1, lp + 1, pos), op(ml + 1, mr + 1, ls + rs), op(1, prr + 1, pr), op(mi + 1, mi + 1, a[mi]), op(bl + 1, br + 1, best + 1)]);
       if (!o) return null;
       return fine(o,
-        T(lingua, "Kadane$(a,n)$ risolve il problema del sotto-array di somma massima: restituisce la terna $(bl,br,best)$, dove $a[bl..br]$ è un sotto-array (di elementi consecutivi, non vuoto) di somma massima e $best$ è la sua somma. Che cosa restituisce Kadane$(a,8)$ su $a=" + arr(a).slice(1, -1) + "$?",
-          "Kadane$(a,n)$ solves the maximum subarray problem: it returns the triple $(bl,br,best)$, where $a[bl..br]$ is a (non-empty, contiguous) subarray of maximum sum and $best$ is its sum. What does Kadane$(a,8)$ return on $a=" + arr(a).slice(1, -1) + "$?"),
+        T(lingua, "Kadane$(a,n)$ risolve il problema del sotto-array di somma massima: restituisce la terna $(bl,br,best)$, dove $a[bl..br]$ è un sotto-array (di elementi consecutivi, non vuoto) di somma massima e $best$ è la sua somma (nelle istanze proposte il sotto-array di somma massima è unico). Che cosa restituisce Kadane$(a,8)$ su $a=" + arr(a).slice(1, -1) + "$?",
+          "Kadane$(a,n)$ solves the maximum subarray problem: it returns the triple $(bl,br,best)$, where $a[bl..br]$ is a (non-empty, contiguous) subarray of maximum sum and $best$ is its sum (in the proposed instances the maximum-sum subarray is unique). What does Kadane$(a,8)$ return on $a=" + arr(a).slice(1, -1) + "$?"),
         T(lingua, "Kadane scorre l'array tenendo $cur$, la somma massima di un sotto-array che termina nella posizione precedente: in posizione $i$ riparte da $a[i]$ se $cur<0$, altrimenti estende con $a[i]$. Il massimo è $a[" + (bl + 1) + ".." + (br + 1) + "]$ con somma $" + best + "$. La somma dei soli positivi ($" + pos + "$) non corrisponde a un sotto-array contiguo.",
           "Kadane scans the array keeping $cur$, the maximum sum of a subarray ending at the previous position: at position $i$ it restarts from $a[i]$ if $cur<0$, otherwise it extends with $a[i]$. The maximum is $a[" + (bl + 1) + ".." + (br + 1) + "]$ with sum $" + best + "$. The sum of the positive entries only ($" + pos + "$) does not correspond to a contiguous subarray."),
         { a: a });
@@ -838,6 +838,423 @@ window.QUIZ_GEN = window.QUIZ_GEN || {};
         T(lingua, "FibRec: $C(n)=2F(n+1)-1=" + cr + "$ (sottoproblemi sovrapposti). FibMemo: ogni valore è calcolato una volta, $M(n)=M(n-1)+2$ con $M(2)=3$, quindi $2n-1=" + cm + "$.",
           "FibRec: $C(n)=2F(n+1)-1=" + cr + "$ (overlapping subproblems). FibMemo: each value is computed once, $M(n)=M(n-1)+2$ with $M(2)=3$, hence $2n-1=" + cm + "$."),
         { n: n });
+    }
+  });
+
+  // =================================================================== aggiunte (6 novembre 2026)
+  function par(v) { return v < 0 ? "(" + v + ")" : String(v); }
+  function segniOpposti(rng) {                 // dividendo e divisore di segno opposto, divisione non esatta
+    var a = ri(rng, 7, 40), b = ri(rng, 2, 9);
+    if (a % b === 0) return null;
+    return rng() < 0.5 ? { x: -a, y: b } : { x: a, y: -b };
+  }
+
+  // ------------------------------------------------ 6 C++: operatori bit a bit
+  add({
+    id: "alg-g-cpp-bitwise", livello: "facile", capitolo: "cpp",
+    link: L("languages/06-introduction-to-cpp/#610-bitwise-operators", "linguaggi/06-introduzione-cpp/#610-operatori-bit-a-bit"),
+    genera: function (rng, lingua) {
+      var op = pickOne(rng, ["&", "|", "^", "<<", ">>"]), sh = op === "<<" || op === ">>";
+      var x = ri(rng, 5, 31), y = sh ? ri(rng, 1, 3) : ri(rng, 5, 31);
+      if (!sh && x === y) return null;
+      var val = { "&": x & y, "|": x | y, "^": x ^ y, "<<": x << y, ">>": x >> y }, g = val[op];
+      var cand = sh ? [op === "<<" ? x >> y : x << y, x * y, x + y, op === "<<" ? x << (y + 1) : x >> (y + 1), Math.floor(x / y)]
+        : ["&", "|", "^"].filter(function (s) { return s !== op; }).map(function (s) { return val[s]; }).concat([x + y, Math.abs(x - y)]);
+      var o = build(rng, num(g), cand.map(num));
+      if (!o) return null;
+      var html = { "&": "&amp;", "|": "|", "^": "^", "<<": "&lt;&lt;", ">>": "&gt;&gt;" }[op];
+      var sp;
+      if (op === "<<") sp = T(lingua, "Lo scorrimento a sinistra di $" + y + "$ posizioni aggiunge $" + y + "$ zeri in coda, cioè moltiplica per $2^{" + y + "}$: $" + x + "\\cdot " + (1 << y) + "=" + g + "$.", "A left shift by $" + y + "$ positions appends $" + y + "$ zeros, i.e., multiplies by $2^{" + y + "}$: $" + x + "\\cdot " + (1 << y) + "=" + g + "$.");
+      else if (op === ">>") sp = T(lingua, "Lo scorrimento a destra di $" + y + "$ posizioni toglie i $" + y + "$ bit meno significativi di $(" + bits(x, 5) + ")_2$, cioè calcola $\\lfloor " + x + "/" + (1 << y) + "\\rfloor=" + g + "$.", "A right shift by $" + y + "$ positions removes the $" + y + "$ least significant bits of $(" + bits(x, 5) + ")_2$, i.e., it computes $\\lfloor " + x + "/" + (1 << y) + "\\rfloor=" + g + "$.");
+      else {
+        var reg = { "&": T(lingua, "un bit vale $1$ solo se vale $1$ in entrambi", "a bit is $1$ only if it is $1$ in both"), "|": T(lingua, "un bit vale $1$ se vale $1$ in almeno uno dei due", "a bit is $1$ if it is $1$ in at least one of them"), "^": T(lingua, "un bit vale $1$ se vale $1$ in esattamente uno dei due", "a bit is $1$ if it is $1$ in exactly one of them") }[op];
+        sp = T(lingua, "$" + x + "=(" + bits(x, 5) + ")_2$ e $" + y + "=(" + bits(y, 5) + ")_2$; con <code>" + html + "</code> " + reg + ": $(" + bits(g, 5) + ")_2=" + g + "$.", "$" + x + "=(" + bits(x, 5) + ")_2$ and $" + y + "=(" + bits(y, 5) + ")_2$; with <code>" + html + "</code> " + reg + ": $(" + bits(g, 5) + ")_2=" + g + "$.");
+      }
+      return fine(o,
+        T(lingua, "In C++, con <code>int x = " + x + ", y = " + y + ";</code>, quanto vale l'espressione <code>x " + html + " y</code>?", "In C++, with <code>int x = " + x + ", y = " + y + ";</code>, what is the value of the expression <code>x " + html + " y</code>?"),
+        sp, { x: x, y: y, op: op });
+    }
+  });
+
+  // ------------------------------------------------ 7 Python: divisione intera e resto con segni opposti
+  add({
+    id: "alg-g-py-divmod", livello: "facile", capitolo: "python",
+    link: L("languages/07-introduction-to-python/#sez-py-secarith", "linguaggi/07-introduzione-python/#sez-py-secarith"),
+    genera: function (rng, lingua) {
+      var s = segniOpposti(rng); if (!s) return null;
+      var x = s.x, y = s.y, qf = Math.floor(x / y), rf = x - y * qf, qt = Math.trunc(x / y), rt = x - y * qt;
+      function op(q, r) { return { k: q + "|" + r, t: T(lingua, "$" + q + "$ e $" + r + "$", "$" + q + "$ and $" + r + "$") }; }
+      var o = build(rng, op(qf, rf), [op(qt, rt), op(qf, rt), op(qt, rf), op(qf, -rf), op(qt, -rt)]);
+      if (!o) return null;
+      var ex = "<code>" + x + " // " + y + "</code>", em = "<code>" + x + " % " + y + "</code>";
+      return fine(o,
+        T(lingua, "In Python 3, quanto valgono " + ex + " e " + em + " (nell'ordine)?", "In Python 3, what are " + ex + " and " + em + " (in this order)?"),
+        T(lingua, "In Python <code>//</code> arrotonda il quoziente verso il basso: $\\lfloor " + x + "/" + par(y) + "\\rfloor=" + qf + "$; il resto è $" + x + "-" + par(y) + "\\cdot" + par(qf) + "=" + rf + "$ e ha il segno del divisore. C++ e Java troncano verso lo zero e darebbero $" + qt + "$ e $" + rt + "$.",
+          "In Python <code>//</code> rounds the quotient down: $\\lfloor " + x + "/" + par(y) + "\\rfloor=" + qf + "$; the remainder is $" + x + "-" + par(y) + "\\cdot" + par(qf) + "=" + rf + "$ and has the sign of the divisor. C++ and Java truncate toward zero and would give $" + qt + "$ and $" + rt + "$."),
+        { x: x, y: y });
+    }
+  });
+
+  // ------------------------------------------------ 8 Java: divisione intera e resto con segni opposti
+  add({
+    id: "alg-g-java-divmod", livello: "facile", capitolo: "java",
+    link: L("languages/08-introduction-to-java/#841-arithmetic-operators", "linguaggi/08-introduzione-java/#841-operatori-aritmetici"),
+    genera: function (rng, lingua) {
+      var s = segniOpposti(rng); if (!s) return null;
+      var x = s.x, y = s.y, qf = Math.floor(x / y), rf = x - y * qf, qt = Math.trunc(x / y), rt = x - y * qt;
+      function op(q, r) { return { k: q + "|" + r, t: "<code>" + q + " " + r + "</code>" }; }
+      var o = build(rng, op(qt, rt), [op(qf, rf), op(qt, rf), op(qf, rt), op(qt, -rt), op(qf, -rf)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "In Java, con <code>int x = " + x + ", y = " + y + ";</code>, che cosa stampa <code>System.out.println(x / y + \" \" + x % y);</code>?",
+          "In Java, with <code>int x = " + x + ", y = " + y + ";</code>, what does <code>System.out.println(x / y + \" \" + x % y);</code> print?"),
+        T(lingua, "Fra due <code>int</code>, <code>/</code> tronca il quoziente verso lo zero: $" + qt + "$; il resto è $" + x + "-" + par(y) + "\\cdot" + par(qt) + "=" + rt + "$ e ha il segno del dividendo. $" + qf + "$ e $" + rf + "$ sono i risultati di <code>//</code> e <code>%</code> in Python, che arrotonda verso il basso.",
+          "Between two <code>int</code> values, <code>/</code> truncates the quotient toward zero: $" + qt + "$; the remainder is $" + x + "-" + par(y) + "\\cdot" + par(qt) + "=" + rt + "$ and has the sign of the dividend. $" + qf + "$ and $" + rf + "$ are the results of <code>//</code> and <code>%</code> in Python, which rounds down."),
+        { x: x, y: y });
+    }
+  });
+
+  // ------------------------------------------------ 9 Notazione asintotica: costanti della definizione di Theta
+  add({
+    id: "alg-g-theta-constants", livello: "media", capitolo: "asymptotic-notation",
+    link: L("asymptotics/09-asymptotic-notation/#912-examples-of-asymptotic-tight-bounds", "notazione-asintotica/09-notazione-asintotica/#912-esempi-di-limitazioni-asintotiche-strette"),
+    genera: function (rng, lingua) {
+      var a = ri(rng, 2, 6), b = ri(rng, 3, 9), v = ri(rng, 0, 2);
+      var giusta = [[a, a + 1, b], [1, a + b, 1], [a, a + 2, Math.ceil(b / 2)]][v];
+      var cand = [[a, a + 1, b - 1], [a, a, b], [a + 1, a + 2, 1], [a, a + 1, 1], [a + 1, 2 * a + b, b], [1, a + b - 1, 1]];
+      function op(t) { return { k: t.join("|"), t: "$c_1=" + t[0] + "$, $c_2=" + t[1] + "$, $n_1=" + t[2] + "$" }; }
+      var o = build(rng, op(giusta), shuffle(rng, cand).map(op));
+      if (!o) return null;
+      var c2a = giusta[1] - a;
+      return fine(o,
+        T(lingua, "Per dimostrare con la definizione che $f(n)=" + a + "n^2+" + b + "n=\\Theta(n^2)$ servono costanti $c_1,c_2>0$ e una soglia $n_1\\in\\N$ con $c_1n^2\\le f(n)\\le c_2n^2$ per ogni $n\\ge n_1$. Quale scelta funziona?",
+          "To prove with the definition that $f(n)=" + a + "n^2+" + b + "n=\\Theta(n^2)$ we need constants $c_1,c_2>0$ and a threshold $n_1\\in\\N$ with $c_1n^2\\le f(n)\\le c_2n^2$ for all $n\\ge n_1$. Which choice works?"),
+        T(lingua, "Il limite inferiore $c_1n^2\\le f(n)$ vale per ogni $n$ se e solo se $c_1\\le " + a + "$. Il superiore equivale a $" + b + "n\\le(c_2-" + a + ")n^2$, cioè $(c_2-" + a + ")\\,n\\ge " + b + "$: serve $c_2>" + a + "$ e $n_1\\ge " + b + "/(c_2-" + a + ")$. Con $c_2=" + giusta[1] + "$ si ha $" + c2a + "\\cdot " + giusta[2] + "\\ge " + b + "$; le altre scelte violano una delle condizioni.",
+          "The lower bound $c_1n^2\\le f(n)$ holds for all $n$ if and only if $c_1\\le " + a + "$. The upper one is equivalent to $" + b + "n\\le(c_2-" + a + ")n^2$, i.e., $(c_2-" + a + ")\\,n\\ge " + b + "$: we need $c_2>" + a + "$ and $n_1\\ge " + b + "/(c_2-" + a + ")$. With $c_2=" + giusta[1] + "$ we have $" + c2a + "\\cdot " + giusta[2] + "\\ge " + b + "$; the other choices violate one of the conditions."),
+        { a: a, b: b });
+    }
+  });
+
+  // ------------------------------------------------ 13 Correttezza: valori all'inizio di un'iterazione (invariante)
+  add({
+    id: "alg-g-findmax-invariant", livello: "facile", capitolo: "correctness",
+    link: L("analysis/13-correctness/#132-correctness-of-find-maximum", "analisi/13-correttezza/#132-correttezza-di-find-maximum"),
+    genera: function (rng, lingua) {
+      var n = 7, a = sample(rng, 1, 40, n), k = ri(rng, 2, 6);
+      function mx(h) { var m = a[0]; for (var i = 1; i < h; i++) if (a[i] > m) m = a[i]; return m; }   // max di a[1..h]
+      function op(i, m) { return { k: i + "|" + m, t: "$i=" + i + "$, $max=" + m + "$" }; }
+      var o = build(rng, op(k + 1, mx(k)), [op(k + 1, mx(k + 1)), op(k, mx(k - 1)), op(k + 1, a[k - 1]), op(k, mx(k)), op(k + 1, a[k])]);
+      if (!o) return null;
+      var kw = function (w) { return "<b>" + w + "</b>"; };
+      var righe = ["1  max := a[1]", "2  i := 2", "3  " + kw("while") + " i ≤ n " + kw("do"), "4      " + kw("if") + " a[i] > max " + kw("then"), "5          max ← a[i]", "       " + kw("end"), "6      i ← i + 1", "   " + kw("end"), "7  " + kw("return") + " max"];
+      return fine(o,
+        T(lingua, "FindMaximum (qui sotto) è eseguito su $a=" + arr(a).slice(1, -1) + "$, con $n=" + n + "$. Quanto valgono $i$ e $max$ quando la condizione della riga $3$ viene valutata per la $" + k + "$-esima volta?",
+          "FindMaximum (below) is executed on $a=" + arr(a).slice(1, -1) + "$, with $n=" + n + "$. What are the values of $i$ and $max$ when the condition of line $3$ is evaluated for the $" + k + "$-th time?") + "\n" + pre(righe),
+        T(lingua, "Alla prima valutazione $i=2$ e $max=a[1]$; ogni iterazione incrementa $i$. Alla valutazione numero $" + k + "$ si ha $i=" + (k + 1) + "$ e, per l'invariante $max=\\max\\{a[1],\\dots,a[i-1]\\}$, $max=\\max\\{a[1],\\dots,a[" + k + "]\\}=" + mx(k) + "$.",
+          "At the first evaluation $i=2$ and $max=a[1]$; each iteration increments $i$. At evaluation number $" + k + "$ we have $i=" + (k + 1) + "$ and, by the invariant $max=\\max\\{a[1],\\dots,a[i-1]\\}$, $max=\\max\\{a[1],\\dots,a[" + k + "]\\}=" + mx(k) + "$."),
+        { a: a, k: k });
+    }
+  });
+
+  // ------------------------------------------------ 14 Ricorsione: chiamate e moltiplicazioni di FastPower
+  add({
+    id: "alg-g-fastpower-mults", livello: "media", capitolo: "recursion",
+    link: L("recursion/14-recursion/#1472-number-of-steps", "ricorsione/14-ricorsione/#1472-numero-di-passi"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 5, 120), Lb = bitlen(n), pc = 0, x = n; while (x > 0) { pc += x % 2; x = Math.floor(x / 2); }
+      var m = Lb + pc;
+      function op(c, mm) { return { k: c + "|" + mm, t: T(lingua, "$" + c + "$ chiamate, $" + mm + "$ moltiplicazioni", "$" + c + "$ calls, $" + mm + "$ multiplications") }; }
+      var o = build(rng, op(Lb + 1, m), [op(Lb, m), op(Lb + 1, 2 * Lb), op(Lb + 1, n - 1), op(Lb + 1, m - 1), op(Lb + 2, m), op(Lb + 1, Lb)]);
+      if (!o) return null;
+      var kw = function (w) { return "<b>" + w + "</b>"; };
+      var righe = [kw("function") + " FastPower(x, n)", "    " + kw("if") + " n = 0 " + kw("then") + " " + kw("return") + " 1", "    y := FastPower(x, ⌊n/2⌋)", "    " + kw("if") + " n mod 2 = 0 " + kw("then") + " " + kw("return") + " y · y", "    " + kw("else") + " " + kw("return") + " x · y · y", kw("end")];
+      var es = [], z = n; while (z > 0) { es.push(z); z = Math.floor(z / 2); } es.push(0);
+      return fine(o,
+        T(lingua, "Quante chiamate di FastPower (compresa la prima) e quante moltiplicazioni esegue in tutto FastPower$(x," + n + ")$? ($y\\cdot y$ conta una moltiplicazione, $x\\cdot y\\cdot y$ due.)",
+          "How many calls of FastPower (including the first one) and how many multiplications in total does FastPower$(x," + n + ")$ execute? ($y\\cdot y$ counts one multiplication, $x\\cdot y\\cdot y$ two.)") + "\n" + pre(righe),
+        T(lingua, "Gli esponenti delle chiamate sono $" + es.join(",") + "$: $" + (Lb + 1) + "$ chiamate. Ognuna delle $" + Lb + "$ con esponente positivo fa una moltiplicazione, più una seconda se l'esponente è dispari ($" + pc + "$ volte, gli $1$ in $(" + n.toString(2) + ")_2$): $" + Lb + "+" + pc + "=" + m + "$, contro le $" + (n - 1) + "$ del calcolo diretto.",
+          "The exponents of the calls are $" + es.join(",") + "$: $" + (Lb + 1) + "$ calls. Each of the $" + Lb + "$ calls with positive exponent makes one multiplication, plus a second one if the exponent is odd ($" + pc + "$ times, the $1$s in $(" + n.toString(2) + ")_2$): $" + Lb + "+" + pc + "=" + m + "$, against the $" + (n - 1) + "$ of the direct computation."),
+        { n: n });
+    }
+  });
+
+  // ------------------------------------------------ 15 Ricorrenze: valore esatto con parti intere
+  add({
+    id: "alg-g-rec-floor", livello: "complessa", capitolo: "recurrences",
+    link: L("recursion/15-recurrences/#sez-sec-expansion", "ricorsione/15-ricorrenze/#sez-sec-expansion"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 9, 23); if ((n & (n - 1)) === 0) return null;
+      var memo = {};
+      function Tv(m) { if (m === 1) return 1; if (memo[m]) return memo[m]; memo[m] = Tv(Math.floor(m / 2)) + Tv(Math.ceil(m / 2)) + m; return memo[m]; }
+      function Tw(m) { return m === 1 ? 1 : 2 * Tw(Math.floor(m / 2)) + m; }
+      var g = Tv(n), fl = flog2(n), cl = clog2(n);
+      var o = build(rng, num(g), [num(n * fl + n), num(n * cl + n), num(Tw(n)), num(g + 1), num(g - 1)]);
+      if (!o) return null;
+      var dims = Object.keys(memo).map(Number).sort(function (p, q) { return p - q; });
+      var elenco = dims.map(function (d) { return "T(" + d + ")=" + memo[d]; }).join(",\\ ");
+      return fine(o,
+        T(lingua, "Sia $T(1)=1$ e $T(n)=T(\\lfloor n/2\\rfloor)+T(\\lceil n/2\\rceil)+n$ per $n\\ge 2$ (la ricorrenza di MergeSort con costanti unitarie). Quanto vale $T(" + n + ")$?",
+          "Let $T(1)=1$ and $T(n)=T(\\lfloor n/2\\rfloor)+T(\\lceil n/2\\rceil)+n$ for $n\\ge 2$ (the recurrence of MergeSort with unit constants). What is $T(" + n + ")$?"),
+        T(lingua, "Si calcolano dal basso i valori che servono: $" + elenco + "$. La formula $n\\log_2 n+n$ vale solo per $n$ potenza di $2$, e sostituire $T(\\lceil n/2\\rceil)$ con $T(\\lfloor n/2\\rfloor)$ dà $" + Tw(n) + "$.",
+          "We compute bottom-up the values that are needed: $" + elenco + "$. The formula $n\\log_2 n+n$ holds only for $n$ a power of $2$, and replacing $T(\\lceil n/2\\rceil)$ with $T(\\lfloor n/2\\rfloor)$ gives $" + Tw(n) + "$."),
+        { n: n });
+    }
+  });
+
+  // ------------------------------------------------ 18 Ricorsivo e iterativo: passate di MergeSortBottomUp
+  function bottomUp(a, maxPass, soloComplete) {
+    a = a.slice(); var n = a.length, w = 1, pass = 0;
+    while (w < n && pass < maxPass) {
+      for (var l = 1; l + w <= n; l += 2 * w) {
+        var m = l + w - 1, r = Math.min(l + 2 * w - 1, n);
+        if (soloComplete && r - l + 1 < 2 * w) continue;
+        var mg = merge(a.slice(l - 1, m), a.slice(m, r)).a;
+        for (var t = 0; t < mg.length; t++) a[l - 1 + t] = mg[t];
+      }
+      w *= 2; pass++;
+    }
+    return a;
+  }
+  add({
+    id: "alg-g-bottomup-pass", livello: "complessa", capitolo: "recursive-vs-iterative",
+    link: L("recursion/18-recursive-vs-iterative/#box-5-obsRviBottomUpMergeSort", "ricorsione/18-ricorsivo-iterativo/#box-5-obsRviBottomUpMergeSort"),
+    genera: function (rng, lingua) {
+      var n = 7, a = sample(rng, 1, 30, n);
+      var p1 = bottomUp(a, 1, false), p2 = bottomUp(a, 2, false), p3 = bottomUp(a, 3, false), p2v = bottomUp(a, 2, true);
+      if (sameArr(p2, p3) || sameArr(p2, p2v)) return null;
+      var o = build(rng, opA(p2), [opA(p2v), opA(p1), opA(p3), opA(insertionAfter(a, 4).a)]);
+      if (!o) return null;
+      var kw = function (w) { return "<b>" + w + "</b>"; };
+      var righe = ["width := 1", kw("while") + " width &lt; n " + kw("do"), "    l := 1", "    " + kw("while") + " l + width ≤ n " + kw("do"), "        m := l + width − 1", "        r := min(l + 2·width − 1, n)", "        Merge(a, l, m, r)", "        l ← l + 2·width", "    " + kw("end"), "    width ← 2·width", kw("end")];
+      return fine(o,
+        T(lingua, "MergeSortBottomUp$(a,n)$ (qui sotto; Merge$(a,l,m,r)$ fonde i sotto-array ordinati $a[l..m]$ e $a[m+1..r]$ in $a[l..r]$ ordinato) è eseguito su $a=" + arr(a).slice(1, -1) + "$, con $n=" + n + "$. Che cosa contiene $a$ al termine della passata con $width=2$?",
+          "MergeSortBottomUp$(a,n)$ (below; Merge$(a,l,m,r)$ merges the sorted subarrays $a[l..m]$ and $a[m+1..r]$ into the sorted $a[l..r]$) is executed on $a=" + arr(a).slice(1, -1) + "$, with $n=" + n + "$. What does $a$ contain at the end of the pass with $width=2$?") + "\n" + pre(righe),
+        T(lingua, "La passata con $width=1$ fonde le coppie $a[1..2]$, $a[3..4]$, $a[5..6]$ ($a[7]$ resta da solo): " + arr(p1) + ". La passata con $width=2$ fonde $a[1..2]$ con $a[3..4]$ e $a[5..6]$ con $a[7..7]$ (blocco incompleto, con $r=\\min(8,7)=7$): " + arr(p2) + ".",
+          "The pass with $width=1$ merges the pairs $a[1..2]$, $a[3..4]$, $a[5..6]$ ($a[7]$ stays alone): " + arr(p1) + ". The pass with $width=2$ merges $a[1..2]$ with $a[3..4]$ and $a[5..6]$ with $a[7..7]$ (incomplete block, with $r=\\min(8,7)=7$): " + arr(p2) + "."),
+        { a: a });
+    }
+  });
+  // =================================================================== generatori aggiunti il 6/11/2026 (secondo generatore per capitolo)
+  // ------------------------------------------------ 4 Ricerca: LinearSearch contro BinarySearch sullo stesso array
+  add({
+    id: "alg-g-search-compare", livello: "media", capitolo: "search",
+    link: L("basic-algorithms/04-search/#431-number-of-iterations", "algoritmi-di-base/04-ricerca/#431-numero-di-iterazioni"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 9, 15), a = sample(rng, 1, 60, n).sort(function (x, y) { return x - y; });
+      var p = ri(rng, 1, n), m = a[p - 1], bs = binSearch(a, m, "floor"), it = bs.seq.length;
+      if (bs.ret !== p) return null;
+      function op(c, k) { return { k: c + "|" + k, t: T(lingua, "LinearSearch $" + c + "$ confronti, BinarySearch $" + k + "$ iterazioni", "LinearSearch $" + c + "$ comparisons, BinarySearch $" + k + "$ iterations") }; }
+      var o = build(rng, op(p, it), shuffle(rng, [op(p, it + 1), op(p - 1, it), op(n, it), op(p, flog2(n) + 1), op(p, it - 1), op(Math.ceil(p / 2), it)]));
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Si cerca $m=" + m + "$ nell'array ordinato $a=" + arr(a).slice(1, -1) + "$ (indici da $1$ a $" + n + "$). LinearSearch confronta $a[i]=m$ per $i=1,2,\\dots$ fino al primo successo. BinarySearch parte da $left=1$, $right=" + n + "$ e a ogni iterazione esamina $mid=left+\\lfloor(right-left)/2\\rfloor$: si ferma se $a[mid]=m$, altrimenti pone $left\\leftarrow mid+1$ se $a[mid]<m$ e $right\\leftarrow mid-1$ se $a[mid]>m$. Quanti confronti esegue LinearSearch e quante iterazioni BinarySearch?",
+          "We look for $m=" + m + "$ in the sorted array $a=" + arr(a).slice(1, -1) + "$ (indices from $1$ to $" + n + "$). LinearSearch compares $a[i]=m$ for $i=1,2,\\dots$ until the first success. BinarySearch starts from $left=1$, $right=" + n + "$ and at each iteration examines $mid=left+\\lfloor(right-left)/2\\rfloor$: it stops if $a[mid]=m$, otherwise it sets $left\\leftarrow mid+1$ if $a[mid]<m$ and $right\\leftarrow mid-1$ if $a[mid]>m$. How many comparisons does LinearSearch perform and how many iterations BinarySearch?"),
+        T(lingua, "$m$ è in posizione $" + p + "$, quindi LinearSearch esegue $" + p + "$ confronti. BinarySearch esamina $mid=" + bs.seq.join(",\\ ") + "$: $" + it + "$ iterazioni, non più di $\\lfloor\\log_2 " + n + "\\rfloor+1=" + (flog2(n) + 1) + "$.",
+          "$m$ is in position $" + p + "$, so LinearSearch performs $" + p + "$ comparisons. BinarySearch examines $mid=" + bs.seq.join(",\\ ") + "$: $" + it + "$ iterations, no more than $\\lfloor\\log_2 " + n + "\\rfloor+1=" + (flog2(n) + 1) + "$."),
+        { a: a, m: m });
+    }
+  });
+
+  // ------------------------------------------------ 6 C++: parametri per valore e per riferimento
+  add({
+    id: "alg-g-cpp-reference", livello: "media", capitolo: "cpp",
+    link: L("languages/06-introduction-to-cpp/#box-26-cpp-exreference", "linguaggi/06-introduzione-cpp/#box-26-cpp-exreference"),
+    genera: function (rng, lingua) {
+      var X = ri(rng, 2, 9), Y = ri(rng, 2, 9), K = ri(rng, 1, 5), M = ri(rng, 2, 4), refA = rng() < 0.5;
+      var A = X + K, B = Y * M, x = refA ? A : X, y = refA ? Y : B, z = A + B;
+      function op(p, q, r) { return { k: p + "|" + q + "|" + r, t: "<code>" + p + " " + q + " " + r + "</code>" }; }
+      var o = build(rng, op(x, y, z), shuffle(rng, [op(X, Y, z), op(A, B, z), op(refA ? X : A, refA ? B : Y, z), op(x, y, refA ? X + B : A + Y), op(x, y, X + Y)]));
+      if (!o) return null;
+      var pa = refA ? "int&amp; a" : "int a", pb = refA ? "int b" : "int&amp; b";
+      var righe = ["int f(" + pa + ", " + pb + ")", "{", "    a = a + " + K + ";", "    b = b * " + M + ";", "    return a + b;", "}", "", "int main()", "{", "    int x = " + X + ", y = " + Y + ";", "    int z = f(x, y);", "    cout &lt;&lt; x &lt;&lt; \" \" &lt;&lt; y &lt;&lt; \" \" &lt;&lt; z;", "    return 0;", "}"];
+      return fine(o,
+        T(lingua, "In C++ un parametro dichiarato con <code>&amp;</code> (per esempio <code>int&amp; b</code>) è passato per riferimento, gli altri per valore. Che cosa stampa il programma?", "In C++ a parameter declared with <code>&amp;</code> (for instance <code>int&amp; b</code>) is passed by reference, the others by value. What does the program print?") + "\n" + pre(righe),
+        T(lingua, "Dentro <code>f</code> si ha <code>a</code> $=" + X + "+" + K + "=" + A + "$ e <code>b</code> $=" + Y + "\\cdot " + M + "=" + B + "$, quindi <code>z</code> $=" + z + "$. Solo il parametro per riferimento (<code>" + (refA ? "a" : "b") + "</code>) modifica la variabile del chiamante: <code>x</code> $=" + x + "$, <code>y</code> $=" + y + "$.",
+          "Inside <code>f</code> we have <code>a</code> $=" + X + "+" + K + "=" + A + "$ and <code>b</code> $=" + Y + "\\cdot " + M + "=" + B + "$, so <code>z</code> $=" + z + "$. Only the parameter passed by reference (<code>" + (refA ? "a" : "b") + "</code>) modifies the variable of the caller: <code>x</code> $=" + x + "$, <code>y</code> $=" + y + "$."),
+        { X: X, Y: Y, K: K, M: M, refA: refA });
+    }
+  });
+
+  // ------------------------------------------------ 7 Python: lista modificata e parametro riassegnato
+  add({
+    id: "alg-g-py-params", livello: "media", capitolo: "python",
+    link: L("languages/07-introduction-to-python/#box-28-py-exparams", "linguaggi/07-introduzione-python/#box-28-py-exparams"),
+    genera: function (rng, lingua) {
+      var b = [ri(rng, 1, 9), ri(rng, 1, 9), ri(rng, 1, 9)], I = ri(rng, 0, 2), K = ri(rng, 2, 7);
+      var nb = b.slice(); nb[I] += K;
+      var nb2 = b.slice(); nb2[I] += 2 * K;
+      function lst(v) { return "[" + v.join(", ") + "]"; }
+      function op(v, k, r) { return { k: v.join(",") + "|" + k + "|" + r, t: "<code>" + lst(v) + " " + k + " " + r + "</code>" }; }
+      var o = build(rng, op(nb, K, 2 * K), shuffle(rng, [op(b, K, 2 * K), op(nb, 2 * K, 2 * K), op(nb, K, K), op(nb2, K, 2 * K), op(b, 2 * K, 2 * K)]));
+      if (!o) return null;
+      var righe = ["def f(a, x):", "    a[" + I + "] = a[" + I + "] + x", "    x = x * 2", "    return x", "", "b = " + lst(b), "k = " + K, "r = f(b, k)", "print(b, k, r)"];
+      return fine(o,
+        T(lingua, "In Python un parametro riceve lo stesso oggetto passato dal chiamante. Che cosa stampa il programma?", "In Python a parameter receives the same object passed by the caller. What does the program print?") + "\n" + pre(righe),
+        T(lingua, "<code>a[" + I + "] = …</code> modifica un elemento della lista del chiamante, che diventa <code>" + lst(nb) + "</code>; <code>x = x * 2</code> cambia solo il nome locale, quindi <code>k</code> resta $" + K + "$, mentre il valore restituito è $" + (2 * K) + "$.",
+          "<code>a[" + I + "] = …</code> modifies an element of the caller's list, which becomes <code>" + lst(nb) + "</code>; <code>x = x * 2</code> changes only the local name, so <code>k</code> stays $" + K + "$, while the returned value is $" + (2 * K) + "$."),
+        { b: b, I: I, K: K });
+    }
+  });
+
+  // ------------------------------------------------ 8 Java: somma e concatenazione con +
+  add({
+    id: "alg-g-java-concat", livello: "media", capitolo: "java",
+    link: L("languages/08-introduction-to-java/#box-5-java-exprint", "linguaggi/08-introduzione-java/#box-5-java-exprint"),
+    genera: function (rng, lingua) {
+      var x = ri(rng, 2, 9), y = ri(rng, 2, 9), v = ri(rng, 0, 2);
+      if (x === y) return null;
+      var S = function (k) { return String(k); }, expr, giusta, cand;
+      if (v === 0) {
+        expr = "x + y + \" \" + x + y";
+        giusta = S(x + y) + " " + S(x) + S(y);
+        cand = [S(x + y) + " " + S(x + y), S(x) + S(y) + " " + S(x) + S(y), S(x) + S(y) + " " + S(x + y), S(x + y) + S(x) + S(y)];
+      } else if (v === 1) {
+        expr = "\"\" + x + y + \" \" + (x + y)";
+        giusta = S(x) + S(y) + " " + S(x + y);
+        cand = [S(x + y) + " " + S(x + y), S(x) + S(y) + " " + S(x) + S(y), S(x + y) + " " + S(x) + S(y), S(x) + S(y) + S(x + y)];
+      } else {
+        expr = "x + \" \" + y * 2 + x";
+        giusta = S(x) + " " + S(2 * y) + S(x);
+        cand = [S(x) + " " + S(2 * y + x), S(x) + " " + S(y) + "2" + S(x), S(x) + " " + S(2 * (y + x)), S(x) + " " + S(y) + S(y) + S(x)];
+      }
+      function op(s) { return { k: s, t: "<code>" + s + "</code>" }; }
+      var o = build(rng, op(giusta), shuffle(rng, cand.map(op)));
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "In Java, con <code>int x = " + x + ", y = " + y + ";</code>, che cosa stampa <code>System.out.println(" + expr + ");</code>?", "In Java, with <code>int x = " + x + ", y = " + y + ";</code>, what does <code>System.out.println(" + expr + ");</code> print?"),
+        T(lingua, "L'operatore <code>+</code> si valuta da sinistra a destra: fra due <code>int</code> è una somma, ma appena uno dei due operandi è una <code>String</code> l'altro viene convertito in testo e concatenato. <code>*</code> e le parentesi si valutano prima. Si ottiene <code>" + giusta + "</code>.",
+          "The operator <code>+</code> is evaluated from left to right: between two <code>int</code> values it is an addition, but as soon as one of the two operands is a <code>String</code> the other is converted into text and concatenated. <code>*</code> and the parentheses are evaluated first. The result is <code>" + giusta + "</code>."),
+        { x: x, y: y, v: v });
+    }
+  });
+
+  // ------------------------------------------------ 10 Crescita asintotica: traslazioni, scalature, cambi di base
+  add({
+    id: "alg-g-growth-transform", livello: "media", capitolo: "asymptotic-growth",
+    link: L("asymptotics/10-asymptotic-growth/#sez-gr-sec-comparison", "notazione-asintotica/10-crescita-asintotica/#sez-gr-sec-comparison"),
+    genera: function (rng, lingua) {
+      var t = ri(rng, 0, 10), f, g, rel, c, k, b, q, sw = false;
+      if (t === 0) { c = ri(rng, 1, 9); k = ri(rng, 2, 4); f = "(n+" + c + ")^{" + k + "}"; g = "n^{" + k + "}"; rel = "theta"; }
+      else if (t === 1) { c = ri(rng, 2, 5); k = ri(rng, 2, 4); f = "(" + c + "n)^{" + k + "}"; g = "n^{" + k + "}"; rel = "theta"; }
+      else if (t === 2) { b = pickOne(rng, [2, 3]); c = ri(rng, 1, 5); f = b + "^{n+" + c + "}"; g = b + "^{n}"; rel = "theta"; }
+      else if (t === 3) { b = pickOne(rng, [2, 3]); c = ri(rng, 2, 3); f = b + "^{" + c + "n}"; g = b + "^{n}"; rel = "omega"; sw = rng() < 0.5; }
+      else if (t === 4) { k = ri(rng, 2, 5); f = "\\log_2(n^{" + k + "})"; g = "\\log_2 n"; rel = "theta"; }
+      else if (t === 5) { k = ri(rng, 2, 5); q = ri(rng, 2, 4); f = "\\log_2^{" + k + "} n"; g = "n^{1/" + q + "}"; rel = "o"; sw = rng() < 0.5; }
+      else if (t === 6) { var bb = shuffle(rng, [2, 3, 5]); b = bb[0]; c = bb[1]; f = b + "^{n}"; g = c + "^{n}"; rel = b < c ? "o" : "omega"; }
+      else if (t === 7) { k = ri(rng, 2, 6); b = pickOne(rng, [2, 3]); f = "n^{" + k + "}"; g = b + "^{n}"; rel = "o"; sw = rng() < 0.5; }
+      else if (t === 8) { c = ri(rng, 1, 9); f = "\\log_2(n+" + c + ")"; g = "\\log_2 n"; rel = "theta"; }
+      else if (t === 9) { q = ri(rng, 2, 4); f = "n\\log_2 n"; g = "n^{1+1/" + q + "}"; rel = "o"; sw = rng() < 0.5; }
+      else { c = ri(rng, 2, 3); f = "2^{n/" + c + "}"; g = "2^{n}"; rel = "o"; sw = rng() < 0.5; }
+      if (sw) { var tmp = f; f = g; g = tmp; rel = rel === "o" ? "omega" : "o"; }
+      var testi = {
+        theta: "$f(n)=\\Theta\\big(g(n)\\big)$", o: "$f(n)=o\\big(g(n)\\big)$", omega: "$f(n)=\\omega\\big(g(n)\\big)$",
+        none: T(lingua, "Nessuna delle due è $\\bigO$ dell'altra", "Neither is $\\bigO$ of the other")
+      };
+      function op(r) { return { k: r, t: testi[r] }; }
+      var o = build(rng, op(rel), shuffle(rng, ["theta", "o", "omega", "none"].map(op)));
+      if (!o) return null;
+      var motivo = {
+        0: T(lingua, "una traslazione dell'argomento non cambia l'ordine di una potenza", "a shift of the argument does not change the order of a power"),
+        1: T(lingua, "una scalatura dell'argomento moltiplica una potenza per una costante", "a scaling of the argument multiplies a power by a constant"),
+        2: T(lingua, "una traslazione dell'esponente moltiplica l'esponenziale per una costante", "a shift of the exponent multiplies the exponential by a constant"),
+        3: T(lingua, "una scalatura dell'esponente cambia la base: $b^{cn}=(b^c)^n$", "a scaling of the exponent changes the base: $b^{cn}=(b^c)^n$"),
+        4: T(lingua, "$\\log_2(n^k)=k\\log_2 n$", "$\\log_2(n^k)=k\\log_2 n$"),
+        5: T(lingua, "ogni polilogaritmo è $o$ di ogni potenza con esponente positivo", "every polylogarithm is $o$ of every power with positive exponent"),
+        6: T(lingua, "fra esponenziali conta la base", "among exponentials the base matters"),
+        7: T(lingua, "ogni potenza è $o$ di ogni esponenziale con base maggiore di $1$", "every power is $o$ of every exponential with base larger than $1$"),
+        8: T(lingua, "una traslazione dell'argomento non cambia l'ordine del logaritmo", "a shift of the argument does not change the order of the logarithm"),
+        9: T(lingua, "$\\frac{n\\log_2 n}{n^{1+1/q}}=\\frac{\\log_2 n}{n^{1/q}}\\to 0^+$", "$\\frac{n\\log_2 n}{n^{1+1/q}}=\\frac{\\log_2 n}{n^{1/q}}\\to 0^+$"),
+        10: T(lingua, "il rapporto $2^{n/c}/2^n=2^{-n(1-1/c)}$ tende a $0^+$", "the ratio $2^{n/c}/2^n=2^{-n(1-1/c)}$ tends to $0^+$")
+      }[t];
+      return fine(o,
+        T(lingua, "Siano $f(n)=" + f + "$ e $g(n)=" + g + "$, funzioni della variabile naturale $n$. Quale relazione asintotica è vera?", "Let $f(n)=" + f + "$ and $g(n)=" + g + "$, functions of the natural variable $n$. Which asymptotic relation is true?"),
+        T(lingua, "Vale " + testi[rel] + ": " + motivo + ". Le notazioni $\\Theta$, $o$ e $\\omega$ si escludono a vicenda.", "It holds " + testi[rel] + ": " + motivo + ". The notations $\\Theta$, $o$ and $\\omega$ are mutually exclusive."),
+        { t: t, c: c === undefined ? null : c, k: k === undefined ? null : k, b: b === undefined ? null : b, q: q === undefined ? null : q, sw: sw });
+    }
+  });
+
+  // ------------------------------------------------ 11 Dimensione dell'input: array con zeri, con o senza il numero n
+  add({
+    id: "alg-g-input-zeros", livello: "media", capitolo: "input-size",
+    link: L("analysis/11-input-size/#box-13-obsArrayLower", "analisi/11-dimensione-input/#box-13-obsArrayLower"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 5, 7), a = []; for (var i = 0; i < n; i++) a.push(rng() < 0.3 ? 0 : ri(rng, 1, 200));
+      var zeri = a.filter(function (x) { return x === 0; }).length, incl = rng() < 0.5;
+      if (zeri === 0 || zeri === n) return null;
+      var bitsA = a.map(function (x) { return x === 0 ? 1 : bitlen(x); }), sA = bitsA.reduce(function (s, x) { return s + x; }, 0);
+      var M = Math.max.apply(null, a), bn = bitlen(n), giusta = sA + (incl ? bn : 0);
+      var o = build(rng, num(giusta), shuffle(rng, [num(sA - zeri + (incl ? bn : 0)), num(incl ? sA : sA + bn), num(n * bitlen(M) + (incl ? bn : 0)), num(giusta + 1), num(sA + n)]));
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "La dimensione dell'input $|I|$ è il numero totale di bit per scrivere l'istanza in binario: un naturale $x\\ge 1$ richiede $\\lfloor\\log_2 x\\rfloor+1$ bit, e lo zero un bit. L'input è l'array $a=" + arr(a).slice(1, -1) + "$" + (incl ? T(lingua, " insieme al numero $n=" + n + "$ delle sue componenti", " together with the number $n=" + n + "$ of its entries") : T(lingua, " (senza il numero $n$)", " (without the number $n$)")) + ". Quanto vale $|I|$?",
+          "The input size $|I|$ is the total number of bits needed to write the instance in binary: a natural number $x\\ge 1$ needs $\\lfloor\\log_2 x\\rfloor+1$ bits, and zero one bit. The input is the array $a=" + arr(a).slice(1, -1) + "$" + (incl ? " together with the number $n=" + n + "$ of its entries" : " (without the number $n$)") + ". What is $|I|$?"),
+        T(lingua, "Le componenti richiedono $" + bitsA.join("+") + "=" + sA + "$ bit (ogni zero conta un bit)" + (incl ? " e $n=" + n + "$ altri $" + bn + "$" : "") + ": $|I|=" + giusta + "$.",
+          "The entries need $" + bitsA.join("+") + "=" + sA + "$ bits (each zero counts one bit)" + (incl ? " and $n=" + n + "$ needs $" + bn + "$ more" : "") + ": $|I|=" + giusta + "$."),
+        { a: a, incl: incl });
+    }
+  });
+
+  // ------------------------------------------------ 13 Correttezza: intervallo di ricerca di BinarySearch (invariante)
+  add({
+    id: "alg-g-binsearch-interval", livello: "media", capitolo: "correctness",
+    link: L("analysis/13-correctness/#134-correctness-of-binary-search", "analisi/13-correttezza/#134-correttezza-di-binary-search"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 10, 14), a = sample(rng, 1, 70, n).sort(function (x, y) { return x - y; });
+      var m = rng() < 0.5 ? a[ri(rng, 0, n - 1)] : ri(rng, 1, 70);
+      var st = [], left = 1, right = n, mid;
+      while (true) {
+        st.push([left, right]);
+        if (!(left <= right)) break;
+        mid = left + Math.floor((right - left) / 2);
+        if (a[mid - 1] === m) break;
+        if (a[mid - 1] < m) left = mid + 1; else right = mid - 1;
+      }
+      if (st.length < 3) return null;
+      var k = ri(rng, 2, st.length), g = st[k - 1], prev = st[k - 2], nxt = st[k] || [g[0], g[1] + 1];
+      var pm = prev[0] + Math.floor((prev[1] - prev[0]) / 2);
+      function op(l, r) { return { k: l + "|" + r, t: "$left=" + l + "$, $right=" + r + "$" }; }
+      var o = build(rng, op(g[0], g[1]), shuffle(rng, [op(prev[0], prev[1]), op(nxt[0], nxt[1]), op(g[0] === prev[0] ? g[0] : pm, g[1] === prev[1] ? g[1] : pm), op(g[0], g[1] + 1), op(g[0] - 1, g[1])]));
+      if (!o) return null;
+      var kw = function (w) { return "<b>" + w + "</b>"; };
+      var righe = ["1  left := 1", "2  right := n", "3  " + kw("while") + " left ≤ right " + kw("do"), "4      mid := left + ⌊(right − left) / 2⌋", "5      " + kw("if") + " a[mid] = m " + kw("then return") + " mid", "6      " + kw("if") + " a[mid] &lt; m " + kw("then") + " left ← mid + 1", "7      " + kw("else") + " right ← mid − 1", "   " + kw("end"), "8  " + kw("return") + " −1"];
+      return fine(o,
+        T(lingua, "BinarySearch (qui sotto) cerca $m=" + m + "$ in $a=" + arr(a).slice(1, -1) + "$, con $n=" + n + "$. Quanto valgono $left$ e $right$ quando la condizione della riga $3$ viene valutata per la $" + k + "$-esima volta?",
+          "BinarySearch (below) looks for $m=" + m + "$ in $a=" + arr(a).slice(1, -1) + "$, with $n=" + n + "$. What are $left$ and $right$ when the condition of line $3$ is evaluated for the $" + k + "$-th time?") + "\n" + pre(righe),
+        T(lingua, "Alle valutazioni successive l'intervallo è " + st.slice(0, k).map(function (s) { return "$[" + s[0] + "," + s[1] + "]$"; }).join(", ") + ". Ogni passo scarta solo una parte che non può contenere $m$ (invariante: se $m$ è nell'array, è in $a[left..right]$).",
+          "At the successive evaluations the interval is " + st.slice(0, k).map(function (s) { return "$[" + s[0] + "," + s[1] + "]$"; }).join(", ") + ". Each step discards only a part that cannot contain $m$ (invariant: if $m$ is in the array, it is in $a[left..right]$)."),
+        { a: a, m: m, k: k });
+    }
+  });
+
+  // ------------------------------------------------ 16 Master theorem: f(n) con fattore polilogaritmico
+  add({
+    id: "alg-g-master-log", livello: "complessa", capitolo: "master-theorem",
+    link: L("recursion/16-master-theorem/#box-1-theoMaster", "ricorsione/16-master-theorem/#box-1-theoMaster"),
+    genera: function (rng, lingua) {
+      var b = pickOne(rng, [2, 3, 4]), e = ri(rng, 1, 3), a = Math.pow(b, e);
+      if (a > 64) return null;
+      var d = e + ri(rng, -1, 1), k = ri(rng, 0, 2);
+      if (d < 0) return null;
+      function pot(p, qq) {
+        var s = p === 0 ? "" : (p === 1 ? "n" : "n^{" + p + "}");
+        var l = qq === 0 ? "" : (qq === 1 ? "\\log n" : "\\log^{" + qq + "} n");
+        if (!s && !l) return "1";
+        return s + (s && l ? "\\," : "") + l;
+      }
+      var gp, gq, caso;
+      if (d < e) { gp = e; gq = 0; caso = 1; } else if (d === e) { gp = e; gq = k + 1; caso = 2; } else { gp = d; gq = k; caso = 3; }
+      function op(p, qq) { return { k: p + "|" + qq, t: "$T(n)=\\Theta\\big(" + pot(p, qq) + "\\big)$" }; }
+      var o = build(rng, op(gp, gq), shuffle(rng, [op(e, k), op(d, k + 1), op(e, k + 1), op(d, k), op(d, 0), op(e + 1, 0), op(e, 0), op(Math.max(d, e), k + 1)]));
+      if (!o) return null;
+      var spieg = {
+        1: T(lingua, "$f$ è polinomialmente più piccola di $n^{" + e + "}$ (caso 1): $T(n)=\\Theta(" + pot(e, 0) + ")$.", "$f$ is polynomially smaller than $n^{" + e + "}$ (case 1): $T(n)=\\Theta(" + pot(e, 0) + ")$."),
+        2: T(lingua, "$f(n)=\\Theta(n^{" + e + "}\\log^{" + k + "} n)$ (caso 2, con $k=" + k + "$): si aggiunge un fattore $\\log n$, $T(n)=\\Theta(" + pot(e, k + 1) + ")$.", "$f(n)=\\Theta(n^{" + e + "}\\log^{" + k + "} n)$ (case 2, with $k=" + k + "$): one factor $\\log n$ is added, $T(n)=\\Theta(" + pot(e, k + 1) + ")$."),
+        3: T(lingua, "$f$ è polinomialmente più grande di $n^{" + e + "}$ e la condizione di regolarità vale ($a\\,f(n/b)\\le\\frac{" + a + "}{" + Math.pow(b, d) + "}f(n)$), quindi (caso 3) $T(n)=\\Theta(f(n))=\\Theta(" + pot(d, k) + ")$.", "$f$ is polynomially larger than $n^{" + e + "}$ and the regularity condition holds ($a\\,f(n/b)\\le\\frac{" + a + "}{" + Math.pow(b, d) + "}f(n)$), hence (case 3) $T(n)=\\Theta(f(n))=\\Theta(" + pot(d, k) + ")$.")
+      }[caso];
+      return fine(o,
+        T(lingua, "Con il Master theorem, qual è l'ordine di crescita della soluzione di $T(n)=" + a + "\\,T(n/" + b + ")+" + pot(d, k) + "$ (logaritmi in base $2$)?", "With the Master Theorem, what is the order of growth of the solution of $T(n)=" + a + "\\,T(n/" + b + ")+" + pot(d, k) + "$ (logarithms in base $2$)?"),
+        T(lingua, "Si confronta $f(n)=" + pot(d, k) + "$ con $n^{\\log_b a}=n^{\\log_{" + b + "} " + a + "}=" + pot(e, 0) + "$. ", "We compare $f(n)=" + pot(d, k) + "$ with $n^{\\log_b a}=n^{\\log_{" + b + "} " + a + "}=" + pot(e, 0) + "$. ") + spieg,
+        { a: a, b: b, d: d, k: k });
     }
   });
 })();

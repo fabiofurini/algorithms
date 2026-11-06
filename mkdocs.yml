@@ -127,7 +127,7 @@ extra_javascript:
   - javascripts/gi-cap1-5.js?v=0c2149b07f
   - javascripts/gi-cap14-17.js?v=c75fa22fac
   - javascripts/gi-cap9-13.js?v=0517f03b6f
-  - javascripts/quiz.js?v=3990768383
+  - javascripts/quiz.js?v=be7fae2b85
 
 # le pagine delle singole app del laboratorio non stanno nel menu (solo l'indice)
 not_in_nav: |

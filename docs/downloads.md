@@ -133,3 +133,10 @@ The lecture notes, the exercise books and the slides in PDF, updated at every pu
 - :material-presentation: [Chapter 17 · Recursive algorithms (1/2)](pdf/slides-17-recursive-algorithms-1.pdf)
 - :material-presentation: [Chapter 17 · Recursive algorithms (2/2)](pdf/slides-17-recursive-algorithms-2.pdf)
 - :material-presentation: [Chapter 18 · Recursive versus iterative algorithms](pdf/slides-18-recursive-vs-iterative.pdf)
+
+<!-- banca-domande -->
+## Quiz question bank
+
+All the self-assessment questions, by part and chapter, with the correct answer and the explanation; for the generated questions, whose numbers change at every start, a few examples.
+
+[:material-format-list-checks: Question bank](quiz/question_list.html){ .md-button }

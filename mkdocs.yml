@@ -90,6 +90,7 @@ extra:
       lang: en
 
 extra_css:
+  - stylesheets/collana.css
   - stylesheets/extra.css?v=305fcc0694
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraph.css
   - stylesheets/interattivi.css?v=750e9c2259

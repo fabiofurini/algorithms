@@ -1,5 +1,39 @@
 # Full index
 
+<!-- collana-organizzazione -->
+## How each chapter is organized
+
+Each chapter is one of the course notes, with the same numbers and the same colors as the
+lecture notes: on the website and in the PDF you find everything in the same place.
+
+<div class="grid" markdown>
+
+!!! definizione "Definition"
+    The precise meaning of a new concept.
+
+!!! teorema "Theorem, proposition, observation"
+    A result to remember, with its hypotheses.
+
+!!! esempio "Example"
+    A computation worked out in full, one step at a time.
+
+!!! chiave ""
+    **In green** the key point to take away.
+
+!!! algoritmo "Algorithm"
+    The pseudo-code, with the lines numbered as in the lecture notes.
+
+!!! codice "Code"
+    The programs in C++, Python and Java in the chapters on the languages; the algorithms run
+    in the Colab notebooks, with the buttons below the pseudo-code.
+
+</div>
+
+??? dimostrazione "Proof — opens with a click"
+    All proofs are included, but folded: first read the statement, then open
+    the proof when you want to study it. The same holds for the solutions of the exercises.
+<!-- /collana-organizzazione -->
+
 ## [Basic algorithms](basic-algorithms/index.md)
 
 1. [Representation of numbers](basic-algorithms/01-number-representation.md)

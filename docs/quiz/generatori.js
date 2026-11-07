@@ -1257,4 +1257,159 @@ window.QUIZ_GEN = window.QUIZ_GEN || {};
         { a: a, b: b, d: d, k: k });
     }
   });
+  // =================================================================== copertura dettagliata (7 novembre 2026)
+  add({
+    id: "alg-g-dec2bin", livello: "facile", capitolo: "number-representation",
+    link: L("basic-algorithms/01-number-representation/#box-3-defSeqDigits", "algoritmi-di-base/01-rappresentazione-numeri/#box-3-defSeqDigits"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 37, 250), s = n.toString(2), r = s.split("").reverse().join("");
+      function op(x) { return { k: x, t: "$(" + x + ")_2$" }; }
+      var o = build(rng, op(s), [op(r), op((n + 1).toString(2)), op((n - 1).toString(2)), op((2 * n).toString(2))]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Quale sequenza di cifre in base $2$ rappresenta il numero naturale $" + n + "$ (scritto in base dieci)?",
+          "Which sequence of digits in base $2$ represents the natural number $" + n + "$ (written in base ten)?"),
+        T(lingua, "Dividendo ripetutamente per $2$ i resti, letti dall'ultimo al primo, danno $(" + s + ")_2$; leggerli nell'ordine in cui escono dà la sequenza rovesciata $(" + r + ")_2$.",
+          "Dividing repeatedly by $2$, the remainders read from the last to the first give $(" + s + ")_2$; reading them in the order they come out gives the reversed sequence $(" + r + ")_2$."),
+        { n: n });
+    }
+  });
+
+  add({
+    id: "alg-g-signmag", livello: "facile", capitolo: "number-representation",
+    link: L("basic-algorithms/01-number-representation/#box-11-defSignMagnitude", "algoritmi-di-base/01-rappresentazione-numeri/#box-11-defSignMagnitude"),
+    genera: function (rng, lingua) {
+      var k = 8, v = ri(rng, 3, 120), sm = "1" + bits(v, k - 1), tc = bits((1 << k) - v, k), oc = bits(((1 << k) - 1) - v, k), pos = bits(v, k);
+      function op(x) { return { k: x, t: "$" + x + "$" }; }
+      var o = build(rng, op(sm), [op(tc), op(oc), op(pos)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Nella rappresentazione in modulo e segno con $k=8$ bit il bit più significativo è il segno ($0$ per $n \\ge 0$, $1$ per $n<0$) e gli altri $7$ bit sono il modulo $|n|$ in binario. Come si rappresenta $n=-" + v + "$?",
+          "In sign-magnitude representation with $k=8$ bits the most significant bit is the sign ($0$ for $n \\ge 0$, $1$ for $n<0$) and the other $7$ bits are the magnitude $|n|$ in binary. How is $n=-" + v + "$ represented?"),
+        T(lingua, "Segno $1$ e modulo $" + v + "=(" + bits(v, 7) + ")_2$ su $7$ bit: $" + sm + "$. $" + tc + "$ è la rappresentazione in complemento a due ($2^8-" + v + "$), $" + pos + "$ quella di $+" + v + "$.",
+          "Sign $1$ and magnitude $" + v + "=(" + bits(v, 7) + ")_2$ on $7$ bits: $" + sm + "$. $" + tc + "$ is the two's complement representation ($2^8-" + v + "$), $" + pos + "$ that of $+" + v + "$."),
+        { v: v });
+    }
+  });
+
+  add({
+    id: "alg-g-divisors", livello: "facile", capitolo: "numerical-algorithms",
+    link: L("basic-algorithms/05-numerical-algorithms/#box-5-ch6-defDivisor", "algoritmi-di-base/05-algoritmi-numerici/#box-5-ch6-defDivisor"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 12, 120), dv = []; for (var d = 1; d <= n; d++) if (n % d === 0) dv.push(d);
+      if (dv.length < 4) return null;
+      var o = build(rng, num(dv.length), [num(dv.length - 2), num(dv.length - 1), num(dv.length + 1), num(dv.filter(function (x) { return x * x <= n; }).length)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Un naturale $d \\ge 1$ è un divisore di $n$ se $n \\bmod d=0$ ($1$ e $n$ compresi). Quanti divisori ha $n=" + n + "$?",
+          "A natural $d \\ge 1$ is a divisor of $n$ if $n \\bmod d=0$ ($1$ and $n$ included). How many divisors does $n=" + n + "$ have?"),
+        T(lingua, "I divisori sono $" + dv.join(",") + "$: in tutto $" + dv.length + "$. Dimenticare $1$ e $n$ toglie due divisori; contare solo quelli fino a $\\sqrt{n}$ ne dimentica i compagni $n/d$.",
+          "The divisors are $" + dv.join(",") + "$: $" + dv.length + "$ in total. Forgetting $1$ and $n$ removes two divisors; counting only those up to $\\sqrt{n}$ forgets their companions $n/d$."),
+        { n: n });
+    }
+  });
+
+  add({
+    id: "alg-g-hanoi-moves", livello: "facile", capitolo: "recursion",
+    link: L("recursion/14-recursion/#box-26-obsHanoiMoves", "ricorsione/14-ricorsione/#box-26-obsHanoiMoves"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 4, 12), M = Math.pow(2, n) - 1;
+      var o = build(rng, num(M), [num(M + 1), num(Math.pow(2, n - 1) - 1), num(2 * n - 1), num(n * n)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Hanoi$(n,from,to,aux)$ con $n \\ge 2$ sposta ricorsivamente $n-1$ dischi da $from$ ad $aux$, poi il disco $n$ da $from$ a $to$ (una mossa), poi $n-1$ dischi da $aux$ a $to$; con $n=1$ fa una sola mossa. Quante mosse fa con $n=" + n + "$ dischi?",
+          "Hanoi$(n,from,to,aux)$ with $n \\ge 2$ recursively moves $n-1$ disks from $from$ to $aux$, then disk $n$ from $from$ to $to$ (one move), then $n-1$ disks from $aux$ to $to$; with $n=1$ it makes a single move. How many moves does it make with $n=" + n + "$ disks?"),
+        T(lingua, "$M(1)=1$ e $M(n)=2M(n-1)+1$, da cui $M(n)=2^n-1=" + M + "$. $2^n$ dimentica il $-1$.",
+          "$M(1)=1$ and $M(n)=2M(n-1)+1$, hence $M(n)=2^n-1=" + M + "$. $2^n$ forgets the $-1$."),
+        { n: n });
+    }
+  });
+
+  add({
+    id: "alg-g-recsum-depth", livello: "facile", capitolo: "recursive-algorithms",
+    link: L("recursion/17-recursive-algorithms/#box-5-obsRecSumDepth", "ricorsione/17-algoritmi-ricorsivi/#box-5-obsRecSumDepth"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 5, 200), h = clog2(n);
+      var o = build(rng, num(h + 1), [num(h), num(2 * n - 1), num(h + 2), num(n)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "RecursiveSum$(a,l,r)$ restituisce $a[l]$ se $l=r$; altrimenti, con $m=\\lfloor (l+r)/2\\rfloor$, restituisce RecursiveSum$(a,l,m)+$RecursiveSum$(a,m+1,r)$. Chiamata su un array di $n=" + n + "$ elementi, qual è la profondità della ricorsione, cioè il massimo numero di chiamate attive contemporaneamente (la chiamata iniziale compresa)?",
+          "RecursiveSum$(a,l,r)$ returns $a[l]$ if $l=r$; otherwise, with $m=\\lfloor (l+r)/2\\rfloor$, it returns RecursiveSum$(a,l,m)+$RecursiveSum$(a,m+1,r)$. Called on an array of $n=" + n + "$ elements, what is the recursion depth, that is, the maximum number of calls active at the same time (the initial call included)?"),
+        T(lingua, "L'albero delle chiamate ha altezza $\\lceil \\log_2 n\\rceil=" + h + "$ (la metà più grande ha $\\lceil k/2\\rceil$ elementi), quindi la profondità è $" + h + "+1=" + (h + 1) + "$. $2n-1=" + (2 * n - 1) + "$ è il numero totale di chiamate.",
+          "The call tree has height $\\lceil \\log_2 n\\rceil=" + h + "$ (the larger half has $\\lceil k/2\\rceil$ elements), so the depth is $" + h + "+1=" + (h + 1) + "$. $2n-1=" + (2 * n - 1) + "$ is the total number of calls."),
+        { n: n });
+    }
+  });
+
+  add({
+    id: "alg-g-fib-calls", livello: "facile", capitolo: "recursive-vs-iterative",
+    link: L("recursion/18-recursive-vs-iterative/#box-9-obsRviFibCalls", "ricorsione/18-ricorsivo-iterativo/#box-9-obsRviFibCalls"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 4, 14), C = 2 * fib(n + 1) - 1;
+      var o = build(rng, num(C), [num(fib(n + 1)), num(Math.pow(2, n) - 1), num(fib(n)), num(2 * fib(n) - 1), num(n + 1)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "FibRec$(n)$ restituisce $n$ se $n \\le 1$, altrimenti FibRec$(n-1)+$FibRec$(n-2)$. Quante chiamate (la chiamata iniziale compresa) esegue FibRec$(" + n + ")$?",
+          "FibRec$(n)$ returns $n$ if $n \\le 1$, otherwise FibRec$(n-1)+$FibRec$(n-2)$. How many calls (the initial call included) does FibRec$(" + n + ")$ make?"),
+        T(lingua, "Le chiamate soddisfano $C(0)=C(1)=1$ e $C(n)=1+C(n-1)+C(n-2)$, da cui $C(n)=2F(n+1)-1=2 \\cdot " + fib(n + 1) + "-1=" + C + "$: crescono come $\\varphi^n$, non come $2^n$.",
+          "The calls satisfy $C(0)=C(1)=1$ and $C(n)=1+C(n-1)+C(n-2)$, hence $C(n)=2F(n+1)-1=2 \\cdot " + fib(n + 1) + "-1=" + C + "$: they grow as $\\varphi^n$, not as $2^n$."),
+        { n: n });
+    }
+  });
+
+  add({
+    id: "alg-g-hanoi-move", livello: "complessa", capitolo: "recursion",
+    link: L("recursion/14-recursion/#box-24-obsHanoiCorrect", "ricorsione/14-ricorsione/#box-24-obsHanoiCorrect"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 3, 5), mosse = [];
+      (function h(k, f, t, a) { if (k === 0) return; h(k - 1, f, a, t); mosse.push([k, f, t]); h(k - 1, a, t, f); })(n, 1, 3, 2);
+      var j = ri(rng, 2, mosse.length - 1), mv = mosse[j - 1];
+      function op(m) { return { k: m.join("|"), t: T(lingua, "disco $" + m[0] + "$ dal piolo $" + m[1] + "$ al piolo $" + m[2] + "$", "disk $" + m[0] + "$ from peg $" + m[1] + "$ to peg $" + m[2] + "$") }; }
+      var inv = [mv[0], mv[2], mv[1]], prima = mosse[j - 2], dopo = mosse[j];
+      var o = build(rng, op(mv), [op(inv), op(prima), op(dopo), op([mv[0], mv[1], 6 - mv[1] - mv[2]])]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Hanoi$(k,from,to,aux)$: se $k=0$ non fa nulla; altrimenti esegue Hanoi$(k-1,from,aux,to)$, sposta il disco $k$ da $from$ a $to$, ed esegue Hanoi$(k-1,aux,to,from)$. Si chiama Hanoi$(" + n + ",1,3,2)$ (dischi $1,\\dots," + n + "$ dal più piccolo, tutti sul piolo $1$). Qual è la mossa numero $" + j + "$?",
+          "Hanoi$(k,from,to,aux)$: if $k=0$ it does nothing; otherwise it runs Hanoi$(k-1,from,aux,to)$, moves disk $k$ from $from$ to $to$, and runs Hanoi$(k-1,aux,to,from)$. Hanoi$(" + n + ",1,3,2)$ is called (disks $1,\\dots," + n + "$ from the smallest, all on peg $1$). Which is move number $" + j + "$?"),
+        T(lingua, "Le prime mosse sono " + mosse.slice(0, Math.min(mosse.length, j + 1)).map(function (m, i) { return "$" + (i + 1) + "$: $" + m[0] + "$ ($" + m[1] + "\\to" + m[2] + "$)"; }).join(", ") + ". Si segue l'albero delle chiamate in ordine: prima tutto il sotto-albero di sinistra, poi la mossa del nodo, poi il sotto-albero di destra.",
+          "The first moves are " + mosse.slice(0, Math.min(mosse.length, j + 1)).map(function (m, i) { return "$" + (i + 1) + "$: $" + m[0] + "$ ($" + m[1] + "\\to" + m[2] + "$)"; }).join(", ") + ". The call tree is followed in order: first the whole left subtree, then the move of the node, then the right subtree."),
+        { n: n, j: j });
+    }
+  });
+
+  add({
+    id: "alg-g-nested-loops", livello: "complessa", capitolo: "running-time",
+    link: L("analysis/12-running-time/#sez-sec-rt-definition", "analisi/12-tempo-esecuzione/#sez-sec-rt-definition"),
+    genera: function (rng, lingua) {
+      var n = ri(rng, 4, 9), tipo = ri(rng, 0, 2), c = 0, i, j, k;
+      for (i = 1; i <= n; i++) for (j = i; j <= n; j++) { if (tipo === 0) c++; else if (tipo === 1) { for (k = 1; k <= j; k++) c++; } else { for (k = i; k <= j; k++) c++; } }
+      var testoIn = tipo === 0 ? "" : (tipo === 1 ? "for $k=1$ to $j$: " : "for $k=i$ to $j$: ");
+      var c2 = n * n, c3 = n * (n + 1) / 2, c4 = tipo === 0 ? n * (n - 1) / 2 : n * n * n, c5 = tipo === 0 ? (n + 1) * (n + 1) : c3 * n;
+      var o = build(rng, num(c), [num(c3 === c ? n * n * (n + 1) / 2 : c3), num(c2), num(c4), num(c5)]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Con $n=" + n + "$, quante volte si esegue l'istruzione $x:=x+1$ nel frammento «for $i=1$ to $n$: for $j=i$ to $n$: " + testoIn + "$x:=x+1$» (ogni for comprende entrambi gli estremi; se l'estremo iniziale supera quello finale il ciclo non si esegue)?",
+          "With $n=" + n + "$, how many times is the statement $x:=x+1$ executed in the fragment «for $i=1$ to $n$: for $j=i$ to $n$: " + (tipo === 0 ? "" : (tipo === 1 ? "for $k=1$ to $j$: " : "for $k=i$ to $j$: ")) + "$x:=x+1$» (every for includes both bounds; if the initial bound exceeds the final one the loop is not executed)?"),
+        T(lingua, "Si somma sulle coppie $i \\le j$: " + (tipo === 0 ? "$\\sum_{i=1}^{n}(n-i+1)=n(n+1)/2" : (tipo === 1 ? "$\\sum_{i=1}^{n}\\sum_{j=i}^{n} j" : "$\\sum_{i=1}^{n}\\sum_{j=i}^{n}(j-i+1)")) + "=" + c + "$. Contare $n$ iterazioni per ogni ciclo ignora che i cicli interni dipendono da $i$ e $j$.",
+          "Sum over the pairs $i \\le j$: " + (tipo === 0 ? "$\\sum_{i=1}^{n}(n-i+1)=n(n+1)/2" : (tipo === 1 ? "$\\sum_{i=1}^{n}\\sum_{j=i}^{n} j" : "$\\sum_{i=1}^{n}\\sum_{j=i}^{n}(j-i+1)")) + "=" + c + "$. Counting $n$ iterations for every loop ignores that the inner loops depend on $i$ and $j$."),
+        { n: n, tipo: tipo });
+    }
+  });
+
+  add({
+    id: "alg-g-bigo-n1", livello: "complessa", capitolo: "asymptotic-notation",
+    link: L("asymptotics/09-asymptotic-notation/#box-3-defBigO", "notazione-asintotica/09-notazione-asintotica/#box-3-defBigO"),
+    genera: function (rng, lingua) {
+      var a = ri(rng, 2, 6), b = ri(rng, 5, 40), c = a + ri(rng, 1, 3), n1 = Math.ceil(b / (c - a));
+      if (n1 < 3) return null;
+      var o = build(rng, num(n1), [num(n1 - 1), num(n1 + 1), num(Math.ceil(b / c)), num(b), num(Math.floor(b / (c - a)))]);
+      if (!o) return null;
+      return fine(o,
+        T(lingua, "Per dimostrare $f(n)=" + a + "n^2+" + b + "n=O(n^2)$ si sceglie la costante $c=" + c + "$. Qual è il più piccolo naturale $n_1$ tale che $f(n) \\le " + c + "\\,n^2$ per ogni $n \\ge n_1$?",
+          "To prove $f(n)=" + a + "n^2+" + b + "n=O(n^2)$ the constant $c=" + c + "$ is chosen. What is the smallest natural $n_1$ such that $f(n) \\le " + c + "\\,n^2$ for every $n \\ge n_1$?"),
+        T(lingua, "Per $n \\ge 1$: $" + a + "n^2+" + b + "n \\le " + c + "n^2 \\iff " + b + " \\le " + (c - a) + "n \\iff n \\ge " + b + "/" + (c - a) + "$, quindi $n_1=\\lceil " + b + "/" + (c - a) + "\\rceil=" + n1 + "$. Con $n_1-1$ la disuguaglianza non vale ancora.",
+          "For $n \\ge 1$: $" + a + "n^2+" + b + "n \\le " + c + "n^2 \\iff " + b + " \\le " + (c - a) + "n \\iff n \\ge " + b + "/" + (c - a) + "$, so $n_1=\\lceil " + b + "/" + (c - a) + "\\rceil=" + n1 + "$. With $n_1-1$ the inequality does not hold yet."),
+        { a: a, b: b, c: c });
+    }
+  });
 })();

@@ -97,6 +97,7 @@ Merge sort: watch the array split in halves and the sorted halves merge, step by
 
 </div>
 
+<!-- collana-da-non-perdere -->
 ## Don't miss
 
 <div class="grid cards" markdown>
@@ -105,17 +106,15 @@ Merge sort: watch the array split in halves and the sorted halves merge, step by
 
     ---
 
-    Exercises for every chapter, each with a worked solution that opens with a click.
+    Exercises for every chapter, each with its worked solution that opens with a click.
 
     [:octicons-arrow-right-24: The exercises](exercises/index.md)
 
--   :material-clipboard-check-outline: **Self-assessment**
+-   :material-clipboard-check-outline: **Self-assessment quiz**
 
     ---
 
-    *Mock exam*
-
-    A new mock exam at every start: 13 questions, 33 points, with the solutions and links to the notes.
+    A new mock exam at every start: 13 questions, 33 points, with the solution and the link to the notes. Downloads also has the full question bank.
 
     [:octicons-arrow-right-24: Test yourself](self-assessment.md)
 
@@ -123,36 +122,36 @@ Merge sort: watch the array split in halves and the sorted halves merge, step by
 
     ---
 
-    Run the algorithms one step at a time: sorting, searching, Euclid and the sieve,
-    the bits of numbers, growth of functions, recursion trees and the Master Theorem.
+    Apps running in the browser: move the parameters and watch the ideas of the course at work, one step at a time.
 
-    [:octicons-arrow-right-24: The graphs](lab/index.md)
+    [:octicons-arrow-right-24: The lab](lab/index.md)
 
--   :simple-googlecolab: **Notebooks in Python, C++ and Java**
-
-    ---
-
-    The algorithms of every chapter, to run in Google Colab in the language you prefer.
-
-    [:octicons-arrow-right-24: The notebooks](notebooks.md)
-
--   :material-download: **Lecture notes and exercise books in PDF**
+-   :material-download: **Lecture notes in PDF**
 
     ---
 
-    Five volumes of lecture notes and five exercise books, with the same numbering as the website.
+    Lecture notes, exercise books and slides in PDF, with the same numbering as the website.
 
     [:octicons-arrow-right-24: Downloads](downloads.md)
+
+-   :material-language-python: **Notebooks in Colab**
+
+    ---
+
+    The code of the course running in the browser, with nothing to install.
+
+    [:octicons-arrow-right-24: The notebooks](notebooks.md)
 
 -   :material-format-list-numbered: **Full index**
 
     ---
 
-    All chapters with their sections, on one page.
+    All the chapters with their sections on one page, and how each chapter is organized.
 
     [:octicons-arrow-right-24: The index](indice.md)
 
 </div>
+<!-- /collana-da-non-perdere -->
 
 ---
 
@@ -205,6 +204,8 @@ Ten courses built the same way: lecture notes online and in PDF, exercises with 
 
 </div>
 <!-- /collana -->
+
+---
 
 Teaching material by **[Fabio Furini](https://fabiofurini.github.io/)** —
 [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.

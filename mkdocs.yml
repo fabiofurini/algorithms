@@ -126,7 +126,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/jsxgraph@1.10.1/distrib/jsxgraphcore.js
   - javascripts/interattivi.js?v=3666b154ef
   - javascripts/gi-cap1-5.js?v=0c2149b07f
-  - javascripts/gi-cap14-17.js?v=c75fa22fac
+  - javascripts/gi-cap14-17.js?v=4bf55ebe7b
   - javascripts/gi-cap9-13.js?v=0517f03b6f
   - javascripts/quiz.js?v=be7fae2b85
 

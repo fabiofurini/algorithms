@@ -34,9 +34,9 @@ exercises with solutions.
 <!-- collana-app -->
 ## Try it now
 
-Merge sort: watch the array split in halves and the sorted halves merge, step by step.
+Merge sort during the last merge: the tree of the calls, the two sorted halves L and R and the array being filled. Press ▶ to replay it from the start, step by step.
 
-<div class="gi" data-grafico="merge-sort"></div>
+<div class="gi" data-grafico="merge-sort" data-vetrina="-4"></div>
 
 [:material-gesture-tap: More apps in the lab](lab/index.md){ .md-button }
 <!-- /collana-app -->

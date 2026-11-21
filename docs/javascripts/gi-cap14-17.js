@@ -473,6 +473,52 @@
   // geometria: x in [0, 12.6], y in [0, 10.5]
   const MS_X0 = 1.15, MS_X1 = 12.35, Y_IND = 10.05, Y_A = 9.3, Y_L = 7.85, Y_R = 6.85, ALB = [MS_X0, MS_X1, 5.55, 0.5];
 
+  // ------------------------------------------------------------ vetrina (home della collana)
+  /** Vetrina: l'app nella home della collana, <div class="gi" data-grafico="…" data-vetrina="…"> (sesto campo di
+   *  APP in COLLANA/collana.py). Senza l'attributo non fa nulla: nel laboratorio l'app resta com'è.
+   *  Va chiamata in monta(board, st) (dopo i comandi e i menu); agisce una volta sola per grafico:
+   *  prepara(valore) porta l'app allo stato da mostrare (voce, istanza, passo: di solito il disegno completo),
+   *  poi il pannello si alleggerisce: restano voci, cursori, ◀ ▶ «Esegui» e letture; spariscono «Prova tu»,
+   *  «Azzera», i menu e i pulsanti delle istanze (sono nella pagina del laboratorio). */
+  function vetrina(st, prepara) {
+    const v = st.el.dataset.vetrina, D = st.dati;
+    if (!v || D.vetrina) return;
+    D.vetrina = true;
+    st.el.classList.add("gi-vetrina");
+    const corpo = st.el.querySelector(".gi-corpo");
+    if (corpo) for (const c of corpo.children) c.style.minWidth = "0";   // la colonna unica del telefono non si allarga
+    setTimeout(() => {
+      try { prepara(v); } catch (e) { console.error("GI: vetrina «" + st.el.dataset.grafico + "»", e); }
+      const pan = corpo && corpo.children[1];
+      if (!pan) return;
+      pan.querySelectorAll(".gi-domanda").forEach((e) => { e.hidden = true; });
+      pan.querySelectorAll("select").forEach((e) => { if (!e.closest(".gi-comandi")) e.style.display = "none"; });
+      pan.querySelectorAll(".gi-comandi").forEach((box) => {
+        let dopo = false;
+        for (const b of box.children) { if (dopo) b.style.display = "none"; if (b.tagName === "SELECT") dopo = true; }
+      });
+      for (const d of pan.children) {
+        if (!d.classList.contains("gi-comandi") && d.children.length === 1 && d.firstElementChild.matches("button.gi-btn")) d.style.display = "none";
+      }
+    }, 40);
+  }
+  /** la voce k di «funzioni», come un clic sul suo pulsante */
+  function scegliVoce(st, k) {
+    if (!k || k === st.chiave()) return;
+    const R = window.GI_RICETTE[st.el.dataset.grafico], i = Object.keys((R && (R.funzioni || R.funzioniCustom)) || {}).indexOf(k);
+    const b = st.el.querySelectorAll(".gi-chip")[i];
+    if (b) b.click();
+  }
+  /** il cursore del passo (l'ultimo del pannello) al passo k: k < 0 conta dalla fine, null è l'ultimo passo */
+  function vaiAlPasso(st, k) {
+    const cur = st.el.querySelectorAll(".gi-ctrl input[type=range]"), inp = cur[cur.length - 1];
+    if (!inp) return;
+    st.aggiorna();                           // il massimo del cursore lo fissa la ricetta in aggiorna
+    const max = +inp.max, min = +inp.min;
+    inp.value = String(k == null || isNaN(k) ? max : k < 0 ? Math.max(min, max + k) : Math.min(max, k));
+    inp.dispatchEvent(new Event("input"));
+  }
+
   window.GI_RICETTE["merge-sort"] = {
     titolo: T("Merge Sort passo per passo", "Merge Sort step by step"),
     sottotitolo: T("dividi fino a un elemento, poi fondi le metà ordinate con Merge",
@@ -570,6 +616,8 @@
           });
         }, vis);
       }
+      // home della collana: data-vetrina="passo" (negativo: contato dalla fine)
+      vetrina(st, (v) => vaiAlPasso(st, parseInt(v, 10)));
     },
     aggiorna(board, st) { preparaMS(st); },
     formula(p, st) {

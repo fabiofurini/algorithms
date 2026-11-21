@@ -16,10 +16,10 @@ hide:
 Teaching material conceived and developed by **[Fabio Furini](https://fabiofurini.github.io/)**, associate
 professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
-**The course lecture notes, online**, in five parts: basic algorithms (representation of numbers,
+**The course lecture notes, online**, in four parts: basic algorithms (representation of numbers,
 pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
-Java), asymptotic notation and growth, analysis of algorithms (running time and correctness),
-and recursion (recurrence relations, the Master Theorem and recursive algorithms), with definitions, theorems with their proofs,
+Java), asymptotic notation and growth, analysis and recursion (running time, correctness,
+recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
 pseudo-code, examples executed step by step, Colab notebooks in Python, C++ and Java and
 exercises with solutions.
 
@@ -206,13 +206,17 @@ All the courses of the series are built the same way: lecture notes online and i
 
     performance guarantees, approximation schemes and limits of approximation for combinatorial problems
 
+-   :material-chart-line: **[LP Modelling](https://fabiofurini.github.io/lp-modelling/)**
+
+    linear programming models of managerial problems, solved with Python and Gurobi
+
+-   :material-chart-bell-curve-cumulative: **[NLP Modelling](https://fabiofurini.github.io/nlp-modelling/)**
+
+    nonlinear programming models, from portfolios to machine learning, with Python and Gurobi
+
 -   :material-vector-polygon: **[MIP Modelling](https://fabiofurini.github.io/mip-modelling/)**
 
     integer linear programming models, from the formulation to the solution with solvers
-
--   :material-chart-timeline-variant: **[Operations Research Lab](https://fabiofurini.github.io/operations-research-lab/)**
-
-    modelling and solving optimization problems with Python and solvers
 
 </div>
 <!-- /collana -->

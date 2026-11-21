@@ -16,7 +16,7 @@ The number of steps executed by an algorithm is a function of a natural number: 
 
 !!! chiave ""
 
-    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use the definition of limit and the rules to compute limits of the part <em>Limits of sequences</em> of that course.
+    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use the definition of limit and the rules to compute limits of the part [<em>Limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/) of that course.
 
 The plan of the chapter is the following.
 

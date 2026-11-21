@@ -24,7 +24,7 @@ The plan of the chapter is the following.
 
 !!! chiave ""
 
-    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use them, and we refer to the part <em>Limits of sequences</em> of that course, in particular to the chapters <em>Computing limits of sequences</em> (comparison theorem), <em>Euler's number</em> and <em>Hierarchies of infinities and the ratio test</em>.
+    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use them, and we refer to the part [<em>Limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/) of that course, in particular to the chapters [<em>Computing limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/02-computing-limits/) (comparison theorem), [<em>Euler's number</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/03-euler-number/) and [<em>Hierarchies of infinities and the ratio test</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/05-hierarchy-of-infinities/).
 
 ## 10.1 Families of increasing functions of a natural variable { #sez-gr-sec-families }
 
@@ -185,7 +185,7 @@ A function of a natural variable is defined on a set of natural numbers of the f
 
 ## 10.2 The hierarchy of infinities { #sez-gr-sec-limits }
 
-The five families of Section [10.1](#sez-gr-sec-families) all diverge to $\ip$. To decide which one diverges faster, we compute the limit of the ratio of two of them. The limits of this section are the <em>hierarchy of infinities</em> for sequences of the course <em>Mathematical Analysis 1</em> (chapter <em>Hierarchies of infinities and the ratio test</em>), where they are proved; here we recall them, together with the idea of their proofs, and we extend the first one to the powers of the logarithms.
+The five families of Section [10.1](#sez-gr-sec-families) all diverge to $\ip$. To decide which one diverges faster, we compute the limit of the ratio of two of them. The limits of this section are the <em>hierarchy of infinities</em> for sequences of the course <em>Mathematical Analysis 1</em> (chapter [<em>Hierarchies of infinities and the ratio test</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/05-hierarchy-of-infinities/)), where they are proved; here we recall them, together with the idea of their proofs, and we extend the first one to the powers of the logarithms.
 
 - Given $a \in \R_{>1}$ and $\beta \in \R_{>0}$, the asymptotically increasing function of a natural variable
 

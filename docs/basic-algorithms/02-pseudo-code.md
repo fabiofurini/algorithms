@@ -10,6 +10,22 @@ title: "Pseudo-code"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 1 «Representation of numbers»](https://fabiofurini.github.io/algorithms/basic-algorithms/01-number-representation/): natural and integer numbers in binary, and the representation interval of a fixed number of bits.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - declare variables with $:=$, modify them with $\leftarrow$, and evaluate expressions with the basic operations;
+
+    - write and execute by hand conditional statements and loops, with <strong>break</strong> and <strong>continue</strong>;
+
+    - use arrays with one, two and more indices, indexed from $1$;
+
+    - write an algorithm as a function with its input, its preconditions, its output and a <strong>return</strong> statement.
+
 ## Introduction
 
 In the previous chapter we have seen how the data of an algorithm, the numbers, are represented. In this chapter we fix the language used in these notes to describe the algorithms themselves: the <strong>pseudo-code</strong>. Pseudo-code is precise enough to describe every step of an algorithm without ambiguity, and simple enough to be read without knowing any programming language.
@@ -1893,9 +1909,9 @@ We conclude with a summary of the notation used in these notes, compared with ot
 
     <strong>The important thing is to be consistent and clear!</strong>
 
-!!! chiave ""
+## 2.9 In summary
 
-    <strong>Key points of the chapter.</strong>
+!!! chiave "In summary"
 
     - Variables are declared with $:=$ and modified with $\leftarrow$.
 

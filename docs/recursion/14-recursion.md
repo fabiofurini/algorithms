@@ -10,6 +10,28 @@ title: "Recursion"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 12 «Running time»](https://fabiofurini.github.io/algorithms/analysis/12-running-time/): counting the steps of a pseudo-code line by line.
+
+    - From this module, [Chapter 13 «Correctness»](https://fabiofurini.github.io/algorithms/analysis/13-correctness/): loop invariants, which induction generalizes.
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Principle of mathematical induction»](https://fabiofurini.github.io/mathematical-analysis-1/logic/02-induction/): strong induction.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - define a recursive algorithm with base cases and recursive steps, and explain why it terminates;
+
+    - draw the tree of recursive calls and the call stack, and read from them the number of calls and the memory;
+
+    - prove the correctness of a recursive algorithm by strong induction;
+
+    - count the steps of the factorial, Fibonacci, GCD, fast power and Hanoi algorithms with a recurrence;
+
+    - recognize tail recursion, and the repeated subproblems of the naive Fibonacci algorithm.
+
 In the previous chapters every algorithm was <strong>iterative</strong>: a sequence of instructions and loops, whose number of steps we counted line by line (chapter «Running time») and whose correctness we proved with loop invariants (chapter «Correctness»). In this chapter we study a different way of designing algorithms: an algorithm may <strong>call itself</strong> on smaller instances of the same problem.
 
 The plan of the chapter is the following.
@@ -1171,7 +1193,7 @@ The plan of the chapter is the following.
 
 - With $n = 64$ disks (the original legend) and one move per second, $2^{64} - 1$ seconds are more than $5.8 \cdot 10^{11}$ years.
 
-## 14.9 Summary
+## 14.9 In summary
 
 <div class="tabella" markdown="0"><table>
 <tr>
@@ -1218,7 +1240,7 @@ The plan of the chapter is the following.
 </tr>
 </table></div>
 
-!!! chiave ""
+!!! chiave "In summary"
 
     - A <strong>recursive algorithm</strong> solves the <strong>base cases</strong> directly and reduces every other instance to <strong>strictly smaller</strong> instances of the same problem; this guarantees termination.
 

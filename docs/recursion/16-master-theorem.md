@@ -10,6 +10,24 @@ title: "The Master Theorem"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 15 «Recurrences»](https://fabiofurini.github.io/algorithms/recursion/15-recurrences/): recurrences in standard form and the recursion-tree method.
+
+    - From this module, [Chapter 10 «Asymptotic growth»](https://fabiofurini.github.io/algorithms/asymptotics/10-asymptotic-growth/): the comparison of powers, logarithms and polylogarithms.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - state the Master Theorem and explain its three cases with the recursion tree;
+
+    - apply it with the five-step scheme, comparing $f(n)$ with $n^{\log_b a}$ and checking the regularity condition;
+
+    - recognize the recurrences to which it does not apply: not in standard form, gaps between the cases, regularity that fails;
+
+    - follow its proof, first for exact powers of $b$ and then with floors and ceilings.
+
 ## Introduction
 
 In the chapter <em>Recurrences</em> we solved recurrences by expansion, by substitution and with recursion trees. Each method requires some computation, and for divide-and-conquer recurrences the computation is always the same: draw the tree, sum the level costs, compare the root with the leaves. At the end of that chapter we observed three possible behaviours: the leaves dominate, all the levels cost the same, or the root dominates.
@@ -1160,7 +1178,17 @@ We start with three recurrences, one for each case, and then solve the recurrenc
 
 - The converse is false: in [Example 16.17](#box-18-exMasterRegularityFails), $f(n)=\Omega(n^{p+1})$ but the regularity condition does not hold.
 
-## 16.6 Summary
+## 16.6 In summary
+
+!!! chiave "In summary"
+
+    - The Master Theorem solves the recurrences in standard form $T(n) = a\,T(n/b) + f(n)$, with $a \ge 1$ and $b > 1$, by comparing $f(n)$ with $n^{\log_b a}$.
+
+    - Case 1, $f$ polynomially smaller: the leaves dominate and $T(n)=\Theta(n^{\log_b a})$. Case 2, $f(n)=\Theta(n^{\log_b a}\log^k n)$: every level counts and $T(n)=\Theta(n^{\log_b a}\log^{k+1} n)$.
+
+    - Case 3, $f$ polynomially larger and regular: the root dominates and $T(n)=\Theta(f(n))$.
+
+    - The theorem does not apply outside the standard form (for example $T(n-1)+f(n)$), in the gaps between the cases and when regularity fails: then we use the recursion tree.
 
 !!! chiave ""
 

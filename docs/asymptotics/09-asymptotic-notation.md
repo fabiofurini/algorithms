@@ -10,13 +10,27 @@ title: "Asymptotic notation"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Sequences and limits of sequences»](https://fabiofurini.github.io/mathematical-analysis-1/sequences/01-limits-of-sequences/): sequences of real numbers and the definition of limit; the functions of a natural variable of this chapter are sequences.
+
+    - From the same module, the chapter [«Computing limits of sequences»](https://fabiofurini.github.io/mathematical-analysis-1/sequences/02-computing-limits/): the rules to compute limits of sequences, used without being explained again.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - state the definitions of $\Theta$, $\bigO$ and $\Omega$ and prove a bound by finding the constants and the threshold;
+
+    - state the definitions of $o$ and $\omega$ and tell them apart from $\bigO$ and $\Omega$;
+
+    - decide which notations hold with the limit criterion, and use the definitions when the limit does not exist;
+
+    - use the relational properties of the notations, and drop constant factors and lower-order terms in a number of steps.
+
 ## Introduction
 
 The number of steps executed by an algorithm is a function of a natural number: the size of its input. Two algorithms that solve the same problem are compared by looking at how fast these functions grow when the input grows, neglecting constant factors and the values on a few small inputs. In this chapter we give the precise language used to express these comparisons: the <strong>asymptotic notations</strong> $\Theta$, $\bigO$, $\Omega$, $o$ and $\omega$.
-
-!!! chiave ""
-
-    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use the definition of limit and the rules to compute limits of the part [<em>Limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/) of that course.
 
 The plan of the chapter is the following.
 
@@ -1465,9 +1479,9 @@ In the chapters «Input size» and «Running time» we measure the size $|I|$ of
 
 - In the chapter «Running time» the order of growth of $S(n)$ is then expressed as a function of the input size $|I|$, using the order of growth of $|I|$ obtained in the chapter «Input size».
 
-## Summary
+## 9.6 In summary
 
-!!! chiave ""
+!!! chiave "In summary"
 
     - $f(n) = \Theta\big(g(n)\big)$, $\bigO\big(g(n)\big)$, $\Omega\big(g(n)\big)$: there exist positive constants ($c_1$ and $c_2$, or $c$) and a threshold $n_1$ such that, for all $n \ge n_1$, $f(n)$ lies between $c_1 g(n)$ and $c_2 g(n)$, below $c\, g(n)$, above $c\, g(n)$. To prove these statements we determine the constants.
 

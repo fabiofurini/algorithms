@@ -10,6 +10,30 @@ title: "Recurrences"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 14 «Recursion»](https://fabiofurini.github.io/algorithms/recursion/14-recursion/): recursive algorithms and the count of their steps.
+
+    - From this module, [Chapter 9 «Asymptotic notation»](https://fabiofurini.github.io/algorithms/asymptotics/09-asymptotic-notation/): the notations $\Theta$, $\bigO$, $\Omega$.
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Summations, geometric and arithmetic progressions»](https://fabiofurini.github.io/mathematical-analysis-1/numbers/05-summations/): arithmetic and geometric sums.
+
+    - From the same module, the chapter [«Principle of mathematical induction»](https://fabiofurini.github.io/mathematical-analysis-1/logic/02-induction/): proofs by induction, used by the substitution method.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - write the recurrence of the number of steps of a recursive algorithm, in standard form when possible;
+
+    - solve a recurrence with one recursive term by the expansion method;
+
+    - prove a guessed bound by the substitution method, also with floors and a strengthened guess;
+
+    - guess the solution with the recursion-tree method, also for unbalanced trees;
+
+    - choose the method suited to a given recurrence.
+
 ## Introduction
 
 In the chapter <em>Recursion</em> we counted the steps of a recursive algorithm line by line, and we noticed that the number of steps executed by a call depends on the number of steps executed by its recursive calls, which are calls of the <em>same</em> algorithm on a <em>smaller</em> input. The quantity we want to compute is therefore defined in terms of itself: this is a <strong>recurrence</strong>.
@@ -1165,9 +1189,9 @@ with $a\ge 1$, $b>1$ constants and $n$ an exact power of $b$.
 
     The <strong>Master Theorem</strong>, studied in the chapter <em>The Master Theorem</em>, makes these three behaviours precise. It compares $f(n)$ with $n^{\log_b a}$ and gives the solution of a recurrence in standard form directly, without drawing the recursion tree.
 
-## 15.6 Summary: which method when { #sez-sec-recSummary }
+## 15.6 In summary { #sez-sec-recSummary }
 
-!!! chiave ""
+!!! chiave "In summary"
 
     - <strong>Expansion method</strong>: recurrences with a <em>single</em> recursive term, for example $T(n-1)+f(n)$, $2T(n-1)+1$, $T(n/2)+c$, $2T(n/2)+n$. It gives the exact closed form when the resulting summation can be computed (arithmetic or geometric series).
 

@@ -10,6 +10,22 @@ title: "Sorting algorithms"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): loops, arrays indexed from $1$, functions, and the execution of a pseudo-code by hand.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - state the sorting problem and the criteria to compare sorting algorithms: comparisons, moves, memory and stability;
+
+    - execute Insertion Sort, Exchange Sort and Selection Sort step by step on a small array;
+
+    - count the key comparisons and the moves of the three algorithms in the best and in the worst case;
+
+    - say which of the three algorithms are in-place and which are stable, and choose among them.
+
 ## Introduction
 
 Sorting is one of the most common tasks in computing: a sorted list of names, of grades or of prices is much easier to search, to compare and to read than an unsorted one. In this chapter we state the sorting problem precisely, we introduce the criteria used to compare sorting algorithms, and we study three classical algorithms that solve it: <strong>Insertion Sort</strong>, <strong>Exchange Sort</strong> and <strong>Selection Sort</strong>.
@@ -2004,7 +2020,11 @@ Before studying specific algorithms, we fix the operations that they may use and
     </tr>
     </table></div>
 
-!!! chiave ""
+## 3.6 In summary
+
+!!! chiave "In summary"
+
+    - A comparison-based sorting algorithm is evaluated by its key comparisons and key moves (best and worst case), by its extra memory and by its stability.
 
     - Insertion Sort, Exchange Sort and Selection Sort are comparison-based and in-place, and in the worst case all three perform $\frac{n(n-1)}{2}$ key comparisons.
 

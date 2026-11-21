@@ -10,6 +10,26 @@ title: "Introduction to Java"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): the constructs of pseudo-code.
+
+    - From this module, [Chapter 6 «Introduction to C++»](https://fabiofurini.github.io/algorithms/languages/06-introduction-to-cpp/): the syntax of <code>C++</code>, which <code>Java</code> shares in large part.
+
+    - From this module, [Chapter 7 «Introduction to Python»](https://fabiofurini.github.io/algorithms/languages/07-introduction-to-python/): an interpreted language, used for the comparison at the end of the chapter.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - write a <code>Java</code> program as a class with the method <code>main</code>, compile it with <code>javac</code> and run it on the JVM;
+
+    - declare typed variables and translate conditional statements and loops from pseudo-code;
+
+    - use arrays, which know their length, and the lists of variable size <code>ArrayList</code>;
+
+    - write methods with parameters, and compare <code>Java</code> with <code>C++</code> and <code>Python</code>.
+
 ## Introduction
 
 In the chapters «Introduction to <code>C++</code>» and «Introduction to <code>Python</code>» we translated the pseudo-code of our algorithms into a compiled and into an interpreted programming language. In this chapter we introduce a third programming language, <code>Java</code>, which is in between: its programs are compiled into an intermediate code, which is then executed by a virtual machine. Its syntax is very close to the syntax of <code>C++</code>, but every program is organized into <strong>classes</strong>.
@@ -1350,9 +1370,9 @@ The following table summarizes the main differences among the three languages of
 </tr>
 </table></div>
 
-!!! chiave ""
+## 8.12 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - A <code>Java</code> program is made of classes; it is compiled into bytecode with <code>javac</code> and executed by the JVM with <code>java</code>, starting from the method <code>public static void main(String[] args)</code>.
 

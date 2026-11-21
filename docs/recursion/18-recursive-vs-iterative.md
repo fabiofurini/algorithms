@@ -10,6 +10,28 @@ title: "Recursive versus iterative algorithms"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 14 «Recursion»](https://fabiofurini.github.io/algorithms/recursion/14-recursion/): the recursive algorithms for factorial, Fibonacci, GCD, fast power and Hanoi, and the call stack.
+
+    - From this module, [Chapter 17 «Recursive algorithms»](https://fabiofurini.github.io/algorithms/recursion/17-recursive-algorithms/): Merge Sort, the Recursive Binary Search and the maximum subarray problem.
+
+    - From this module, [Chapter 16 «The Master Theorem»](https://fabiofurini.github.io/algorithms/recursion/16-master-theorem/): the Master Theorem.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - list the hidden costs of a recursive call, and turn a recursion into a loop with an explicit stack;
+
+    - explain why divide and conquer, not recursion itself, gives the asymptotic gain;
+
+    - recognize overlapping subproblems and remove them with memoization or with an iterative algorithm;
+
+    - measure the memory of the call stack, and eliminate tail recursion;
+
+    - decide, with the guidelines of the chapter, when to use recursion.
+
 ## Introduction
 
 In the previous chapters we have studied several recursive algorithms (chapter «Recursion»: factorial, Fibonacci numbers, recursive GCD, fast power, Tower of Hanoi; chapter «Recursive algorithms»: sum of an array, Merge Sort, Recursive Binary Search, maximum subarray) and we have analysed them by means of recurrences and of the Master Theorem. In this chapter we answer a very practical question:
@@ -1087,6 +1109,20 @@ The asymptotic analysis predicts how the number of steps grows with $n$. We now 
     <strong>Always consider the space</strong>: the call stack uses memory proportional to the depth of the recursion. Tail recursion can be eliminated mechanically, obtaining a loop with $\Theta(1)$ extra memory.
 
     <strong>Always compare with the best iterative algorithm</strong>: a recursive algorithm can improve on brute force and still be beaten by a smarter loop (Kadane's algorithm for the maximum subarray).
+
+## 18.9 In summary
+
+!!! chiave "In summary"
+
+    - A decrease-by-one recursion does the same work as a loop, with a call overhead and $\Theta(n)$ stack memory.
+
+    - Divide and conquer into a few balanced independent subproblems can be asymptotically faster (Merge Sort, fast power, Karatsuba), and the same decomposition can often be written as a loop.
+
+    - With overlapping subproblems a naive recursion can be exponential (Fibonacci): memoization or a bottom-up loop removes the repetitions.
+
+    - The call stack uses memory proportional to the depth of the recursion; tail recursion can be eliminated mechanically.
+
+    - A recursive algorithm must always be compared with the best iterative one, which may be better (Kadane).
 
 ---
 

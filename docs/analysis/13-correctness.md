@@ -10,6 +10,28 @@ title: "Correctness"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 3 «Sorting algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/03-sorting/): Insertion Sort.
+
+    - From this module, [Chapter 4 «Linear and binary search»](https://fabiofurini.github.io/algorithms/basic-algorithms/04-search/): the binary search.
+
+    - From this module, [Chapter 5 «Numerical algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/05-numerical-algorithms/): the Euclidean algorithm.
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Principle of mathematical induction»](https://fabiofurini.github.io/mathematical-analysis-1/logic/02-induction/): proofs by induction, used for recursive algorithms.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - define when an algorithm is correct, and explain why testing alone cannot prove it;
+
+    - state a loop invariant and prove its initialization, maintenance and termination;
+
+    - prove the correctness of Find Maximum, Insertion Sort, Binary Search and the Euclidean algorithm;
+
+    - say how the correctness of a recursive algorithm is proved by induction.
+
 ## 13.1 Correctness of an algorithm
 
 - The previous chapters measured how much an algorithm costs: the size of its input and its running time. Before asking how fast an algorithm is, however, we must be sure that it does what it promises. This chapter presents the standard tool to prove it, the <strong>loop invariant</strong>, and applies it to algorithms already met in the chapters «Sorting», «Linear and binary search» and «Numerical algorithms»: Find Maximum, Insertion Sort, Binary Search and the Euclidean algorithm.
@@ -734,9 +756,9 @@ title: "Correctness"
 
     The correctness of recursive algorithms is proved by induction on the size of the input. This technique is applied together with the study of recursive algorithms.
 
-!!! chiave ""
+## 13.7 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - An algorithm is correct if, for every input instance, it terminates and returns the correct output; testing can only show that an algorithm is wrong.
 

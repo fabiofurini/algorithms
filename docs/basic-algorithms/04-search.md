@@ -10,6 +10,24 @@ title: "Linear and binary search"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): loops with <strong>return</strong>, arrays and functions.
+
+    - From this module, [Chapter 3 «Sorting algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/03-sorting/): arrays sorted in non-decreasing order, and the count of the comparisons of an algorithm.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - state the search problem and the output $-1$ when the element is missing;
+
+    - execute the linear search and count its comparisons;
+
+    - execute the binary search on a sorted array, and bound its iterations by $\lfloor \log_2 n \rfloor + 1$;
+
+    - pass from the indices of the pseudo-code to those of the <code>C++</code> implementation.
+
 ## 4.1 The search problem
 
 - Looking for a value in a collection of data is one of the most frequent operations performed by a computer: a name in a list of contacts, a code in a table of products, a word in a dictionary.
@@ -524,9 +542,9 @@ title: "Linear and binary search"
 
     Binary search requires the array to be sorted in non-decreasing order. On a sorted array of $n$ elements it executes at most $\lfloor \log_2 n \rfloor + 1$ iterations, while linear search may need $n$ comparisons. If the array is not sorted, binary search may wrongly discard the half that contains $m$, and linear search must be used.
 
-!!! chiave ""
+## 4.4 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - The search problem asks for an index $k$ such that $a[k]=m$, or $-1$ if no such index exists.
 

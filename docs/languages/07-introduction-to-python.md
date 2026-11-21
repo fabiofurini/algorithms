@@ -10,6 +10,24 @@ title: "Introduction to Python"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): the constructs of pseudo-code.
+
+    - From this module, [Chapter 6 «Introduction to C++»](https://fabiofurini.github.io/algorithms/languages/06-introduction-to-cpp/): the same constructs in a compiled language, compared section by section.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - write and run a <code>Python</code> program, with blocks delimited by indentation;
+
+    - use variables without declared types, the two divisions <code>/</code> and <code>//</code>, and input-output;
+
+    - translate conditional statements, loops and arrays (as lists) from pseudo-code to <code>Python</code>;
+
+    - write functions that return several results, and compare <code>Python</code> with <code>C++</code>.
+
 ## Introduction
 
 In the chapter «Introduction to <code>C++</code>» we translated the pseudo-code of our algorithms into a compiled programming language. In this chapter we introduce a second programming language, <code>Python</code>, which is interpreted, has a lighter syntax and is very popular both in teaching and in scientific computing.
@@ -1387,9 +1405,9 @@ The following table summarizes the main differences between the two languages me
 </tr>
 </table></div>
 
-!!! chiave ""
+## 7.12 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - A <code>Python</code> program is executed by the interpreter (<code>python3</code>) from the first line to the last one; the instructions do not end with “<code>;</code>” and the blocks are delimited by “<code>:</code>” and by the indentation.
 

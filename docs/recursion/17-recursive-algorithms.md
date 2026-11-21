@@ -10,6 +10,30 @@ title: "Recursive algorithms"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 14 «Recursion»](https://fabiofurini.github.io/algorithms/recursion/14-recursion/): recursive algorithms, call trees, call stack and proofs by strong induction.
+
+    - From this module, [Chapter 16 «The Master Theorem»](https://fabiofurini.github.io/algorithms/recursion/16-master-theorem/): the Master Theorem.
+
+    - From this module, [Chapter 13 «Correctness»](https://fabiofurini.github.io/algorithms/analysis/13-correctness/): loop invariants, used for the non-recursive parts.
+
+    - From this module, [Chapter 3 «Sorting algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/03-sorting/): the $\Theta(n^2)$ sorting algorithms, compared with Merge Sort.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - analyse a recursive algorithm with the scheme of the chapter: call tree, correctness, recurrence, running time, extra memory;
+
+    - compute the sum of an array with an iterative and two recursive algorithms, and compare their memory;
+
+    - execute Merge Sort and prove that it sorts in $\Theta(n \log_2 n)$ steps;
+
+    - execute the Recursive Binary Search and compare its space with that of the iterative version;
+
+    - solve the maximum subarray problem by divide and conquer, and compare it with brute force and Kadane's algorithm.
+
 ## Introduction
 
 In the chapters «Recursion», «Recurrences» and «The Master Theorem» we have learnt how a recursive algorithm is executed, how its number of steps is described by a recurrence, and how such a recurrence is solved. In this chapter we put these tools to work on four classical problems on arrays:
@@ -2915,11 +2939,11 @@ The last problem of the chapter shows divide and conquer at work on a less obvio
 
     A recursive divide and conquer algorithm is not necessarily the best possible one: here, a simple iterative algorithm that exploits the structure of the problem ($M(i)$ depends only on $M(i-1)$) is asymptotically faster. We will come back to this lesson in the chapter «Recursive versus iterative algorithms».
 
-## 17.5 Summary
+## 17.5 In summary
 
 The four problems of the chapter cover the three typical shapes of a recursive algorithm on arrays: two calls on the halves with constant combination work (sum), two calls on the halves with linear combination work (Merge Sort, maximum subarray), one call on a half (binary search).
 
-!!! chiave ""
+!!! chiave "In summary"
 
     <div class="tabella" markdown="0"><table>
     <tr>
@@ -2959,6 +2983,10 @@ The four problems of the chapter cover the three typical shapes of a recursive a
     <td><span class="arithmatex">&#92;(&#92;Theta(&#92;log&#95;2 n)&#92;)</span></td>
     </tr>
     </table></div>
+
+    - Merge Sort sorts in $\Theta(n\log_2 n)$ steps, against the $\Theta(n^2)$ steps of Insertion Sort; the Recursive Binary Search makes $\Theta(\log_2 n)$ calls.
+
+    - Maximum subarray: brute force $\Theta(n^2)$, divide and conquer $\Theta(n\log_2 n)$, Kadane's iterative algorithm $\Theta(n)$.
 
     - Correctness: always by strong induction on the size of the sub-problem; the non-recursive parts (<code>Merge</code>, <code>FindMaxCrossingSubarray</code>, <code>Kadane</code>) by loop invariants.
 

@@ -10,6 +10,24 @@ title: "Introduction to C++"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): variables, conditional statements, loops, arrays and functions in pseudo-code.
+
+    - From this module, [Chapter 1 «Representation of numbers»](https://fabiofurini.github.io/algorithms/basic-algorithms/01-number-representation/): the binary representation of integer numbers, used by the bitwise operators.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - write, compile and run a <code>C++</code> program with its <code>main</code> function, variables and input-output;
+
+    - translate conditional statements, loops and arrays from pseudo-code to <code>C++</code>, shifting the indices by one;
+
+    - write functions with parameters passed by value and by reference;
+
+    - use the bitwise operators on the binary representation of integers.
+
 ## Introduction
 
 In the chapter «Pseudo-code» algorithms are written in a language meant for humans: it is precise, but it is not executed by a computer. To run an algorithm we have to translate it into a <strong>programming language</strong>. In this chapter we introduce the programming language <code>C++</code>, which we use to implement the algorithms of the course.
@@ -1744,9 +1762,9 @@ The bitwise operators give short and fast solutions to common tasks. In the foll
     cout << "Result: " << n << endl;  // Output: 13 (Binary: 1101)
     ```
 
-!!! chiave ""
+## 6.11 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - A <code>C++</code> program is compiled (for example with <code>g++</code>) and its execution starts from the <code>main</code> function; every instruction ends with “<code>;</code>”.
 

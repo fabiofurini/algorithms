@@ -10,6 +10,22 @@ title: "Representation of numbers"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Roots, powers, logarithms and modular arithmetic»](https://fabiofurini.github.io/mathematical-analysis-1/numbers/04-roots-powers-logarithms/): powers and logarithms in base $2$ and in base $10$, and the integer part $\lfloor x \rfloor$.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - write a natural number in a positional numeral system with base $b$, in particular in binary, and read it back;
+
+    - compute the representation interval of $k$ digits and the minimum number of digits needed for a number;
+
+    - represent an integer number in sign-magnitude and in two's complement, and detect an overflow in an addition;
+
+    - convert a real number into its IEEE 754 single precision representation, and explain why $0.1$ is not represented exactly.
+
 ## Introduction
 
 An algorithm manipulates data, and before we can describe how an algorithm works we have to agree on how its data are written down. For numbers, this question has a precise answer: a computer stores every number as a finite sequence of symbols, and only finitely many numbers can be written with a given number of symbols. This simple fact has important consequences: every representation has a <strong>representation interval</strong>, outside of which numbers cannot be stored, and the representation of real numbers is, in general, only approximate.
@@ -1480,6 +1496,18 @@ The machine epsilon measures the <strong>relative precision</strong> of the form
     - IEEE 754 single precision: $1 + 8 + 23$ bits, bias $127$; double precision: $1 + 11 + 52$ bits, bias $1023$.
 
     - The exponent bits determine the range, the fraction bits the precision; most real numbers (for instance $0.1$) are stored with a rounding error.
+
+## 1.4 In summary
+
+!!! chiave "In summary"
+
+    - With $k$ digits in base $b$ we represent exactly the natural numbers of $[0, b^k-1]$; a number $n \ge 1$ needs $\lfloor \log_b n\rfloor + 1$ digits.
+
+    - Two's complement with $k$ bits represents the integers of $[-2^{k-1}, 2^{k-1}-1]$ with a unique zero; a negative $n$ is written as $2^k + n$.
+
+    - In two's complement the addition is the addition modulo $2^k$; an overflow occurs only when two operands with the same sign give a result with the opposite sign.
+
+    - A floating-point number is stored as sign, exponent and fraction (IEEE 754): the exponent bits fix the range, the fraction bits the precision, and most real numbers are rounded.
 
 ---
 

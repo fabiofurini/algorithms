@@ -10,6 +10,26 @@ title: "Running time"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 11 «Input size»](https://fabiofurini.github.io/algorithms/analysis/11-input-size/): the input size $|I|$ of numbers and arrays.
+
+    - From this module, [Chapter 9 «Asymptotic notation»](https://fabiofurini.github.io/algorithms/asymptotics/09-asymptotic-notation/): the notations $\Theta$, $\bigO$, $\Omega$.
+
+    - From this module, [Chapter 3 «Sorting algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/03-sorting/): Insertion Sort; and, from [Chapter 5 «Numerical algorithms»](https://fabiofurini.github.io/algorithms/basic-algorithms/05-numerical-algorithms/), the change of base and the primality test.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - define the running time, the primitive operations (steps) and the worst case;
+
+    - count the steps of a pseudo-code line by line, also when a line is executed a number of times that depends on the input;
+
+    - express the number of steps $S(n)$ as a running time $T(|I|)$ of the input size;
+
+    - explain why $\Theta(\sqrt{n})$ steps of the primality test are exponential in $|I|$.
+
 In the chapter «Input size» we learned how to measure the size $|I|$ of an input instance $I$, that is, the number of bits needed to represent it. In this chapter we use this measure to answer the central question of the analysis of algorithms: <strong>how does the time needed by an algorithm grow when the input grows?</strong>
 
 The plan of the chapter is the following.
@@ -1170,7 +1190,7 @@ Thus, $S(n)=\Theta(|I|^2)$.
 
     Accordingly, the order of growth of the worst-case running time of the <code>PrimalityTest</code> algorithm is <strong>exponential</strong> in the input size.
 
-## 12.6 Summary { #sez-sec-rt-summary }
+## 12.6 In summary { #sez-sec-rt-summary }
 
 - The following table collects the results of the chapter. For the two algorithms on arrays, the running time is given under the hypothesis that all entries use a fixed constant number of bits.
 
@@ -1212,9 +1232,7 @@ Thus, $S(n)=\Theta(|I|^2)$.
 </tr>
 </table></div>
 
-!!! chiave ""
-
-    <strong>Key points.</strong>
+!!! chiave "In summary"
 
     - The running time is measured in <strong>steps</strong> (primitive operations, each executed in constant time); we count one step for each execution of a line of pseudo-code.
 

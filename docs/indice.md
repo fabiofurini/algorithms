@@ -40,6 +40,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 1.1 Representation of natural numbers
     - 1.2 Representation of integer numbers
     - 1.3 Representation of real numbers
+    - 1.4 In summary
 2. [Pseudo-code](basic-algorithms/02-pseudo-code.md)
     - 2.1 Introduction to pseudo-code
     - 2.2 Variables and assignments
@@ -49,21 +50,25 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 2.6 Functions
     - 2.7 Sets
     - 2.8 Style conventions
+    - 2.9 In summary
 3. [Sorting algorithms](basic-algorithms/03-sorting.md)
     - 3.1 The sorting problem
     - 3.2 Insertion Sort
     - 3.3 Exchange Sort
     - 3.4 Selection Sort
     - 3.5 Comparison of the three algorithms
+    - 3.6 In summary
 4. [Linear and binary search](basic-algorithms/04-search.md)
     - 4.1 The search problem
     - 4.2 Linear search
     - 4.3 Binary search
+    - 4.4 In summary
 5. [Numerical algorithms](basic-algorithms/05-numerical-algorithms.md)
     - 5.1 Change of base
     - 5.2 Primality test
     - 5.3 Sieve of Eratosthenes
     - 5.4 Greatest common divisor
+    - 5.5 In summary
 
 ## [Programming languages](languages/index.md)
 
@@ -78,6 +83,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 6.8 The <code>main</code> and custom functions
     - 6.9 A complete algorithm: the maximum value in an array
     - 6.10 Bitwise operators
+    - 6.11 In summary
 7. [Introduction to Python](languages/07-introduction-to-python.md)
     - 7.1 Main characteristics of the programming language
     - 7.2 Variables and data types
@@ -90,6 +96,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 7.9 A complete algorithm: the maximum value in an array
     - 7.10 Bitwise operators
     - 7.11 <code>Python</code> and <code>C++</code> side by side
+    - 7.12 In summary
 8. [Introduction to Java](languages/08-introduction-to-java.md)
     - 8.1 Main characteristics of the programming language
     - 8.2 Variables and data types
@@ -102,6 +109,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 8.9 A complete algorithm: the maximum value in an array
     - 8.10 Bitwise operators
     - 8.11 <code>Java</code>, <code>C++</code> and <code>Python</code> side by side
+    - 8.12 In summary
 
 ## [Asymptotic notation and growth](asymptotics/index.md)
 
@@ -111,10 +119,12 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 9.3 Limits and asymptotic notations
     - 9.4 Relational properties of asymptotic notations
     - 9.5 Asymptotic notation in the analysis of algorithms
+    - 9.6 In summary
 10. [Asymptotic growth](asymptotics/10-asymptotic-growth.md)
     - 10.1 Families of increasing functions of a natural variable
     - 10.2 The hierarchy of infinities
     - 10.3 Comparison of orders of growth
+    - 10.4 In summary
 
 ## [Analysis of algorithms](analysis/index.md)
 
@@ -125,13 +135,14 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 11.4 Input instance consisting of two natural numbers
     - 11.5 Input instance consisting of an array of natural numbers
     - 11.6 Input size and number of steps
+    - 11.7 In summary
 12. [Running time](analysis/12-running-time.md)
     - 12.1 Running time of an algorithm
     - 12.2 Find maximum
     - 12.3 Insertion sort
     - 12.4 Change of base
     - 12.5 Primality test
-    - 12.6 Summary
+    - 12.6 In summary
 13. [Correctness](analysis/13-correctness.md)
     - 13.1 Correctness of an algorithm
     - 13.2 Correctness of Find Maximum
@@ -139,6 +150,7 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 13.4 Correctness of Binary Search
     - 13.5 Correctness of the Euclidean algorithm
     - 13.6 Correctness of recursive algorithms
+    - 13.7 In summary
 
 ## [Recursion](recursion/index.md)
 
@@ -151,27 +163,27 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 14.6 Greatest common divisor
     - 14.7 Fast exponentiation
     - 14.8 Towers of Hanoi
-    - 14.9 Summary
+    - 14.9 In summary
 15. [Recurrences](recursion/15-recurrences.md)
     - 15.1 Recurrences
     - 15.2 The expansion method
     - 15.3 The substitution method
     - 15.4 The recursion-tree method
     - 15.5 Towards the Master Theorem
-    - 15.6 Summary: which method when
+    - 15.6 In summary
 16. [The Master Theorem](recursion/16-master-theorem.md)
     - 16.1 Recurrences in standard form
     - 16.2 The Master Theorem
     - 16.3 Applying the Master Theorem
     - 16.4 When the Master Theorem does not apply
     - 16.5 Proof of the Master Theorem
-    - 16.6 Summary
+    - 16.6 In summary
 17. [Recursive algorithms](recursion/17-recursive-algorithms.md)
     - 17.1 The sum of the elements of an array
     - 17.2 Merge Sort
     - 17.3 Recursive Binary Search
     - 17.4 The maximum subarray problem
-    - 17.5 Summary
+    - 17.5 In summary
 18. [Recursive versus iterative algorithms](recursion/18-recursive-vs-iterative.md)
     - 18.1 Recursion and iteration
     - 18.2 Comparison at a glance
@@ -180,3 +192,4 @@ lecture notes: on the website and in the PDF you find everything in the same pla
     - 18.5 Space
     - 18.7 Experiment
     - 18.8 Guidelines
+    - 18.9 In summary

@@ -10,6 +10,24 @@ title: "Numerical algorithms"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 1 «Representation of numbers»](https://fabiofurini.github.io/algorithms/basic-algorithms/01-number-representation/): positional numeral systems and the digits of a number in base $b$.
+
+    - From this module, [Chapter 2 «Pseudo-code»](https://fabiofurini.github.io/algorithms/basic-algorithms/02-pseudo-code/): loops, arrays and functions.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - convert a natural number from base ten into base $b$ with repeated divisions with remainder;
+
+    - decide whether a number is prime testing the divisors up to $\lfloor\sqrt{n}\rfloor$, and explain why this is enough;
+
+    - find all the primes up to $n$ with the Sieve of Eratosthenes;
+
+    - compute the greatest common divisor with the Euclidean algorithm and use it to test coprimality.
+
 ## Introduction
 
 In this chapter we study four classical algorithms that work on natural numbers:
@@ -1625,6 +1643,18 @@ The following observation replaces the pair $(n, m)$ with a pair of smaller numb
     - The Euclidean algorithm repeats the replacement until the second number is $0$, and returns the first one, since $\gcd(n, 0) = n$.
 
     - Two numbers are coprime if and only if the Euclidean algorithm returns $1$.
+
+## 5.5 In summary
+
+!!! chiave "In summary"
+
+    - All four algorithms rest on the division with remainder: the change of base produces the digits as remainders, from the least significant one, with $\lfloor \log_b n \rfloor + 1$ divisions.
+
+    - The divisors of $n$ come in pairs $d$, $n/d$: $n \ge 2$ is prime if and only if no number in $\{2, \dots, \lfloor\sqrt{n}\rfloor\}$ divides it.
+
+    - The sieve does not divide: it marks the multiples of each prime $p$ from $p^2$, and its outer loop stops at $\lfloor\sqrt{n}\rfloor$.
+
+    - The Euclidean algorithm replaces $(n, m)$ with $(m, n \bmod m)$ until $m = 0$; two numbers are coprime if and only if it returns $1$.
 
 ---
 

@@ -10,6 +10,26 @@ title: "Input size"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 1 «Representation of numbers»](https://fabiofurini.github.io/algorithms/basic-algorithms/01-number-representation/): the minimum number of bits $\lfloor \log_2 n \rfloor + 1$ of a natural number.
+
+    - From this module, [Chapter 9 «Asymptotic notation»](https://fabiofurini.github.io/algorithms/asymptotics/09-asymptotic-notation/): the notations $\Theta$, $\bigO$, $\Omega$ and the limit criterion.
+
+    - From this module, [Chapter 10 «Asymptotic growth»](https://fabiofurini.github.io/algorithms/asymptotics/10-asymptotic-growth/): the orders of growth of logarithms, powers and exponentials.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - define the input size $|I|$ as the number of bits needed to write the input in binary;
+
+    - compute the order of growth of $|I|$ for one natural number, for two natural numbers and for an array;
+
+    - give the upper and the lower bound on the input size of an array, and the case of entries of constant size;
+
+    - tell whether a number of steps is polynomial or exponential in $|I|$, depending on whether $n$ is a value or a number of entries.
+
 ## Introduction
 
 To compare two algorithms that solve the same problem we count how many operations they execute. This number grows with the input: sorting an array of one million entries takes longer than sorting an array of ten entries, and testing whether a number with twenty digits is prime takes longer than testing a number with two digits. To make this statement precise we need a measure of how <em>large</em> an input is.
@@ -961,9 +981,9 @@ When a number of steps is bounded by exponentials with constant factors, the con
 
     If instead the same loop ran from $1$ to the <em>value</em> of a number $n$ given as input, the $\Theta(n)$ steps would be exponential in the input size, because $n$ can be as large as $2^{|I|}-1$ ([Observation 11.12](#box-18-obsValueEntries)).
 
-!!! chiave ""
+## 11.7 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - The input size $|I|$ is the number of bits needed to write the input instance in binary.
 

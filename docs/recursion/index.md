@@ -34,7 +34,7 @@
 
     ---
 
-    The sum of the elements of an array · Merge Sort · Recursive Binary Search · The maximum subarray problem · …
+    The sum of the elements of an array · Merge Sort · Recursive Binary Search · The maximum subarray problem
 
     [:octicons-arrow-right-24: Read the chapter](17-recursive-algorithms.md) · [Exercises](../exercises/ex-17-recursive-algorithms.md)
 

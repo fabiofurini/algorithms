@@ -10,6 +10,28 @@ title: "Asymptotic growth"
 
 </div>
 
+!!! nota "Prerequisites"
+
+    - From this module, [Chapter 9 «Asymptotic notation»](https://fabiofurini.github.io/algorithms/asymptotics/09-asymptotic-notation/): the five asymptotic notations and the limit criterion.
+
+    - From the module <em>Mathematical Analysis 1</em>, the chapter [«Computing limits of sequences»](https://fabiofurini.github.io/mathematical-analysis-1/sequences/02-computing-limits/): the comparison theorem and the rules to compute limits.
+
+    - From the same module, the chapter [«Euler's number»](https://fabiofurini.github.io/mathematical-analysis-1/sequences/03-euler-number/): the number $e$ and the limits linked to it.
+
+    - From the same module, the chapter [«Hierarchies of infinities and the ratio test»](https://fabiofurini.github.io/mathematical-analysis-1/sequences/05-hierarchy-of-infinities/): the hierarchy of infinities $\log n$, $n^\alpha$, $b^n$, $n!$, $n^n$.
+
+!!! chiave "Objectives"
+
+    At the end of this chapter you will be able to:
+
+    - recognize the logarithmic, power, exponential, factorial and self-power functions of a natural variable;
+
+    - order two functions with the hierarchy of the orders of growth and the limit criterion;
+
+    - say when a change of base, a shift or a scaling of the argument changes the order of growth;
+
+    - classify an order of growth as bounded, sub-linear, linear or super-linear.
+
 ## Introduction
 
 The number of steps executed by an algorithm is a function of a natural number: the size of its input. Two algorithms that solve the same problem are compared by looking at how fast these functions grow when the input grows, and not at their values on a few small inputs. In this chapter we study the functions of a natural variable that appear in the analysis of algorithms and we compare their <strong>orders of growth</strong> with the asymptotic notations $o$, $\bigO$, $\Theta$, $\Omega$ and $\omega$ introduced in chapter 9 «Asymptotic notation».
@@ -21,10 +43,6 @@ The plan of the chapter is the following.
 - In Section [10.2](#sez-gr-sec-limits) we recall the four limits that put these families in order (the <strong>hierarchy of infinities</strong>).
 
 - In Section [10.3](#sez-gr-sec-comparison) we express the comparison of two orders of growth with the asymptotic notation, through the limit criterion of chapter 9 «Asymptotic notation». We then derive the hierarchy of the orders of growth, a classification of the orders of growth, and the properties of logarithmic, power, polynomial and exponential functions that are used in the analysis of algorithms.
-
-!!! chiave ""
-
-    <strong>Prerequisites.</strong> The functions of a natural variable are the <strong>sequences</strong> of the course <em>Mathematical Analysis 1</em> ([fabiofurini.github.io/mathematical-analysis-1/](https://fabiofurini.github.io/mathematical-analysis-1/), Italian version [fabiofurini.github.io/analisi-matematica-1/](https://fabiofurini.github.io/analisi-matematica-1/)). Their limits, and the theorems used to compute them, are not explained again in this chapter: we use them, and we refer to the part [<em>Limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/) of that course, in particular to the chapters [<em>Computing limits of sequences</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/02-computing-limits/) (comparison theorem), [<em>Euler's number</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/03-euler-number/) and [<em>Hierarchies of infinities and the ratio test</em>](https://fabiofurini.github.io/mathematical-analysis-1/sequences/05-hierarchy-of-infinities/).
 
 ## 10.1 Families of increasing functions of a natural variable { #sez-gr-sec-families }
 
@@ -834,9 +852,9 @@ In the proofs of this subsection and of the following ones we compute the limit 
 
 - For example, $2^{n+10} = 1024 \cdot 2^n = \Theta(2^n)$, while $2^{2n} = 4^n = \omega(2^n)$: a constant added to the exponent is a constant factor, a constant factor in the exponent changes the base.
 
-!!! chiave ""
+## 10.4 In summary
 
-    <strong>Key points of the chapter</strong>
+!!! chiave "In summary"
 
     - The functions of a natural variable used in the analysis of algorithms are logarithmic ($\log_a n$), power ($n^\alpha$), exponential ($b^n$), factorial ($n!$) and self-power ($n^n$) functions, together with their sums and products.
 

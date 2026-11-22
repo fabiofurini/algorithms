@@ -63,6 +63,36 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/fabiofurini
       name: GitHub
+    - icon: material/function-variant
+      link: https://fabiofurini.github.io/mathematical-analysis-1/
+      name: Mathematical Analysis 1
+    - icon: material/matrix
+      link: https://fabiofurini.github.io/linear-algebra/
+      name: Linear Algebra
+    - icon: material/vector-triangle
+      link: https://fabiofurini.github.io/linear-programming/
+      name: Linear Programming
+    - icon: material/dots-grid
+      link: https://fabiofurini.github.io/integer-linear-programming/
+      name: Integer Linear Programming
+    - icon: material/vector-curve
+      link: https://fabiofurini.github.io/convex-optimization/
+      name: Convex Optimization
+    - icon: material/graph-outline
+      link: https://fabiofurini.github.io/network-optimization/
+      name: Network Optimization
+    - icon: material/hexagon-multiple-outline
+      link: https://fabiofurini.github.io/combinatorial-optimization/
+      name: Combinatorial Optimization Problems
+    - icon: material/table-large
+      link: https://fabiofurini.github.io/dynamic-programming/
+      name: Dynamic Programming
+    - icon: material/map-marker-path
+      link: https://fabiofurini.github.io/heuristic-algorithms/
+      name: Heuristic Algorithms
+    - icon: material/approximately-equal
+      link: https://fabiofurini.github.io/approximation-algorithms/
+      name: Approximation Algorithms
     - icon: material/chart-line
       link: https://fabiofurini.github.io/lp-modelling/
       name: LP Modelling
@@ -72,18 +102,6 @@ extra:
     - icon: material/vector-polygon
       link: https://fabiofurini.github.io/mip-modelling/
       name: MIP Modelling
-    - icon: material/math-integral
-      link: https://fabiofurini.github.io/mathematical-analysis-1/
-      name: Mathematical Analysis 1
-    - icon: material/matrix
-      link: https://fabiofurini.github.io/linear-algebra/
-      name: Linear Algebra
-    - icon: material/chart-bell-curve
-      link: https://fabiofurini.github.io/convex-optimization/
-      name: Convex Optimization
-    - icon: material/vector-triangle
-      link: https://fabiofurini.github.io/linear-programming/
-      name: Linear Programming
   alternate:
     - name: Italiano
       link: https://fabiofurini.github.io/algoritmi/

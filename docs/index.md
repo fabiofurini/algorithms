@@ -21,9 +21,6 @@ pseudo-code, sorting, searching, numerical algorithms), the programming language
 Java, the growth of functions and asymptotic notation, the analysis of algorithms and recursion
 (running time, correctness, recurrence relations, the Master Theorem).
 
-Every chapter has definitions, theorems with proofs, pseudo-code, examples executed step by step,
-Colab notebooks in Python, C++ and Java and exercises with solutions.
-
 [Start :material-arrow-right:](basic-algorithms/index.md){ .md-button .md-button--primary }
 [:material-pencil: Exercises](exercises/index.md){ .md-button }
 [:material-gesture-tap: Lab](lab/index.md){ .md-button }

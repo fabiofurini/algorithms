@@ -16,12 +16,13 @@ hide:
 Teaching material conceived and developed by **[Fabio Furini](https://fabiofurini.github.io/)**, associate
 professor at [DIAG](https://www.diag.uniroma1.it/), Sapienza University of Rome.
 
-**The course lecture notes, online**, in four parts: basic algorithms (representation of numbers,
-pseudo-code, sorting, searching, numerical algorithms), programming languages (C++, Python and
-Java), asymptotic notation and growth, analysis and recursion (running time, correctness,
-recurrence relations, the Master Theorem), with definitions, theorems with their proofs,
-pseudo-code, examples executed step by step, Colab notebooks in Python, C++ and Java and
-exercises with solutions.
+The course presents algorithms in four parts: basic algorithms (representation of numbers,
+pseudo-code, sorting, searching, numerical algorithms), the programming languages C++, Python and
+Java, the growth of functions and asymptotic notation, the analysis of algorithms and recursion
+(running time, correctness, recurrence relations, the Master Theorem).
+
+Every chapter has definitions, theorems with proofs, pseudo-code, examples executed step by step,
+Colab notebooks in Python, C++ and Java and exercises with solutions.
 
 [Start :material-arrow-right:](basic-algorithms/index.md){ .md-button .md-button--primary }
 [:material-pencil: Exercises](exercises/index.md){ .md-button }

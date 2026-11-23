@@ -174,7 +174,7 @@ nav:
       - asymptotics/index.md
       - "9. Asymptotic notation": asymptotics/09-asymptotic-notation.md
       - "10. Asymptotic growth": asymptotics/10-asymptotic-growth.md
-  - Analysis:
+  - Running time and correctness:
       - analysis/index.md
       - "11. Input size": analysis/11-input-size.md
       - "12. Running time": analysis/12-running-time.md

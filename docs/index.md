@@ -49,8 +49,6 @@ Merge sort during the last merge: the tree of the calls, the two sorted halves L
 
     The representation of numbers and pseudo-code, the language in which all the algorithms of the course are written; the first algorithms: sorting (insertion, exchange and selection sort), linear and binary search, numerical algorithms (change of base, primality test, sieve of Eratosthenes, greatest common divisor). Every algorithm with its pseudo-code and examples executed step by step.
 
-    1\. Representation of numbers · 2\. Pseudo-code · 3\. Sorting algorithms · 4\. Linear and binary search · 5\. Numerical algorithms
-
     [:octicons-arrow-right-24: The chapters](basic-algorithms/index.md)
 
 -   :material-console: **2 · Programming languages**
@@ -58,8 +56,6 @@ Merge sort during the last merge: the tree of the calls, the two sorted halves L
     ---
 
     From pseudo-code to programs: three programming languages, C++ (compiled), Python (interpreted) and Java (compiled to bytecode and run by a virtual machine). For each: variables and data types, input and output, operators, conditional statements, loops, arrays and lists, functions, bitwise operators and a complete algorithm, with the comparison of the three languages.
-
-    6\. Introduction to C++ · 7\. Introduction to Python · 8\. Introduction to Java
 
     [:octicons-arrow-right-24: The chapters](languages/index.md)
 
@@ -69,8 +65,6 @@ Merge sort during the last merge: the tree of the calls, the two sorted halves L
 
     How the functions of a natural variable that count the steps of an algorithm are compared: the asymptotic notations Theta, big O, Omega, little o and omega, their properties and the limit criterion; then the families of increasing functions (logarithms, powers, exponentials, factorial), the hierarchy of infinities and the comparison of orders of growth written with the symbols. Limits and functions of a natural variable are taken from the course of Mathematical Analysis 1.
 
-    9\. Asymptotic notation · 10\. Asymptotic growth
-
     [:octicons-arrow-right-24: The chapters](asymptotics/index.md)
 
 -   :material-timer-sand: **4 · Analysis of algorithms**
@@ -79,8 +73,6 @@ Merge sort during the last merge: the tree of the calls, the two sorted halves L
 
     The analysis of algorithms: the input size, the running time in the best, worst and average case, and correctness proved with loop invariants.
 
-    11\. Input size · 12\. Running time · 13\. Correctness
-
     [:octicons-arrow-right-24: The chapters](analysis/index.md)
 
 -   :material-file-tree: **5 · Recursion**
@@ -88,8 +80,6 @@ Merge sort during the last merge: the tree of the calls, the two sorted halves L
     ---
 
     Recursion: classical recursive algorithms, recurrence relations, the Master Theorem, recursive algorithms (array sum, merge sort, binary search, maximum subarray) and the comparison between recursive and iterative versions.
-
-    14\. Recursion · 15\. Recurrences · 16\. The Master Theorem · 17\. Recursive algorithms · 18\. Recursive versus iterative algorithms
 
     [:octicons-arrow-right-24: The chapters](recursion/index.md)
 

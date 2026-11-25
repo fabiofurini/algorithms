@@ -5,7 +5,7 @@ hide:
 
 # Interactive lab
 
-Here you can watch the algorithms at work. Pick an app: it opens full page, with **sliders** and buttons.
+Each app runs an algorithm of the course. Pick an app: it opens full page, with **sliders** and buttons.
 Drag the sliders, or press ▶ to run one step at a time and «Run» for the animation. The notation is that
 of the lecture notes: arrays \(a[1..n]\) indexed from 1, the same names of algorithms and variables.
 
